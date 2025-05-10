@@ -1,29 +1,31 @@
-# graduate-doc-template
+# 🎓 Doctoral Programme in Biosciences and Drug Research
 
+Welcome to the unofficial GitHub page for the Doctoral Programme in Biosciences and Drug Research at **Åbo Akademi University**.
 
-This template repository renders the `README.md` file into a styled HTML page and a downloadable PDF using a Jinja2 template and WeasyPrint. It is fully automated via GitHub Actions and designed to be reused across graduate school documentation categories.
+---
 
-## 🚀 Features
-- 📄 Write content in Markdown (`README.md`)
-- 🎨 Apply custom styling via Jinja2 template
-- 🌐 Deploy as a static website via GitHub Pages
-- 🧾 Export as PDF using WeasyPrint
+## 🏛️ About Åbo Akademi University
 
-## 🛠️ Setup
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/YOUR-ORG/graduate-doc-template.git your-topic-doc
-   cd your-topic-doc
-   ```
+Åbo Akademi University is a Swedish-language multidisciplinary academic university located in Finland, with campuses in **Turku** and **Vaasa**.
 
-2. Edit `README.md` with your content.
-3. Commit and push changes.
+---
 
-GitHub Actions will:
-- Convert the README to HTML using the Jinja2 template
-- Export the HTML as a PDF
-- Publish both to GitHub Pages
+## 🧪 Major Subjects in the Programme
 
-## 📄 Output
-- `public/index.html` – Web version
-- `public/Document.pdf` – Downloadable PDF
+- Biochemistry  
+- Cell Biology  
+- Environmental and Marine Biology  
+- Drug Development  
+- Pharmacy
+
+---
+
+## 📂 Documentation Categories
+
+### 🧑‍🏫 Supervisor Portfolio  
+- 🌐 [View Online](https://aaugs-dp-biosciences-and-drug-research.github.io/supervisor-portfolio/)  
+- 📄 [Download PDF](https://aaugs-dp-biosciences-and-drug-research.github.io/supervisor-portfolio/Supervisor_Portfolio.pdf)
+
+### 📘 Learning Goals  
+- 🌐 [View Online](https://aaugs-dp-biosciences-and-drug-research.github.io/LearningGoals/)  
+- 📄 [Download PDF](https://aaugs-dp-biosciences-and-drug-research.github.io/LearningGoals//Document.pdf)

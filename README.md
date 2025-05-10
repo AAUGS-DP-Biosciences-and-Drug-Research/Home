@@ -1,6 +1,6 @@
 # Doctoral Programme in Biosciences and Drug Research
 
-Welcome to the unofficial Web pages for the Doctoral Programme in Biosciences and Drug Research at **Åbo Akademi University**.
+Welcome to the unofficial web pages for the Doctoral Programme in Biosciences and Drug Research at **Åbo Akademi University**.
 
 ---
 

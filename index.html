@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Graduate Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .card {
+      background: #fafafa;
+      max-width: 1000px;
+      width: 100%;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      border: 2px solid #ccc;
+      margin-top: 20px;
+      box-sizing: border-box;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .back-button {
+      display: inline-block;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #333;
+      text-decoration: none;
+    }
+    .back-button:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>graduate-doc-template</h1>
+<p>This template repository renders the <code>README.md</code> file into a styled HTML page and a downloadable PDF using a Jinja2 template and WeasyPrint. It is fully automated via GitHub Actions and designed to be reused across graduate school documentation categories.</p>
+<h2>🚀 Features</h2>
+<ul>
+<li>📄 Write content in Markdown (<code>README.md</code>)</li>
+<li>🎨 Apply custom styling via Jinja2 template</li>
+<li>🌐 Deploy as a static website via GitHub Pages</li>
+<li>🧾 Export as PDF using WeasyPrint</li>
+</ul>
+<h2>🛠️ Setup</h2>
+<ol>
+<li>
+<p>Clone the repository:
+   <code>bash
+   git clone https://github.com/YOUR-ORG/graduate-doc-template.git your-topic-doc
+   cd your-topic-doc</code></p>
+</li>
+<li>
+<p>Edit <code>README.md</code> with your content.</p>
+</li>
+<li>Commit and push changes.</li>
+</ol>
+<p>GitHub Actions will:
+- Convert the README to HTML using the Jinja2 template
+- Export the HTML as a PDF
+- Publish both to GitHub Pages</p>
+<h2>📄 Output</h2>
+<ul>
+<li><code>public/index.html</code> – Web version</li>
+<li><code>public/Document.pdf</code> – Downloadable PDF</li>
+</ul>
+    <p style="text-align: center;">
+      <a href="../index.html" class="back-button">← Back to Documentation Home</a>
+    </p>
+  </div>
+</body>
+</html>

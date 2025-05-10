@@ -1,16 +1,16 @@
-# 🎓 Doctoral Programme in Biosciences and Drug Research
+# Doctoral Programme in Biosciences and Drug Research
 
 Welcome to the unofficial GitHub page for the Doctoral Programme in Biosciences and Drug Research at **Åbo Akademi University**.
 
 ---
 
-## 🏛️ About Åbo Akademi University
+## About Åbo Akademi University
 
 Åbo Akademi University is a Swedish-language multidisciplinary academic university located in Finland, with campuses in **Turku** and **Vaasa**.
 
 ---
 
-## 🧪 Major Subjects in the Programme
+## Major Subjects in the Programme
 
 - Biochemistry  
 - Cell Biology  
@@ -20,12 +20,12 @@ Welcome to the unofficial GitHub page for the Doctoral Programme in Biosciences 
 
 ---
 
-## 📂 Documentation Categories
+## Documentation Categories
 
-### 🧑‍🏫 Supervisor Portfolio  
+### Supervisor Portfolio  
 - 🌐 [View Online](https://aaugs-dp-biosciences-and-drug-research.github.io/supervisor-portfolio/)  
 - 📄 [Download PDF](https://aaugs-dp-biosciences-and-drug-research.github.io/supervisor-portfolio/Supervisor_Portfolio.pdf)
 
-### 📘 Learning Goals  
+### Learning Goals  
 - 🌐 [View Online](https://aaugs-dp-biosciences-and-drug-research.github.io/LearningGoals/)  
 - 📄 [Download PDF](https://aaugs-dp-biosciences-and-drug-research.github.io/LearningGoals//Document.pdf)

@@ -1,12 +1,12 @@
 # Doctoral Programme in Biosciences and Drug Research
 
-Welcome to the unofficial GitHub page for the Doctoral Programme in Biosciences and Drug Research at **Åbo Akademi University**.
+Welcome to the unofficial Web pages for the Doctoral Programme in Biosciences and Drug Research at **Åbo Akademi University**.
 
 ---
 
 ## About Åbo Akademi University
 
-Åbo Akademi University is a Swedish-language multidisciplinary academic university located in Finland, with campuses in **Turku** and **Vaasa**.
+Åbo Akademi University is a Swedish-language multidisciplinary academic university in Finland, with campuses in Turku and Vaasa.
 
 ---
 

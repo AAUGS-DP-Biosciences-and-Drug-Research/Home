@@ -26,6 +26,10 @@ Welcome to the unofficial web pages for the Doctoral Programme in Biosciences an
 - 🌐 [View Online](https://aaugs-dp-biosciences-and-drug-research.github.io/supervisor-portfolio/)  
 - 📄 [Download PDF](https://aaugs-dp-biosciences-and-drug-research.github.io/supervisor-portfolio/Supervisor_Portfolio.pdf)
 
+### Curriculum 
+- 🌐 [View Online](https://aaugs-dp-biosciences-and-drug-research.github.io/Curriculum/)  
+- 📄 [Download PDF](https://aaugs-dp-biosciences-and-drug-research.github.io/Curriculum.pdf)
+
 ### Learning Goals  
 - 🌐 [View Online](https://aaugs-dp-biosciences-and-drug-research.github.io/LearningGoals/)  
 - 📄 [Download PDF](https://aaugs-dp-biosciences-and-drug-research.github.io/LearningGoals//Document.pdf)

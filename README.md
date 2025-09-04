@@ -52,3 +52,7 @@ To learn more about our doctoral programme, use the links below.
 ### Get Ready to Graduate  
 - 🌐 _Coming soon_  
 - 📄 _Coming soon_
+
+### Fund your PhD studies  
+- 🌐 _Coming soon_  
+- 📄 _Coming soon_

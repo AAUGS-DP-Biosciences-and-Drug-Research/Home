@@ -38,8 +38,8 @@ To learn more about our doctoral programme, use the links below.
 - 📄 [Download PDF](https://aaugs-dp-biosciences-and-drug-research.github.io/supervisor-portfolio/Supervisor_Portfolio.pdf)
 
 ### Graduation Requirements  
-- 🌐 _Coming soon_  
-- 📄 _Coming soon_
+- 🌐 [View Online](https://aaugs-dp-biosciences-and-drug-research.github.io/Graduation_Requirements/)  
+- 📄 [Download PDF](https://aaugs-dp-biosciences-and-drug-research.github.io/Graduation_Requirements/Document.pdf)
 
 ### Curriculum  
 - 🌐 [View Online](https://aaugs-dp-biosciences-and-drug-research.github.io/Curriculum/)  

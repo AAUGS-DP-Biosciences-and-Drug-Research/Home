@@ -56,3 +56,8 @@ To learn more about our doctoral programme, use the links below.
 ### Fund your PhD studies  
 - 🌐 _Coming soon_  
 - 📄 _Coming soon_
+
+### Additional Resources
+- 📄 [Master Documentation (PDF)](https://github.com/AAUGS-DP-Biosciences-and-Drug-Research/Master_PDF/raw/main/pdfs/master.pdf?download=1)
+- 📊 [PhD ECTS Tracker Workbook (Excel)](https://github.com/AAUGS-DP-Biosciences-and-Drug-Research/Curriculum/raw/main/PhD_ECTS_Tracker_Categories_v4.xlsx?download=1)
+- 📝 [Skills and Competencies (DOCX)](https://github.com/AAUGS-DP-Biosciences-and-Drug-Research/Yearly_followup/raw/main/Skills%20and%20competencies_v250108.docx?download=1)

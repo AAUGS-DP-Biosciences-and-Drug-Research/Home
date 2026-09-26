@@ -26,7 +26,6 @@ SITE = ROOT / "site"
 OUT = SITE / "pdf"
 CONFIG = yaml.safe_load((ROOT / "mkdocs.yml").read_text(encoding="utf-8"))
 SITE_URL = CONFIG["site_url"].rstrip("/") + "/"
-CONTACT = "guillaume.jacquemet@abo.fi"
 TITLE = CONFIG["site_name"]
 
 PAGES = [  # (built page, pdf name, section title in the handbook)
@@ -297,8 +296,7 @@ def main():
         f'<div class="cover"><img src="{logo}" alt=""><h1>{TITLE}</h1>'
         f"<p>Åbo Akademi University</p><p>{SITE_URL}</p>{qr(SITE_URL, 'Scan for the website', 'qr qr--cover')}"
         f"<p>Last updated: {updated.day} {updated.strftime('%B %Y')}</p>"
-        f"<p>Maintained by Guillaume Jacquemet · "
-        f'<a href="mailto:{CONTACT}">{CONTACT}</a></p></div>'
+        "<p>Maintained by Guillaume Jacquemet</p></div>"
     )
     toc, body = [], []
     for i, (page, name, title) in enumerate(PAGES, 1):

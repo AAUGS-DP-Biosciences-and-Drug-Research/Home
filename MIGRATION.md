@@ -115,7 +115,8 @@ commits, with the new build:
 - Yearly follow-up: list indentation fixed so nested bullets and the numbered
   meeting steps render properly; checklists render as checkboxes.
 - Graduation Requirements: blank line before the list of article types.
-- Home: the "Documentation Categories" are shown as cards.
+- Home: title and welcome text shown as a hero panel, the major subjects as
+  chips, and the "Documentation Categories" as cards.
 
 ## Deprecated files
 

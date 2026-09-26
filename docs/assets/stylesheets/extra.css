@@ -1,20 +1,70 @@
-/* Colours: Åbo Akademi blue, borrowed card styling from the AIC Turku dashboard */
+/* Colours: Åbo Akademi red (from the university logo, #d50022) and yellow,
+   card styling borrowed from the AIC Turku dashboard */
 :root {
-  --md-primary-fg-color: #1a3d7c;
-  --md-primary-fg-color--light: #3a5fa3;
-  --md-primary-fg-color--dark: #0f2a5a;
-  --md-accent-fg-color: #c8102e;
+  --dp-red: #d50022;
+  --dp-red-dark: #a3001a;
+  --dp-yellow: #f5b800;
+  --md-primary-fg-color: #d50022;
+  --md-primary-fg-color--light: #e8475d;
+  --md-primary-fg-color--dark: #a3001a;
+  --md-accent-fg-color: #a3001a;
+  --md-typeset-a-color: #a3001a;
+  --dp-hero-bg: #fbf1f2;
   --dp-radius: 14px;
   --dp-gap: 14px;
 }
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #24477f;
-  --md-accent-fg-color: #ff6b7f;
-  --md-typeset-a-color: #8fb3ff;
+  --md-primary-fg-color: #ff4d64;
+  --md-primary-fg-color--light: #ff7a8b;
+  --md-primary-fg-color--dark: #d50022;
+  --md-accent-fg-color: #ff7a8b;
+  --md-typeset-a-color: #ff8a99;
+  --dp-hero-bg: #2a1a1d;
+}
+
+/* Thin red–yellow band at the top of every page, as a university accent */
+.md-header { border-top: 4px solid var(--dp-red); box-shadow: inset 0 4px 0 -2px var(--dp-yellow); }
+.md-tabs__item--active .md-tabs__link, .md-tabs__link:hover { color: var(--md-primary-fg-color); }
+.md-typeset h1 { font-weight: 800; letter-spacing: -0.01em; }
+.md-typeset h2 { font-weight: 700; }
+.md-typeset h2::after {
+  content: ""; display: block; width: 2.2rem; height: 3px; margin-top: 0.35rem;
+  background: var(--dp-red); border-radius: 2px;
+}
+.md-typeset .dp-card h3, .md-typeset .dp-profile__info h1 { font-weight: 700; }
+
+/* Landing page hero */
+.dp-hero {
+  position: relative; overflow: hidden;
+  margin: 0 0 1.5rem; padding: 2rem 12rem 1.6rem 2rem;
+  background: var(--dp-hero-bg); border-radius: var(--dp-radius);
+  border-left: 6px solid var(--dp-red);
+}
+.dp-hero::after {
+  content: ""; position: absolute; right: 1.8rem; top: 50%; transform: translateY(-50%);
+  width: 8.5rem; height: 8.5rem; opacity: 0.14;
+  background: url("../images/AboAkademiUniversity.png") center / contain no-repeat;
+}
+.md-typeset .dp-hero h1 { margin: 0 0 0.8rem; font-size: 1.85rem; line-height: 1.15; max-width: 30ch; color: var(--md-default-fg-color); }
+.md-typeset .dp-hero p { font-size: 0.95rem; max-width: 60ch; margin: 0; position: relative; z-index: 1; }
+.dp-hero + hr { display: none; }
+@media (max-width: 600px) {
+  .dp-hero { padding: 1.4rem 1.2rem; }
+  .dp-hero::after { display: none; }
+  .md-typeset .dp-hero h1 { font-size: 1.6rem; }
+}
+
+/* Subject chips */
+.md-typeset .dp-chips ul { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; margin: 0.8rem 0 1.2rem; padding: 0; }
+.md-typeset .dp-chips ul li { margin-left: 0; }
+.md-typeset .dp-chips li {
+  margin: 0; padding: 0.35rem 0.85rem; border-radius: 999px; font-size: 0.75rem; font-weight: 600;
+  border: 1px solid color-mix(in srgb, var(--dp-red) 35%, transparent);
+  background: color-mix(in srgb, var(--dp-red) 8%, transparent);
 }
 
 /* Header logo is a square crest */
-.md-header__button.md-logo img { height: 1.9rem; width: auto; background: #fff; border-radius: 4px; padding: 1px; }
+.md-header__button.md-logo img { height: 2.1rem; width: auto; background: #fff; border-radius: 4px; padding: 1px; }
 
 /* Landing page cards */
 .dp-cards {
@@ -31,11 +81,12 @@
   box-shadow: 0 2px 10px rgba(0,0,0,0.06);
   transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
 }
+.dp-card { border-top: 3px solid var(--dp-red); }
 .dp-card:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,0.12); border-color: var(--md-primary-fg-color); }
 .md-typeset .dp-card h3 { margin-top: 0.8rem; }
 .md-typeset .dp-card ul { list-style: none; margin-left: 0; padding-left: 0; }
 .md-typeset .dp-card li { margin-left: 0; }
-.dp-card--soon { opacity: 0.6; border-style: dashed; }
+.dp-card--soon { opacity: 0.6; border-style: dashed; border-top: 3px dashed var(--md-default-fg-color--lighter); }
 .dp-card--soon:hover { transform: none; box-shadow: 0 2px 10px rgba(0,0,0,0.06); border-color: var(--md-default-fg-color--lightest); }
 
 /* Supervisor filter bar */
@@ -90,10 +141,15 @@
 .dp-person__initials {
   display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 1 / 1;
   font-size: 2.2rem; font-weight: 700; letter-spacing: 0.05em; color: #fff;
-  background: linear-gradient(135deg, var(--md-primary-fg-color), var(--md-primary-fg-color--light));
+  background: linear-gradient(135deg, var(--dp-red-dark), var(--dp-red));
 }
 .dp-profile__photo.dp-person__initials { aspect-ratio: 4 / 5; font-size: 3rem; }
 .dp-profile__photo.dp-person__initials { width: 200px; }
 @media (max-width: 700px) {
   .dp-profile__photo, .dp-profile__photo.dp-person__initials { flex: none; width: 160px; }
 }
+
+/* Softer links: coloured, underline appears on hover */
+.md-typeset a { text-decoration: underline; text-decoration-color: color-mix(in srgb, currentColor 35%, transparent); text-underline-offset: 2px; }
+.md-typeset a:hover { text-decoration-color: currentColor; }
+[data-md-color-scheme="slate"] .md-typeset .dp-hero h1 { color: #fff; }

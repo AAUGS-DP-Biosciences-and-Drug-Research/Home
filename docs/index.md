@@ -1,16 +1,24 @@
+<div class="dp-hero" markdown>
+
 # Doctoral Programme in Biosciences and Drug Research
 
 Welcome to the **unofficial** web pages for the Doctoral Programme in Biosciences and Drug Research at **Åbo Akademi University**.
 
+</div>
+
 ---
 
 ## Major Subjects in the Programme
+
+<div class="dp-chips" markdown>
 
 - Biochemistry  
 - Cell Biology  
 - Environmental and Marine Biology  
 - Drug Development  
 - Pharmacy
+
+</div>
 
 If you are interested in applying to join our graduate school and doctoral programme, follow this link for full details:  
 👉 [Apply for a doctoral study right](https://www.abo.fi/en/research-at-aau/postgraduate-and-doctoral-studies/apply-for-doctoral-studies/)

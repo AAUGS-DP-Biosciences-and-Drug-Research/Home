@@ -65,13 +65,13 @@ Supervisor slugs are kept exactly as before (including the mangled ones such as
 
 ### Phase 1 – Build the new site (branch `claude/zen-pascal-s1k6xf`, Home)
 - [x] Plan (this file)
-- [ ] Zensical scaffold, theme, navigation
-- [ ] Copy the five pages verbatim; rewrite old-site link targets
-- [ ] Move supervisor YAML + photos; generate supervisor index and profile pages
-- [ ] PDF build: one PDF per page + full handbook (cover, contents, all sections, supervisor portfolio)
-- [ ] Content verification script passes (web and PDF)
-- [ ] Screenshots of every page (desktop + mobile) reviewed
-- [ ] CI workflow (`publish.yml`): build on every push/PR, deploy only from `main`
+- [x] Zensical scaffold, theme, navigation
+- [x] Copy the five pages verbatim; rewrite old-site link targets
+- [x] Move supervisor YAML + photos; generate supervisor index and profile pages
+- [x] PDF build: one PDF per page + full handbook (cover, contents, all sections, supervisor portfolio)
+- [x] Content verification script passes (web and PDF)
+- [x] Screenshots of every page (desktop + mobile) reviewed
+- [x] CI workflow (`publish.yml`): build on every push/PR, deploy only from `main`
 
 ### Phase 2 – Go live (manual: merge the Home PR)
 - [ ] Merge Home PR → site at `/Home/` is replaced in place
@@ -91,6 +91,34 @@ Prepared on the same branch name in each repo:
 - [ ] Ask the programme office which external pages link to the old URLs and update them
 - [ ] Archive (do not delete) the old repositories, starting with `template` as a test
 - [ ] Move open issue supervisor-portfolio#2 ("Fix the publication formatting") to Home
+
+## Verification result
+
+`scripts/verify_content.py` (run by hand via the *Verify migrated content*
+workflow) compares the old published pages, pinned to their last `gh-pages`
+commits, with the new build:
+
+- 5 content pages, the supervisor index and all 27 supervisor profiles:
+  **word-for-word identical**.
+- Every PDF contains every word of its web page (emoji are drawn as images in
+  PDFs and are checked visually instead).
+- Intended differences, handled explicitly in the script: the old template's
+  "← Back to Home" footer link (replaced by the navigation bar), and literal
+  "-" characters that the old site showed where lists were not recognised
+  (Yearly follow-up, Graduation Requirements; now real bullet lists; these
+  whitespace-only fixes are in their own commits).
+
+## Formatting-only changes (text unchanged)
+
+- Yearly follow-up: list indentation fixed so nested bullets and the numbered
+  meeting steps render properly; checklists render as checkboxes.
+- Graduation Requirements: blank line before the list of article types.
+- Home: the "Documentation Categories" are shown as cards.
+
+## Deprecated files
+
+`deprecated/` keeps the old consolidated `master.pdf` (from Master_PDF) and
+`PhD_ECTS_Tracker_Categories_v4.xlsx` (from Curriculum). Not published.
 
 ## Things deliberately *not* changed in the text (fix later, separately)
 

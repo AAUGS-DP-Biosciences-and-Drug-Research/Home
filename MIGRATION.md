@@ -116,7 +116,7 @@ commits, with the new build:
   meeting steps render properly; checklists render as checkboxes.
 - Graduation Requirements: blank line before the list of article types.
 - Home: title and welcome text shown as a hero panel, the major subjects as
-  chips, and the "Documentation Categories" as cards.
+  tags, and the "Documentation Categories" as colour tiles (abo.fi style).
 
 ## Deprecated files
 

@@ -12,6 +12,7 @@ theme:
   language: en
   logo: assets/images/AboAkademiUniversity.png
   favicon: assets/images/AboAkademiUniversity.png
+  font: false          # Figtree is self-hosted in assets/fonts (no Google Fonts)
   features:
     - navigation.tabs
     - navigation.top

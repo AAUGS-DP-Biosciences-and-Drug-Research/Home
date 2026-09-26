@@ -38,6 +38,17 @@ Downloadable files (DOCX, …) go in `docs/files/`.
   `tools/Convert_Excel_Supervisor_Data_to_YAML.ipynb`:
   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AAUGS-DP-Biosciences-and-Drug-Research/Home/blob/main/tools/Convert_Excel_Supervisor_Data_to_YAML.ipynb)
 
+## Look and feel
+
+The style follows www.abo.fi (colours of the abo2025 theme, square colour tiles,
+bold type). Everything is in `docs/assets/stylesheets/extra.css`. The
+university's own fonts are licensed through Adobe Fonts, so the open-source
+Figtree font is used instead; it is self-hosted in `docs/assets/fonts/`, so the
+site makes no requests to Google or Adobe. To show a black-and-white campus
+photo behind the title on the landing page, add `docs/assets/images/hero.jpg`
+and uncomment the `background-image` line under "Landing page hero" in
+`extra.css`.
+
 ## PDFs
 
 Built automatically from the website pages (so PDF and web text are always

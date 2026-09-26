@@ -16,6 +16,7 @@ from urllib.parse import unquote, urljoin, urlparse
 import yaml
 from bs4 import BeautifulSoup
 from weasyprint import CSS, HTML
+from weasyprint.text.fonts import FontConfiguration
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / "site"
@@ -31,22 +32,27 @@ PAGES = [  # (built page, pdf name, section title in the handbook)
     ("graduation-requirements/", "graduation-requirements", "Graduation Requirements"),
 ]
 
-PRINT_CSS = """
+FONT_DIR = (ROOT / "docs" / "assets" / "fonts").as_uri()
+PRINT_CSS = "".join(
+    f'@font-face {{ font-family: "Figtree"; font-weight: {w}; font-style: {s}; '
+    f'src: url("{FONT_DIR}/figtree-latin-{w}-{s}.woff2"); }}\n'
+    for w, s in [(400, "normal"), (400, "italic"), (600, "normal"), (700, "normal"), (800, "normal")]
+) + """
 @page {
-  size: A4; font-family: "Inter", "Noto Sans", "DejaVu Sans", sans-serif; margin: 20mm 18mm 20mm 18mm;
-  @bottom-center { content: counter(page); font-family: "Noto Sans", "DejaVu Sans", sans-serif; font-size: 9pt; color: #666; }
-  @top-right { content: string(section); font-family: "Noto Sans", "DejaVu Sans", sans-serif; font-size: 8pt; color: #888; }
+  size: A4; font-family: "Figtree", "Noto Sans", "DejaVu Sans", sans-serif; margin: 20mm 18mm 20mm 18mm;
+  @bottom-center { content: counter(page); font-family: "Figtree", "Noto Sans", sans-serif; font-size: 9pt; color: #666; }
+  @top-right { content: string(section); font-family: "Figtree", "Noto Sans", sans-serif; font-size: 8pt; color: #888; }
 }
 @page cover { @bottom-center { content: none; } @top-right { content: none; } }
-body { font-family: "Inter", "Noto Sans", "DejaVu Sans", sans-serif; font-size: 10.5pt; line-height: 1.45; color: #1d1d1f; }
-h1 { font-size: 20pt; color: #b8001d; margin: 0 0 8pt; string-set: section content(); }
-h2 { font-size: 14pt; color: #b8001d; margin: 16pt 0 5pt; border-bottom: 1px solid #ecd3d7; padding-bottom: 2pt; }
+body { font-family: "Figtree", "Noto Sans", "DejaVu Sans", sans-serif; font-size: 10.5pt; line-height: 1.45; color: #20201f; }
+h1 { font-size: 20pt; color: #b8161d; margin: 0 0 8pt; string-set: section content(); }
+h2 { font-size: 14pt; color: #b8161d; margin: 16pt 0 5pt; border-bottom: 1px solid #dddddd; padding-bottom: 2pt; }
 h3 { font-size: 12pt; margin: 12pt 0 4pt; }
 h4 { font-size: 10.5pt; margin: 10pt 0 3pt; }
 h2, h3, h4 { break-after: avoid; }
 li { margin: 2pt 0; }
-a { color: #b8001d; text-decoration: none; }
-hr { border: 0; border-top: 1px solid #ecd3d7; margin: 12pt 0; }
+a { color: #b8161d; text-decoration: none; }
+hr { border: 0; border-top: 1px solid #dddddd; margin: 12pt 0; }
 table { border-collapse: collapse; } td, th { border: 1px solid #ccc; padding: 3pt 6pt; }
 .headerlink, .md-content__button, .dp-filter, .dp-back, .dp-pdf-link { display: none !important; }
 .section { break-before: page; }
@@ -56,22 +62,22 @@ table { border-collapse: collapse; } td, th { border: 1px solid #ccc; padding: 3
 .task-list-control input { display: none; }
 /* landing page cards */
 .dp-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 8pt; }
-.dp-card { border: 1px solid #ecd3d7; border-radius: 6pt; padding: 0 8pt 4pt; break-inside: avoid; }
+.dp-card { border: 1px solid #dddddd; border-radius: 6pt; padding: 0 8pt 4pt; break-inside: avoid; }
 .dp-card ul { list-style: none; padding-left: 0; }
 .dp-card--soon { color: #888; }
 /* supervisor overview */
 .dp-subject h2 { break-after: avoid; }
 .dp-people { display: flex; flex-wrap: wrap; gap: 6pt; }
-.dp-person { width: 72pt; color: #1d1d1f; font-size: 7.5pt; line-height: 1.2; break-inside: avoid; }
+.dp-person { width: 72pt; color: #20201f; font-size: 7.5pt; line-height: 1.2; break-inside: avoid; }
 .dp-person img, .dp-person .dp-person__initials { display: block; width: 72pt; height: 72pt; object-fit: cover; object-position: top; border-radius: 4pt; }
 .dp-person__name { display: block; font-weight: 700; margin-top: 2pt; }
 .dp-person__group { display: block; color: #666; }
-.dp-person__initials { background: #b8001d; color: #fff; font-size: 20pt; font-weight: 700; text-align: center; line-height: 72pt; }
+.dp-person__initials { background: #b8161d; color: #fff; font-size: 20pt; font-weight: 700; text-align: center; line-height: 72pt; }
 /* profiles */
 .profile { break-before: page; }
 .dp-profile { display: flex; gap: 12pt; align-items: flex-start; margin-bottom: 6pt; }
 .dp-profile__photo { width: 90pt; height: 112pt; object-fit: cover; object-position: top; border-radius: 4pt; flex: none; }
-span.dp-profile__photo { display: block; background: #b8001d; color: #fff; font-size: 28pt; font-weight: 700; text-align: center; line-height: 112pt; }
+span.dp-profile__photo { display: block; background: #b8161d; color: #fff; font-size: 28pt; font-weight: 700; text-align: center; line-height: 112pt; }
 .dp-profile__info h1 { font-size: 16pt; }
 .dp-profile__info p { margin: 1pt 0; }
 /* cover + contents */
@@ -110,7 +116,9 @@ def article(page):
 
 def render(body_html, out):
     doc = f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>{TITLE}</title></head><body>{body_html}</body></html>'
-    HTML(string=doc, base_url=str(SITE)).write_pdf(out, stylesheets=[CSS(string=PRINT_CSS)])
+    fonts = FontConfiguration()  # needed for the @font-face rules (Figtree)
+    css = CSS(string=PRINT_CSS, font_config=fonts)
+    HTML(string=doc, base_url=str(SITE)).write_pdf(out, stylesheets=[css], font_config=fonts)
     print(f"✅ {out.relative_to(ROOT)} ({out.stat().st_size // 1024} kB)")
 
 

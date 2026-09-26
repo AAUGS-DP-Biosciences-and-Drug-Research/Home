@@ -73,6 +73,11 @@ def text(value):
     )
 
 
+def tone(slug):
+    """Stable palette colour (0-3) for the initials tile of a supervisor."""
+    return sum(map(ord, slug)) % 4
+
+
 def initials(name):
     parts = str(name).split()
     return html.escape((parts[0][0] + parts[-1][0]).upper() if parts else "")
@@ -137,7 +142,7 @@ def profile_page(s):
     if photo:
         media = f'<img class="dp-profile__photo" src="../assets/images/supervisors/{photo}" alt="Photo of {html.escape(str(s["name"]))}"{pos}>'
     else:
-        media = f'<span class="dp-profile__photo dp-person__initials" aria-hidden="true">{initials(s["name"])}</span>'
+        media = f'<span class="dp-profile__photo dp-person__initials dp-tone-{tone(s["slug"])}" aria-hidden="true">{initials(s["name"])}</span>'
     info = [f"<h1>{text(s['name'])}</h1>"]
     if s.get("group"):
         info.append(f"<p><strong>Group Name:</strong> {text(s['group'])}</p>")
@@ -210,7 +215,7 @@ def index_page(sups):
                 + list(s.get("expertise") or []) + list(s.get("techniques") or [])
             ).casefold()
             cards.append(
-                f'<a class="dp-person" href="{s["slug"]}.md" data-subject="{html.escape(str(u))}" '
+                f'<a class="dp-person dp-tone-{tone(s["slug"])}" href="{s["slug"]}.md" data-subject="{html.escape(str(u))}" '
                 f'data-search="{html.escape(haystack)}">'
                 f"{media}"
                 f'<span class="dp-person__name">{text(s["name"])}</span>'

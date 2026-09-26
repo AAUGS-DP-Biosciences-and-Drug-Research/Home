@@ -79,13 +79,15 @@ Supervisor slugs are kept exactly as before (including the mangled ones such as
 
 ### Phase 3 – Redirect the old sites (merge each old repo's PR, *after* Phase 2)
 Prepared on the same branch name in each repo:
-- [ ] LearningGoals, Curriculum, Yearly_followup, Graduation_Requirements:
+- [x] LearningGoals, Curriculum, Yearly_followup, Graduation_Requirements:
       old build workflow replaced by one that publishes a redirect page and a
       one-page "this document has moved" `Document.pdf`
-- [ ] supervisor-portfolio: redirects for the index, all 27 profile pages,
-      `Supervisor_Portfolio.html` and `.pdf`; broken `center-faces` workflow removed
-- [ ] Master_PDF: rebuild workflow removed, README points to the handbook
-- [ ] `.github` org profile: links updated
+- [x] supervisor-portfolio: redirects for the index, all 27 profile pages,
+      `Supervisor_Portfolio.html` and `.pdf`; broken `center-faces` workflow removed;
+      Excel→YAML notebook moved to `Home/tools/`
+- [x] Master_PDF: rebuild workflow removed, README points to the handbook,
+      `pdfs/master.pdf` replaced by a notice (original kept in `deprecated/`)
+- [x] `.github` org profile: links updated
 
 ### Phase 4 – Clean-up (manual)
 - [ ] Ask the programme office which external pages link to the old URLs and update them
@@ -126,4 +128,5 @@ commits, with the new build:
 - Yearly follow-up: "Useful ressources"; "Individual Study Plan (ISP based on…" missing ")";
   "Startup (first 3 months" and "During each TFC meeting (≤ 90 min" missing ")";
   "PhD  researcher" double space
-- Home: the ÅAU Survival Guide link is the 2023–2024 edition
+- Home: the ÅAU Survival Guide link is the 2023–2024 edition, while the org
+  profile README already links a 2024–2025 edition (Adobe link) – pick one

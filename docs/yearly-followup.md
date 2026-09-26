@@ -11,9 +11,9 @@
 ## Annual ISP Update & Follow-Up Committee
 - The ISP must be updated once a year.
 - As part of the yearly follow-up, the PhD researcher recruits a Thesis Follow-Up Committee (TFC).
-  - **Aim**: Promote successful progress of the thesis by providing subject matter and implementation expertise. If necessary, the study plan and research plan may be updated in response to the committee’s discussions.
-  - **Composition** (recommended): 2 members (internal to AAU and/or external) + the supervisor(s).
-  - **Recruitment**: By the PhD researcher together with the supervisor(s).
+    - **Aim**: Promote successful progress of the thesis by providing subject matter and implementation expertise. If necessary, the study plan and research plan may be updated in response to the committee’s discussions.
+    - **Composition** (recommended): 2 members (internal to AAU and/or external) + the supervisor(s).
+    - **Recruitment**: By the PhD researcher together with the supervisor(s).
 
 ## Committee Meetings: Frequency, Roles & Confidentiality
 - The TFC convenes **every year** until the thesis defence.
@@ -35,16 +35,19 @@
   
 ### During each committee meeting (≤ **90 minutes**)
 1) The PhD researcher (maximum 1h with questions):
+
 - Presents the doctoral training plan.
 - The presentation focuses on the graduation requirements:
 - Progress so far:
- 	- Courses
-  - Funding plan
-  - Scientific progress and publication plan 	
-  - Expected graduation date
+    - Courses
+    - Funding plan
+    - Scientific progress and publication plan
+    - Expected graduation date
 
 2) The TFC gives constructive feedback on the graduation plan, research plan and the presentation skills.
+
 3) After the presentation, the PhD researcher leaves for 10-15 minutes so that the supervisor can confidentially discuss with the committee any potential issues with the PhD
+
 4) Final 10 minutes: supervisor(s) are dismissed; the PhD researcher comes back and continues confidentially with the committee to raise any supervision-related issues or concerns.
 
 ### After each meeting

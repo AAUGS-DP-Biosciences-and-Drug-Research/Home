@@ -54,6 +54,8 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - admonition
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - toc:
       permalink: true
 

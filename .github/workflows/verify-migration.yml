@@ -1,7 +1,7 @@
-# One-off check used during the migration: compares the text of the old
-# per-repo sites (pinned commits) with the new site and PDFs. Run it by hand
-# from the Actions tab. It is not run on every push, because intended text
-# edits after the migration would (correctly) make it report differences.
+# One-off check of the migration: compares the text of the old per-repo sites
+# (pinned commits) with the new site and PDFs. It checks out the migration
+# merge commit, because later intended text edits would (correctly) show up as
+# differences. Run it by hand from the Actions tab.
 name: Verify migrated content
 
 on:
@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          ref: 5ccbbb0456e2a767a57265e6c6128121aea30c99   # merge of Home#1
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"

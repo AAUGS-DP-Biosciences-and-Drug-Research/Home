@@ -29,7 +29,7 @@ If you are interested in applying to join our graduate school and doctoral progr
 
 Åbo Akademi University is a Swedish-language, multidisciplinary university in Finland with campuses in Turku and Vaasa.  
 If you are new to Finland or Turku, you may find this helpful:  
-📘 [ÅAU Survival Guide (2023–2024, PDF)](https://www.abo.fi/wp-content/uploads/2024/05/survival_guide_2023-2024.pdf)
+📘 [ÅAU Survival Guide (2026–2027, PDF)](https://www.abo.fi/wp-content/uploads/2026/09/uppdaterad-survival_guide_26-27-final.pdf)
 
 ---
 
@@ -79,21 +79,7 @@ To learn more about our doctoral programme, use the links below.
 
 </div>
 
-<div class="dp-card dp-card--soon" markdown>
-
-### Get Ready to Graduate  
-- 🌐 _Coming soon_  
-- 📄 _Coming soon_
-
-</div>
-
-<div class="dp-card dp-card--soon" markdown>
-
-### Fund your PhD studies  
-- 🌐 _Coming soon_  
-- 📄 _Coming soon_
-
-</div>
+<!-- "Get Ready to Graduate" and "Fund your PhD studies" (Coming soon) were hidden on 2026-09-26; restore the tiles from git history when the pages exist. -->
 
 <div class="dp-card" markdown>
 

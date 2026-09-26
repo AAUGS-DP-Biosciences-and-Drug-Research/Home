@@ -2,7 +2,7 @@
 
 ## 🟦 Courses in major subject or related fields (20-30 ECTS)
 
-#### Compulsary courses
+#### Compulsory courses
 - **A course on research ethics**
 - **Subject specific compulsory courses**
 
@@ -20,6 +20,6 @@
 
 ---
 
-## Useful ressources
+## Useful resources
 
 - 📝 [Skills and Competencies (DOCX)](files/Skills%20and%20competencies_v250108.docx)

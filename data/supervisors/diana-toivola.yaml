@@ -1,0 +1,50 @@
+- name: Diana Toivola
+  slug: diana-toivola
+  group: Epithelial Biology Lab
+  unit: Cell Biology
+  university: Åbo Akademi University
+  lab_website: https://toivola-lab.org/
+  cris_profile: 'https://research.abo.fi/sv/persons/diana-toivola'
+  photo: diana-toivola.jpg
+  expertise:
+  - 'Epithelial cell biology of gastrointestinal organs and related glands including the endocrine pancreas'
+  - 'Cytoskeletal intermediate filaments protein regulation and function and molecular roles in health and disease, especially simple epithelial keratins and nuclear lamins'
+  - 'Auto-immune diseases, Inflammatory bowel diseases, type I diabetes, and colorectal cancer'
+  - 'Mouse disease modelling'
+  - 'Non-invasive diagnostics development of intestinal diseases'
+  projects:
+  - 'Dysregulation of keratins in intestinal inflammation with biomarker potential'
+  - 'Noninvasive in vitro assays to detect and monitor inflammatory bowel diseases'
+  - 'A colon-specific mouse model for colorectal cancer'
+  - 'Keratins as tumor suppressors and guardians of intestinal health'
+  - 'Beta-cell cytoskeletal keratin 18 and its putative type 1 diabetes-associated variant in beta-cell function'
+  techniques:
+  - 'Mouse disease modelling, especially models of colitis, colorectal cancer and diabetes'
+  - 'Intestinal crypt isolation and organoid culture (mini-gut)'
+  - 'Isolation of islets of Langerhans and 3D culture'
+  - 'Beta-cell and colon cancer cell lines'
+  - 'Microscopy, digital histopathology and fluorescence-based imaging methods'
+  - 'Cell, molecular, biochemical methods'
+  - 'Immunoassay and non-invasive imaging methods development'
+  funding:
+  - 'Current funding: InFLAMES flagship, Business Finland, Novo Nordisk Fonden,
+    Medicinska understödsföreningen Liv och Hälsa, Diabetes Research Foundation Finland'
+  - 'Networks: Intermediate filament community, American Society for Cell Biology,
+    Gut Research Community in Finland, Gastroenterology organizations in Finland, and
+    USA'
+  publications:
+  - 'Defining a timeline of colon pathologies after keratin 8 loss: rapid crypt elongation
+    and diarrhea are followed by epithelial erosion and cell exfoliation. Am. J. Physiol.,
+    Gastro. Liver Physiol. 2024. DOI: 10.1152/ajpgi.00140.2023'
+  - 'β-cell keratin 8 maintains islet mechanical integrity, mitochondrial ultrastructure
+    and β-cell glucose transporter 2 plasma membrane targeting. 2024. Am. J. Physiol.-Cell
+    Physiol. DOI: 10.1152/ajpcell.00123.2024'
+  - 'Colonocyte keratins stabilize mitochondria and contribute to mitochondrial energy
+    metabolism. 2024. Am. J. Physiol.- Gastrointestinal Liver Physiol. DOI: 10.1152/ajpgi.00220.2023'
+  - 'Colonocyte keratin 7 expression is expressed  de novo in inflammatory bowel diseases
+    and associated with pathological changes and drug-resistance. Sci. Rep. 2022.
+   DOI: 10.1038/s41598-022-26603-2'
+  - 'Targeted deletion of keratin 8 in intestinal epithelial cells disrupts tissue
+    integrity and predisposes to tumorigenesis in the colon. Cell. Mol. Life. Sci.
+    2022. DOI: 10.1007/s00018-021-04081-5'
+  keywords: ''

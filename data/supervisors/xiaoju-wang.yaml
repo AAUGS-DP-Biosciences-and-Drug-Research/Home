@@ -1,0 +1,37 @@
+- name: Xiaoju Wang
+  slug: xiaoju-wang
+  group: Biomaterials and Drug Fabrication
+  unit: Pharmacy
+  university: Åbo Akademi University
+  lab_website: https://www.pharmscilab.fi/biomaterials-and-drug-fabrication
+  cris_profile: https://research.abo.fi/sv/persons/xiaoju-wang
+  photo: xiaoju-wang.png
+  expertise:
+  - My research focuses on harnessing the benign properties of bio-enabled plant biopolymers
+    to design sustainable and functional biomaterials for better interfacing with
+    living cells or microbes. To create effective bionanomaterials and soft matter
+    biomaterials, my research applies core methodologies such as biopolymer chemical
+    modifications, nanostructured biopolymer synthesis, and self-assembled biocolloidal
+    networks from nano- to macro-scale.
+  projects:
+  - 'MADNESS CoE-Center of Excellence in Materials-driven solutions for combating antimicrobial resistance, Åbo Akademi University Foundation, 01.01.2024-31.12.2028 (Co-PI; Center director: Prof. Jessica Rosenholm)'
+  - 'SusCellInk-Sustainable nanocellulose-based bioinks towards diverse material functionalities and therapeutic delivery of bioactive cues, Research Council of Finland (333158),  01.09.2020-31.08.2025, (PI)'
+  techniques:
+  - Chemical synthesis of nanostructured polysaccharides and polyphenols
+  - Rheology  
+  - Various additive manufacturing techniques
+  - Cell-laden 3D bioprinting for fabrication of in vitro models
+  funding:
+  - Independent PI at CoE-MADNESS, Åbo Akademi University Foundation, 01.01.2024-31.12.2028
+  - Academy Research Fellow, Research Council of Finland (333158),  01.09.2020-31.08.2025
+  publications:
+  - 'Photocurable cellulose nanofibers and their copolymers with polyacrylamide as microgels to support 3D cell cultivation. Nanoscale. 2025, DOI:
+    10.1039/D5NR00583C'
+  - 'Bioprinting Macroporous Hydrogel with Aqueous Two-Phase Emulsion-Based Bioink: In Vitro Mineralization and Differentiation Empowered by Phosphorylated Cellulose Nanofibrils. Adv. Funct.
+    Mater. 2024. DOI: 10.1002/adfm.202400431'
+  - 'Aqueous Two-Phase Emulsion Bioresin for Facile One-Step 3D Microgel-Based Bioprinting. Adv. Healthcare Mater. 2023. DOI: 10.1002/adhm.202203243'
+  - 'Evolution of Self-Assembled Lignin Nanostructure into Dendritic Fiber in Aqueous Biphasic Photocurable Resin for DLP-Printing. Adv. Funct.
+    Mater. 2024. DOI: 10.1002/adfm.202315679'
+  - 'Digital light processing (DLP) 3D-fabricated antimicrobial hydrogel with a sustainable resin of methacrylated woody polysaccharides and hybrid silver-lignin nanospheres. Green Chemistry. 2022.
+    DOI: 10.1039/D1GC03841A'
+  keywords: ''

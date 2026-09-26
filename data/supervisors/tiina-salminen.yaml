@@ -1,0 +1,50 @@
+- name: Tiina Salminen
+  slug: tiina-salminen
+  group: Structural Immunology Lab
+  unit: Biochemistry
+  university: Åbo Akademi University
+  lab_website: https://www.abo.fi/en/structural-immunology-lab/
+  cris_profile: https://research.abo.fi/en/persons/tiina-a-salminen
+  photo: tiina-salminen.png
+  photo_position: center
+  expertise:
+  - Protein biochemistry, bioinformatics, and Structural biology
+  - Protein-ligand interactions
+  - Molecular interaction mechanisms in inflammation, infection, and cancer
+  - Disease-causing genetic variation
+  - Structure-based drug design
+  - Targeted diagnostics
+  projects:
+  - Selective treatments against Borrelia infections
+  - Immunosuppressive SEFIR protein asa  target against Klebsiella infections
+  - Expanding toolbox for Clever-1-targeted oncotherapy
+  - Intercepting Siglec-9 interactions in cancer and inflammation
+  - Molecular mechanism of collagen-binding integrin activation
+  techniques:
+  - Modern facilities for protein purification and sample quality control
+  - State-of-the-art infrastructure for protein crystallization
+  - Automated imaging of protein crystallization trials
+  - In-situ diffraction testing
+  - Infrastructure for Cryo-electron microscopy sample preparation
+  - Up-to-date infrastructure for computational biology and Scientific IT Support
+  funding:
+  - Research Council Finland
+  - InFLAMES Flagship
+  - Medicinska Understödsföreningen Liv och Hälsa rf
+  - Tor, Joe och Pentti Borg Foundation
+  - 3D-BioInfo Community of ELIXIR
+  - International Network of Protein Engineering Centres (INPEC)
+  publications:
+  - 'Secreted Clever-1 modulates T cell responses and impacts cancer immunotherapy
+    efficacy. Theranostics. 2025. DOI: 10.7150/thno.110544'
+  - 'Apprehensions and emerging solutions in ML-based protein structure prediction.
+    Curr. Opin. Struct. Biol. 2024. DOI: 10.1016/j.sbi.2024.102819'
+  - 'Vascular adhesion protein-1-targeted PET imaging in autoimmune myocarditis. J.
+    Nucl. Cardiol. 2023. DOI: 10.1007/s12350-023-03371-8'
+  - 'Klebsiella pneumoniae type VI secretion system-mediated microbial competition
+    is PhoPQ controlled and reactive oxygen species dependent. PloS Pathog. 2020.
+    DOI: 10.1371/journal.ppat.1007969'
+  - 'Structural and Biomolecular Analyses of Borrelia burgdorferi BmpD Reveal a Substrate-Binding
+    Protein of an ABC-Type Nucleoside Transporter Family. Infect. Immun. 2020. DOI:
+    10.1128/IAI.00962-19'
+  keywords: ''

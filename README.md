@@ -1,62 +1,93 @@
-# Doctoral Programme in Biosciences and Drug Research
+# Doctoral Programme in Biosciences and Drug Research – website
 
-Welcome to the **unofficial** web pages for the Doctoral Programme in Biosciences and Drug Research at **Åbo Akademi University**.
+Source of the (unofficial) programme website:
 
----
+**https://aaugs-dp-biosciences-and-drug-research.github.io/Home/**
 
-## Major Subjects in the Programme
+The site is built with [Zensical](https://zensical.org) from the Markdown
+files in `docs/`. Every push to `main` rebuilds the website and all PDFs and
+publishes them automatically (GitHub Actions → `gh-pages` branch).
 
-- Biochemistry  
-- Cell Biology  
-- Environmental and Marine Biology  
-- Drug Development  
-- Pharmacy
+## Editing a page
 
-If you are interested in applying to join our graduate school and doctoral programme, follow this link for full details:  
-👉 [Apply for a doctoral study right](https://www.abo.fi/en/research-at-aau/postgraduate-and-doctoral-studies/apply-for-doctoral-studies/)
+| Page | File |
+|---|---|
+| Home (landing page) | `docs/index.md` |
+| Learning Goals | `docs/learning-goals.md` |
+| Curriculum | `docs/curriculum.md` |
+| Yearly Follow-up | `docs/yearly-followup.md` |
+| Graduation Requirements | `docs/graduation-requirements.md` |
 
----
+Open the file on GitHub, click the pencil icon, edit, and commit. Each page on
+the website also has an "Edit this page" button that opens the right file.
+Lists need a blank line before them, and nested items are indented by
+**4 spaces**.
 
-## About Åbo Akademi University
+Downloadable files (DOCX, …) go in `docs/files/`.
 
-Åbo Akademi University is a Swedish-language, multidisciplinary university in Finland with campuses in Turku and Vaasa.  
-If you are new to Finland or Turku, you may find this helpful:  
-📘 [ÅAU Survival Guide (2023–2024, PDF)](https://www.abo.fi/wp-content/uploads/2024/05/survival_guide_2023-2024.pdf)
+## Supervisors
 
----
+- One YAML file per supervisor in `data/supervisors/` (template: copy an
+  existing file). The `slug` is also the page address, so do not change it
+  for existing supervisors.
+- Photo: `data/photos/<slug>.jpg` (or `.png`). Photos are resized
+  automatically. Without a photo, the initials are shown.
+- Optional `photo_position: center` crops the thumbnail from the centre
+  instead of the top.
+- To convert a Microsoft Forms Excel export into YAML, use the notebook
+  `tools/Convert_Excel_Supervisor_Data_to_YAML.ipynb`:
+  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AAUGS-DP-Biosciences-and-Drug-Research/Home/blob/main/tools/Convert_Excel_Supervisor_Data_to_YAML.ipynb)
 
-## Documentation Categories
+## Look and feel
 
-To learn more about our doctoral programme, use the links below.
+The style follows www.abo.fi (colours of the abo2025 theme, square colour tiles,
+bold type). Everything is in `docs/assets/stylesheets/extra.css`. The
+university's own fonts are licensed through Adobe Fonts, so the open-source
+Figtree font is used instead; it is self-hosted in `docs/assets/fonts/`, so the
+site makes no requests to Google or Adobe. To show a black-and-white campus
+photo behind the title on the landing page, add `docs/assets/images/hero.jpg`
+and uncomment the `background-image` line under "Landing page hero" in
+`extra.css`.
 
-### Learning Goals  
-- 🌐 [View Online](https://aaugs-dp-biosciences-and-drug-research.github.io/LearningGoals/)  
-- 📄 [Download PDF](https://aaugs-dp-biosciences-and-drug-research.github.io/LearningGoals/Document.pdf)
+## Credits and licences
 
-### Supervisor Portfolio  
-- 🌐 [View Online](https://aaugs-dp-biosciences-and-drug-research.github.io/supervisor-portfolio/)  
-- 📄 [Download PDF](https://aaugs-dp-biosciences-and-drug-research.github.io/supervisor-portfolio/Supervisor_Portfolio.pdf)
+| What | Source | Licence |
+|---|---|---|
+| Site generator and theme | [Zensical](https://zensical.org) | MIT (bundled third-party scripts: see `assets/javascripts/LICENSE` in the built site) |
+| Font | [Figtree](https://github.com/erikdkennedy/figtree), via Fontsource, self-hosted in `docs/assets/fonts/` | SIL Open Font License 1.1 (`docs/assets/fonts/OFL.txt`) |
+| Emoji in PDFs | Noto Color Emoji (system font on the build machine) | SIL Open Font License 1.1 |
+| Åbo Akademi University logo | [abo.fi logo page](https://www.abo.fi/en/about-abo-akademi-university/for-media/the-abo-akademi-university-logo/) | © Åbo Akademi University. Used unmodified, on white, as required by the university's graphic guide ("Felanvändning": no busy/low-contrast backgrounds, no recolouring or distortion) |
+| Colours | Åbo Akademi graphic guide (2019) and www.abo.fi | Colour values only; no code, images or icons are copied from www.abo.fi |
+| Supervisor photos and texts | Submitted by the supervisors for the portfolio | © the supervisors |
 
-### Graduation Requirements  
-- 🌐 [View Online](https://aaugs-dp-biosciences-and-drug-research.github.io/Graduation_Requirements/)  
-- 📄 [Download PDF](https://aaugs-dp-biosciences-and-drug-research.github.io/Graduation_Requirements/Document.pdf)
+The university's own typefaces (Gibson, Soleil) are licensed through Adobe
+Fonts and are **not** used. The only requests a visitor's browser makes outside
+the site are to the GitHub API (repository name/version next to the "Edit these
+pages on GitHub" link); no Google, Adobe or font CDN requests.
 
-### Curriculum  
-- 🌐 [View Online](https://aaugs-dp-biosciences-and-drug-research.github.io/Curriculum/)  
-- 📄 [Download PDF](https://aaugs-dp-biosciences-and-drug-research.github.io/Curriculum/Document.pdf)
+## PDFs
 
-### PhD Follow-up Strategies  
-- 🌐 [View Online](https://aaugs-dp-biosciences-and-drug-research.github.io/Yearly_followup/)  
-- 📄 [Download PDF](https://aaugs-dp-biosciences-and-drug-research.github.io/Yearly_followup/Document.pdf)
+Built automatically from the website pages (so PDF and web text are always
+the same):
 
-### Get Ready to Graduate  
-- 🌐 _Coming soon_  
-- 📄 _Coming soon_
+- `/Home/pdf/handbook.pdf` – everything in one document, with contents
+- `/Home/pdf/<page>.pdf` – one PDF per page, and `supervisor-portfolio.pdf`
+- `/Home/Document.pdf` – the landing page (same address as before)
 
-### Fund your PhD studies  
-- 🌐 _Coming soon_  
-- 📄 _Coming soon_
+## Building locally
 
-### Additional Resources
-- 📄 [Master Documentation (PDF)](https://github.com/AAUGS-DP-Biosciences-and-Drug-Research/Master_PDF/raw/main/pdfs/master.pdf?download=1)
-- 📝 [Skills and Competencies (DOCX)](https://github.com/AAUGS-DP-Biosciences-and-Drug-Research/Yearly_followup/raw/main/Skills%20and%20competencies_v250108.docx?download=1)
+```bash
+pip install -r requirements.txt
+python scripts/gen_supervisors.py   # supervisor pages from YAML
+zensical serve                      # live preview (address printed in the terminal)
+zensical build && python scripts/build_pdf.py   # full build incl. PDFs into site/
+```
+
+WeasyPrint needs Pango (`apt install libpango-1.0-0 libpangoft2-1.0-0`).
+
+## History
+
+Until 2026 each page lived in its own repository (LearningGoals, Curriculum,
+Yearly_followup, Graduation_Requirements, supervisor-portfolio, Master_PDF).
+See [MIGRATION.md](MIGRATION.md) for how they were merged here and how text
+accuracy was verified. Retired files are kept in [`deprecated/`](deprecated/).

@@ -1,0 +1,47 @@
+- name: Riikka Puntila-Dodd
+  manual_edit: true
+  slug: riikka-puntila-dodd
+  group: Marine ecosystem ecology
+  unit: Marine Biology
+  university: Åbo Akademi University
+  cris_profile: https://research.abo.fi/en/persons/riikka-puntila-dodd
+  photo: riikka-puntila-dodd.jpg
+  photo_position: center
+  expertise:
+  - Ecosystem modelling
+  - Ecopath with Ecosim
+  - Species distribution modelling
+  - Future scenarios
+  - Baltic Sea
+  - Cumulative pressures
+  projects:
+  - GES4SEAS
+  - MIMOSA
+  - Identifying changes in coastal ecosystems – implications to
+  - Recovery trajectories (RCoF)
+  - SEADITO
+  techniques:
+  - Ecopath with Ecosim
+  - Bayesian networks
+  - Species distribution modelling
+  - Integrated trend analysis
+  - Multivariate analyses
+  funding:
+  - RCoF
+  - Horizon Europe ICES WGIAB
+  - Marine modelling network
+  - Ecopath Consortium
+  - Beyond shifting baselines-consortium
+  publications:
+  - 'Novelty, variability, and resilience: exploring adaptive cycles in a marine ecosystem under pressure. Ambio. 2025. DOI: 10.1007/s13280-025-02181-1'
+  - 'Food web robustness depends
+    on the network type and threshold for extinction. Oikos. 2025. DOI: 10.1111/oik.11139.'
+  - 'Modelling Framework to Evaluate Societal
+    Effects of Ecosystem Management. Sci Total Environ. 2023. DOI: 10.1016/j.scitotenv.2023.165508'
+  - 'Integrating diverse model
+    results into decision support for good environmental status and blue growth. Sci Total Environ. 2022.
+    DOI: 10.1016/j.scitotenv.2021.150450.'
+  - 'Food-web modeling in the Maritime
+    Spatial Planning Challenge Simulation Platform: Results from the Baltic Sea. Proc
+    Int Simulation and Gaming Ass Conf. 2021. DOI: 10.1007/978-3-030-72132-9_25'
+  keywords: ''

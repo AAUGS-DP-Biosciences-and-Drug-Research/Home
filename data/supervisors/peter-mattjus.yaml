@@ -1,0 +1,41 @@
+- name: Peter Mattjus
+  slug: peter-mattjus
+  group: Lipid Transfer Protein Research
+  unit: Biochemistry
+  university: Åbo Akademi University
+  lab_website: https://users.abo.fi/pmattjus/
+  cris_profile: https://research.abo.fi/sv/persons/peter-mattjus
+  photo: peter-mattjus.jpeg
+  expertise:
+  - The role of glycolipid transfer proteins in cells
+  - Glycosphingolipid biosynthesis
+  - Intracellular glycosphingolipid transport events
+  projects:
+  - Glycolipid transfer protein, GLTP interaction with VAP-proteins in the ER exit
+    sites
+  - The role of GLTP in demyelination
+  - Intracellular localization of GLTP
+  - Inhibitors for glycolipid binding proteins
+  techniques:
+  - Lipid biochemistry
+  - Quantitative and qualitative glycosphingo- and phospholipid analysis by high-performance
+    TLC
+  - Cell and molecular biology
+  - Fluorescence spectroscopy, steady-state and lifetime
+  - Radioisotope labeling and lipid metabolism techniques
+  funding:
+  - Medicinska understödsföreningen Liv och hälsa
+  - Borgs stiftelse
+  - COST action SPHINX member
+  publications:
+  - 'Glycolipid transfer protein knockout disrupts vesicle trafficking to the plasma
+    membrane. Journal of Biological Chemistry. 2023. DOI: 10.1016/j.jbc.2023.104607'
+  - 'Who moves the sphinx? An overview of intracellular sphingolipid transport. BBA
+    Molecular and Cell Biology of Lipids. 2021. DOI: 10.1016/j.bbalip.2021.159021'
+  - 'Glucosylceramide acyl chain length is sensed by the glycolipid transfer protein.
+    PLoS ONE. 2018. DOI: 10.1371/journal.pone.0209230'
+  - 'Alternation in the Glycolipid Transfer Protein Expression Causes Changes in the
+    Cellular Lipidome. PLoS ONE. 2014. DOI: 10.1371/journal.pone.0097263'
+  - 'Vesicular and non-vesicular transport feed distinct glycosylation pathways in
+    the Golgi. Nature. 2013. DOI: 10.1038/nature12423'
+  keywords: ''

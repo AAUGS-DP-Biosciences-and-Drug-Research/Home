@@ -1,3 +1,7 @@
-jinja2
-markdown
-weasyprint
+# Pinned so the site does not change unexpectedly; bump deliberately.
+zensical==0.0.65
+weasyprint==70.0
+pillow==12.3.0
+PyYAML==6.0.3
+beautifulsoup4==4.15.0
+pypdfium2==5.13.0

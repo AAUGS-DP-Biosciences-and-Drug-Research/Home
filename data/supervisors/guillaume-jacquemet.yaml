@@ -1,0 +1,48 @@
+- name: Guillaume Jacquemet
+  manual_edit: true
+  slug: guillaume-jacquemet
+  group: Cell Migration Lab
+  unit: Cell Biology
+  university: Åbo Akademi University
+  lab_website: https://cellmig.org/
+  cris_profile: https://research.abo.fi/en/persons/guillaume-jacquemet
+  photo: guillaume-jacquemet.jpg
+  photo_position: center
+  expertise:
+  - Cancer cell biology
+  - Cell adhesion and migration
+  - Microscopy and live imaging
+  - Image analysis
+  projects:
+  - The role of filopodia during breast cancer progression
+  - Cancer cell communication via filopodia trans- endocytosis
+  - Deciphering the mechanisms of pancreatic cancer metastasis
+  - The role of mechanosensitive calcium channels in melanoma
+  - The role of TLNRD1 in endothelium homeostasis
+  - Democratising deep learning for microscopy with ZeroCostDL4Mic
+  techniques:
+  - Microscopy (super-resolution microscopy, live imaging, traction force microscopy)
+  - Image analysis, deep learning, and computer vision
+  - Cell and molecular biology
+  - Mass spectrometry (identification of protein-protein interactions using pull-downs
+    and biotinylation-based strategy)
+  - Zebrafish embryo to study cancer biology
+  - Flow and perfusion chambers
+  funding:
+  - Sigrid Juselius Foundation
+  - Wellcome Trust
+  - Academy of Finland
+  - Finnish Cancer Foundation
+  - Inflames
+  - Turku Bioscience
+  publications:
+  - 'TLNRD1 is a CCM complex component and regulates endothelial barrier integrity.
+    J Cell Biol. 2024. DOI: 10.1083/jcb.202310030'
+  - 'CellTracksColab is a platform that enables compilation, analysis, and exploration
+    of cell tracking data. PLOS Biol. 2024. DOI: 10.1371/journal.pbio.3002740'
+  - 'MYO10-filopodia support basement membranes at preinvasive tumor boundaries. Dev
+    Cell. 2022. DOI: 10.1016/j.devcel.2022.09.016'
+  - 'TrackMate 7: Integrating state-of-the-art segmentation algorithms into tracking
+    pipelines. Nat. Methods. 2022. DOI: 10.1038/s41592-022-01507-1'
+  - 'Democratising Deep Learning for Microscopy with ZeroCostDL4Mic. Nat Commun. 2021. DOI: 10.1038/s41467-021-22518-0'
+  keywords: ''

@@ -1,0 +1,44 @@
+- name: Conny Sjöqvist
+  slug: conny-sj-qvist
+  group: Molecular Ecology Lab
+  unit: Marine Biology
+  university: Åbo Akademi University
+  lab_website: www.connysjoqvist.com
+  cris_profile: https://research.abo.fi/en/persons/conny-sj%C3%B6qvist
+  photo: conny-sj-qvist.jpg
+  expertise:
+  - Plankton ecology and evolution
+  - Experimental and molecular ecology
+  - Paleo- and resurrection biology
+  projects:
+  - Temperature adaptation in European diatom populations - AWARE
+  - Hotspots for biodiversity shifts in the Archipelago Sea - BIOSHIFT
+  - Modeling advanced primary production scenarios in coastal seas - MIMOSA
+  - 'Geochemical Dynamics of Seawater-Submarine Aquifer Interactions: Impacts on Coastal Sediments and Ecosystems'
+  - Switching the functional roles of gene expression of feeding trait plasticity in a
+    marine key species - GeneMac
+  techniques:
+  - Cell cultivation
+  - Microscopical analyses
+  - DNA and RNA sequencing
+  - Population genomics
+  - Transcriptomics
+  - Bioinformatics
+  funding:
+  - Centre for Sustainable Ocean Science
+  - Swedish Cultural Foundation
+  - European Molecular Biology Laboratory (EMBL)
+  - Traversing European Coastlines (TREC)
+  - Estonian Research Council
+  publications:
+  - 'Biodiversity of microorganisms in the Baltic Sea: The power of novel methods
+    in the identification of marine microbes. FEMS Microbiology Reviews. 2024. DOI: 10.1093/femsre/fuae024'
+  - 'Temperature optima of a natural diatom population increases as global warming
+    proceeds. Nature Climate Change. 2024. DOI: 10.1038/s41558-024-01981-9'
+  - 'Toward phytoplankton parasite detection using autoencoders. Machine Vision and
+    Applications. 2023. DOI: 10.1007/s00138-023-01450-x'
+  - 'Strain-specific transcriptional responses overshadow salinity effects in a marine
+    diatom sampled along the Baltic Sea salinity cline. ISME Journal. 2022. DOI: 10.1038/s41396-022-01230-x'
+  - 'Ecologically coherent population structure of uncultivated bacterioplankton. ISME
+    Journal. 2021. DOI: 10.1038/s41396-021-00985-z'
+  keywords: ''

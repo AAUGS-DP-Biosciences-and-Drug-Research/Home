@@ -1,0 +1,26 @@
+# One-off check used during the migration: compares the text of the old
+# per-repo sites (pinned commits) with the new site and PDFs. Run it by hand
+# from the Actions tab. It is not run on every push, because intended text
+# edits after the migration would (correctly) make it report differences.
+name: Verify migrated content
+
+on:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y libpango-1.0-0 libpangoft2-1.0-0 fonts-noto-core fonts-noto-color-emoji fonts-dejavu-core
+      - run: pip install -r requirements.txt
+      - run: python scripts/gen_supervisors.py
+      - run: zensical build --strict
+      - run: python scripts/build_pdf.py
+      - run: python scripts/verify_content.py

@@ -1,0 +1,42 @@
+- name: Tapani Viitala
+  slug: tapani-viitala
+  group: Pharmaceutical Biophysics
+  unit: Pharmacy
+  university: Åbo Akademi University
+  cris_profile: https://research.abo.fi/fi/persons/tapani-viitala
+  photo: tapani-viitala.jpg
+  expertise:
+  - Pharmaceutical nanotechnology
+  - Surface and colloid chemistry
+  - Physico-chemical characterization
+  - Drug delivery and targeting
+  - Biomolecular interactions
+  - Real-time label-free living cell sensing
+  - 3D printing
+  projects:
+  - 'NAP4DIVE: Non-Animal Platform for Nanoparticle-Based Delivery Across the Blood-Brain
+    Barrier Interface with Vehicle Evolution - EU Horizon RIA'
+  - Nordic Pharmaceutical Translation and Innovation - Nordforsk
+  - 'MADNESS: Centre of Excellence in Materials-driven solutions for combating
+    antimicrobial resistance - Åbo Akademi Foundation'
+  - Data integrated platforms for the design, production, and testing of therapeutics
+    (project in Helsinki) - Business Finland
+  techniques:
+  - Multi-Parametric Surface Plasmon Resonance
+  - Impedance-based Quartz Crystal Microbalance
+  - LigandTracer
+  - Waveguide scattering microscopy
+  funding:
+  - EU Horizon RIA
+  - NordForsk
+  - Åbo Akademi Foundation
+  - Business Finland
+  publications:
+  - 'Semi-solid extruded tablets for personalized pediatric use: Development, Quality control and In-Vitro Assessment of Enteral Tube Administration. European Journal of Pharmaceutical
+    Sciences. 2025. DOI: 10.1016/j.ejps.2025.107122'
+  - 'Monitoring silica core@shell nanoparticle-bacterial film interactions using the multi-parametric surface plasmon resonance technique. Smart
+    Medicine 2. 2023. DOI: 10.1002/SMMD.20230012'
+  - 'In Vitro Characterization and Real-Time Label-Free Assessment of the Interaction of Chitosan-Coated Niosomes with Intestinal Cellular Monolayers. Langmuir. 2023. DOI: 10.1021/acs.langmuir.3c00728'
+  - 'Protein A/G-based surface plasmon resonance biosensor for regenerable antibody-mediated capture and analysis of nanoparticles. Colloids and Surfaces A: Physicochemical and Engineering Aspects. 2022. DOI: 10.1016/j.colsurfa.2022.130015'
+  - 'In situ analysis of liposome hard and soft protein corona structure and composition in a single label-free workflow. Nanoscale. 2020. DOI: 10.1039/C9NR08186K'
+  keywords: ''

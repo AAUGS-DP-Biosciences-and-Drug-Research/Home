@@ -1,0 +1,35 @@
+- name: Eleanor Coffey
+  slug: eleanor-coffey
+  group: Protein Kinase Function in the Brain
+  unit: Cell Biology
+  university: Åbo Akademi University
+  lab_website: https://bioscience.fi/research/kinase-function-in-brain/
+  cris_profile: https://research.abo.fi/en/persons/eleanor-coffey
+  photo: eleanor-coffey.jpg
+  expertise:
+  - 'Our lab investigates the molecular mechanisms underlying brain disorders, with
+    specialized expertise in the signaling pathways regulated by the protein kinases
+    JNK and LRRK2. We have uncovered novel insights into how these kinases influence
+    anxiety-like behaviors and neuronal death in Parkinson’s disease. By integrating
+    animal and cellular models with clinical proteomics, we aim to deepen our understanding
+    of the biology behind these conditions.'
+  projects:
+  - 'We focus on Parkinson’s disease, using deep proteomic profiling of blood cells
+    to detect pre-symptomatic changes. This includes developing new informatics to
+    decode the “dark proteome” of cohorts like PPMI to identify early biomarkers.
+    We also study depression cohorts to find markers predicting treatment response.
+    Together, this work offers insight into immune cell roles in brain disorders.'
+  techniques:
+  - Our lab combines fluorescence imaging and proteomics methods with neurobiology,
+    biochemistry, and data science to reach our goals.
+  funding:
+  - These projects are funded by the Michael J Fox Foundation, the Research Council
+    of Finland, EU ERANET, Immudocs, and Inflames. We participate in international networks
+    in the field of neuroscience, including informatics for neuroscience.
+  publications:
+  - 'PhosPiR: an automated phosphoproteomic pipeline in R. Briefings in Bioinformatics. 2022. DOI: 10.1093/bib/bbab510'
+  - 'Protein synthesis is suppressed in sporadic and familial Parkinson’s disease by LRRK2. FASEB Journal. 2020. DOI: 10.1096/fj.202001046R'
+  - 'JNK1 controls adult hippocampal neurogenesis and imposes cell-autonomous control of anxiety behaviour from the neurogenic niche. Molecular Psychiatry. 2018. DOI: 10.1038/mp.2016.203'
+  - 'Nuclear and cytosolic JNK signalling in neurons. Nature Reviews Neuroscience. 2014. DOI: 10.1038/nrn3729' 
+  - 'Phosphorylation of SCG10/stathmin-2 determines multipolar stage exit and neuronal migration rate. Nature Neuroscience. 2011. DOI: 10.1038/nn.2755'
+  keywords: ''

@@ -1,0 +1,32 @@
+- name: Mikael von Numers
+  slug: mikael-von-numers
+  group: Mikael von Numers
+  unit: Marine Biology
+  university: Åbo Akademi University
+  lab_website:
+  cris_profile: https://research.abo.fi/sv/persons/mikael-von-numers
+  photo: mikael-von-numers.jpg
+  expertise:
+  - Island biogeography
+  - Long-term changes
+  - Distribution patterns among plants and birds
+  - Species-environment interactions
+  projects:
+  - My main research interests include long-term changes (among both plants and birds)
+    and biogeographical questions concerning species distribution patterns in relation
+    to the environment.
+  techniques:
+  - Fieldwork, GIS
+  funding:
+  - mainly domestic sources such as SKF
+  publications:
+  - 'Predation risk and landscape context
+    shape reproductive output of an endangered sea duck from two subpopulations with
+    contrasting predation risk. J. of Ornithology. 2023. DOI: 10.1007/s10336-022-02036-6'
+  - 'Island properties dominate species traits in determining plant colonizations in an archipelago system. Ecography. 2020. DOI: 10.1111/ecog.05013'
+  - 'Population changes in the declining Turnstone (Arenaria interpres) and other waders in the northern Baltic Sea based
+    on past and current breeding observations. Ornis Fenn. 2020. DOI: 10.51812/of.133973'
+  - 'Refining predictions of metacommunity dynamics by modelling species non-independence. Ecology. 2020. DOI: 10.1002/ecy.3067'
+  - 'Distribution patterns and long-term changes in vascular plants of non-littoral areas in the SW archipelago of Finland. Part VII. Poaceae
+    and synthesis. 2017. DOI: 10.5735/085.054.0607'
+  keywords: ''

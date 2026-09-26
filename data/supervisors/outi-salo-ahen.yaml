@@ -1,0 +1,46 @@
+- name: Outi Salo-Ahen
+  manual_edit: true
+  slug: outi-salo-ahen
+  group: Computer-aided drug design (CADD) group
+  unit: Pharmacy
+  university: Åbo Akademi University
+  lab_website: https://www.pharmscilab.fi/computer-aided-drug-design
+  cris_profile: https://research.abo.fi/sv/persons/outi-salo-ahen
+  photo: outi-salo-ahen.jpg
+  photo_position: center
+  expertise:
+  - Computer-aided drug design
+  - Molecular modeling
+  - Biomolecular simulations
+  - Computational chemistry/biology and computational pharmaceutics
+  - Structural bioinformatics
+  - Immunoinformatics
+  projects:
+  - Discovery and design of novel antivirulence agents / antimicrobial compounds /
+    anticancer drugs
+  - Computational analysis of pharmaceutical materials (e.g., nanoparticles, polymers)
+  techniques:
+  - Comparative protein modeling
+  - Molecular docking
+  - Molecular dynamics simulations
+  - Molecular interaction analysis
+  - Materials science modeling
+  funding:
+  - Tor, Joe & Pentti Memorial Fund
+  - Svenska Kulturfonden
+  - Research Council of Finland
+  - EU-OPENSCREEN
+  publications:
+  - 'Microfluidics-Enabled Core/Shell Nanostructure Assembly: Understanding
+    Encapsulation Processes via Particle Characterization and Molecular Dynamics.
+    Adv Colloid Interface Sci. 2025. DOI: 10.1016/j.cis.2025.103400'
+  - 'Insights Into Molecular Interactions and Biological Effect of
+    Natural Stilbenoids at the TRPA1 ion channel. ChemMedChem. 2024. DOI: 10.1002/cmdc.202400501'
+  - 'Development of Aptamer-DNAzyme based metal-nucleic acid frameworks
+    for gastric cancer therapy. Nat Commun. 2024. DOI: 10.1038/s41467-024-48149-9.'
+  - 'Isolation and functional analysis of phage-displayed antibody fragments
+    targeting the staphylococcal superantigen-like proteins. MicrobiologyOpen. 2023. DOI: doi.org/10.1002/mbo3.1371'
+  - 'The discovery of Zika virus NS2B-NS3 inhibitors with antiviral activity
+    via an integrated virtual screening approach. Eur J Pharm Sci. 2022. DOI:
+    10.1016/j.ejps.2022.106220'
+  keywords: ''

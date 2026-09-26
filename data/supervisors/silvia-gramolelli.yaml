@@ -1,0 +1,38 @@
+- name: Silvia Gramolelli
+  slug: silvia-gramolelli
+  group: Viral Oncogenesis
+  unit: Cell Biology
+  university: Åbo Akademi University
+  lab_website: https://viraloncor.wordpress.com/
+  cris_profile: https://research.abo.fi/sv/persons/silvia-gramolelli/publications/
+  photo: silvia-gramolelli.jpg
+  expertise:
+  - Gene expression
+  - Chromatin remodelling
+  - Viral reactivation from latency
+  - Cellular transformation
+  projects:
+  - Role of somatic mutations in Epstein-Barr virus-induced oncogenesis and drug
+    resistance
+  - Role of stress-related transcription factors in oncogenic herpesvirus persistence
+    and gene expression
+  - New diagnostic tools based on DNA nanotechnology to detect viral genomic sequences
+  techniques:
+  - Patient-derived organoids
+  - Lentiviral production and transduction
+  - Chromatin IP
+  - Proteomics
+  funding:
+  - Research Council of Finland
+  - Sigrid Juselius
+  - Finnish Cultural Foundation
+  - Mary & George Ehrnrooth Foundation
+  - Suomen Tiedeseura
+  - InFLAMES
+  publications:
+  - 'Heat shock factor 2 regulates oncogenic gamma-herpesvirus gene expression by remodeling the chromatin at the ORF50 and BZLF1 promoter. PLoS Pathog. 2025. DOI: 10.1371/journal.ppat.1013108'
+  - 'DLL4/Notch3/WNT5B axis mediates bidirectional prometastatic crosstalk between melanoma and lymphatic endothelial cells. JCI Insight. 2024. DOI: 10.1172/jci.insight.171821'
+  - 'Oncogenic Herpesvirus Engages Endothelial Transcription Factors SOX18 and PROX1 to Increase Viral Genome Copies and Virus Production. Cancer Res. 2020. DOI: 10.1158/0008-5472.CAN-19-3103'
+  - 'Kaposis Sarcoma-Associated Herpesvirus Lytic Replication Is Independent of Anaphase-Promoting Complex Activity. Journal of Virology. 2020. DOI: 10.1128/JVI.02079-19'
+  - 'High tissue MMP14 expression predicts worse survival in gastric cancer, particularly with a low PROX1. Cancer Medicine. 2019. DOI: 10.1002/cam4.2576'
+  keywords: ''

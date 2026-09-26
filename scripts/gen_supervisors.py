@@ -26,7 +26,6 @@ IMG_OUT = ROOT / "docs" / "assets" / "images" / "supervisors"
 LOGO = "AboAkademiUniversity.png"
 PHOTO_WIDTH = 600
 REPO = "https://github.com/AAUGS-DP-Biosciences-and-Drug-Research/Home"
-ISSUE_FORM = "supervisor-profile.yml"  # .github/ISSUE_TEMPLATE/
 
 SECTIONS = [
     ("expertise", "Areas of Expertise"),
@@ -154,21 +153,38 @@ def make_photo(slug):
     return name
 
 
+def issue_body(s):
+    """Plain-text profile the supervisor edits in the new issue."""
+    s = s or {}
+    lines = [
+        "<!-- Edit what should change, then click Create. Leave everything that is"
+        " correct as it is. One item per line in the lists. To send a new photo,"
+        " drag it into this box. -->",
+        "",
+    ]
+    fields = [("Name", s.get("name")), ("Group name", s.get("group")), ("Subject", s.get("unit")),
+              ("University", s.get("university", "Åbo Akademi University")),
+              ("Lab website", s.get("lab_website")), ("AboCRIS profile", s.get("cris_profile"))]
+    lines += [f"**{label}:** {value or ''}  " for label, value in fields]
+    lists = SECTIONS + [("publications", "Selected Publications (up to 5, each ending with DOI: 10.xxxx/…)")]
+    for key, title in lists:
+        lines += ["", f"### {title}"]
+        items = [" ".join(str(i).split()) for i in s.get(key) or []]
+        lines += [f"- {i}" for i in items] or ["- "]
+    lines += ["", "### Keywords", str(s.get("keywords") or ""), "", "### Anything else?", ""]
+    return "\n".join(lines)
+
+
 def suggest_url(s=None):
-    """New-issue link that opens the profile form, prefilled with the profile."""
-    q = {"template": ISSUE_FORM}
-    if s:
-        q["title"] = f"Profile update: {s['name']}"
-        fields = {
-            "name": s.get("name"), "group": s.get("group"), "subject": s.get("unit"),
-            "university": s.get("university"), "lab_website": s["lab_website"],
-            "cris_profile": s["cris_profile"], "keywords": s.get("keywords"),
-        }
-        fields.update({key: "\n".join(map(str, s.get(key) or [])) for key, _ in SECTIONS})
-        fields["publications"] = "\n".join(" ".join(str(p).split()) for p in s.get("publications") or [])
-        q.update({k: str(v) for k, v in fields.items() if v})
-    else:
-        q["title"] = "New supervisor profile: "
+    """New-issue link, prefilled with the current profile (blank for a new one).
+
+    Uses the plain `title`/`body` parameters: GitHub does not reliably prefill
+    issue-form fields from the URL. The label is added by
+    .github/workflows/label-profile-issues.yml (a link can only set labels for
+    people with triage rights).
+    """
+    title = f"Profile update: {s['name']}" if s else "New supervisor profile: "
+    q = {"title": title, "body": issue_body(s)}
     return f"{REPO}/issues/new?{urllib.parse.urlencode(q, quote_via=urllib.parse.quote)}"
 
 

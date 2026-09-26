@@ -35,12 +35,12 @@ Downloadable files (DOCX, …) go in `docs/files/`.
 - Optional `photo_position: center` crops the thumbnail from the centre
   instead of the top.
 - Supervisors can request changes themselves: each profile page has a
-  **Suggest changes to this profile** button. It opens a GitHub issue form
-  (`.github/ISSUE_TEMPLATE/supervisor-profile.yml`) already filled in with the
-  current profile, so they only edit what should change. The issue gets the
-  label `supervisor profile`; apply the change to the YAML file and close the
-  issue. The supervisor overview page links to a blank form for new
-  supervisors. The pencil icon on a profile opens its YAML file.
+  **Suggest changes to this profile** button. It opens a new GitHub issue whose
+  text is the current profile, so they only edit what should change. The
+  supervisor overview page links to a blank version for new supervisors.
+  These issues get the label `supervisor profile` automatically
+  (`.github/workflows/label-profile-issues.yml`); apply the change to the YAML
+  file and close the issue. The pencil icon on a profile opens its YAML file.
 - To convert a Microsoft Forms Excel export into YAML, use the notebook
   `tools/Convert_Excel_Supervisor_Data_to_YAML.ipynb`:
   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AAUGS-DP-Biosciences-and-Drug-Research/Home/blob/main/tools/Convert_Excel_Supervisor_Data_to_YAML.ipynb)

@@ -27,5 +27,4 @@ A doctoral degree unlocks many exciting career opportunities. Graduates actively
 
 En doktorsexamen möjliggör många spännande karriärmöjligheter. De utexaminerade forskarna formar aktivt innovationer inom den akademiska världen och inom den offentliga och privata sektorn, i Finland och globalt. De driver genombrott i bioteknik- och läkemedelsföretag, fungerar som inflytelserika experter i ministerier och forskningsinstitut och leder transformativ forskning vid toppuniversitet. Dessutom skyddar de immateriella rättigheter vid patentbyråer, styr administrationen av högre utbildning och utmärker sig inom vetenskaplig publicering, journalistik och entreprenörskap.
 
-[Swedish version VERY much in the works still!]
 

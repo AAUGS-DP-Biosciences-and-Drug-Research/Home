@@ -74,11 +74,17 @@ Supervisor slugs are kept exactly as before (including the mangled ones such as
 - [x] CI workflow (`publish.yml`): build on every push/PR, deploy only from `main`
 
 ### Phase 2 – Go live (manual: merge the Home PR)
-- [ ] Merge Home PR → site at `/Home/` is replaced in place
-- [ ] Check the live site; old sites still up at this point
+- [x] Merge Home PR → site at `/Home/` is replaced in place
+      (AAUGS-DP-Biosciences-and-Drug-Research/Home#1, merge commit `5ccbbb0`, 2026-09-26)
+- [x] Check the live site: all pages, supervisor profiles, PDFs, DOCX and fonts
+      return 200; Figtree loads in the browser and is embedded in the CI-built PDFs
 
 ### Phase 3 – Redirect the old sites (merge each old repo's PR, *after* Phase 2)
-Prepared on the same branch name in each repo:
+Merged on 2026-09-26: LearningGoals#1, Curriculum#1, Yearly_followup#1,
+Graduation_Requirements#1, supervisor-portfolio#19, Master_PDF#1, .github#1.
+Checked live: all 33 old page addresses redirect to the matching new page
+(anchors kept), the 6 old PDF addresses serve the "moved" notice, raw file
+download links still work, and the org profile has no old links left.
 - [x] LearningGoals, Curriculum, Yearly_followup, Graduation_Requirements:
       old build workflow replaced by one that publishes a redirect page and a
       one-page "this document has moved" `Document.pdf`
@@ -92,7 +98,7 @@ Prepared on the same branch name in each repo:
 ### Phase 4 – Clean-up (manual)
 - [ ] Ask the programme office which external pages link to the old URLs and update them
 - [ ] Archive (do not delete) the old repositories, starting with `template` as a test
-- [ ] Move open issue supervisor-portfolio#2 ("Fix the publication formatting") to Home
+- [x] Move open issue supervisor-portfolio#2 ("Fix the publication formatting") to Home
 
 ## Verification result
 
@@ -123,11 +129,20 @@ commits, with the new build:
 `deprecated/` keeps the old consolidated `master.pdf` (from Master_PDF) and
 `PhD_ECTS_Tracker_Categories_v4.xlsx` (from Curriculum). Not published.
 
-## Things deliberately *not* changed in the text (fix later, separately)
+## Text fixes after the migration (2026-09-26, separate PR)
+
+Kept verbatim during the migration, then fixed on their own so the changes are
+easy to review:
 
 - Curriculum: "Compulsary courses" → "Compulsory"; "Useful ressources" → "resources"
-- Yearly follow-up: "Useful ressources"; "Individual Study Plan (ISP based on…" missing ")";
-  "Startup (first 3 months" and "During each TFC meeting (≤ 90 min" missing ")";
-  "PhD  researcher" double space
-- Home: the ÅAU Survival Guide link is the 2023–2024 edition, while the org
-  profile README already links a 2024–2025 edition (Adobe link) – pick one
+- Yearly follow-up: "Useful ressources" → "resources"; missing ")" added in
+  "Individual Study Plan (ISP) based on…", "Startup (first 3 months)" and
+  "During each TFC meeting (≤ 90 min)"; double space in "PhD researcher"
+- Learning Goals: removed the note "[Swedish version VERY much in the works still!]"
+- Home: ÅAU Survival Guide link updated to the 2026–2027 edition on abo.fi (the
+  2023–2024 link had stopped working); "Get Ready to Graduate" and "Fund your
+  PhD studies" ("Coming soon") tiles hidden until those pages exist
+
+`scripts/verify_content.py` checks the migration itself, so the *Verify
+migrated content* workflow runs it on the migration commit (`5ccbbb0`). On
+later commits it would report exactly these intended edits.

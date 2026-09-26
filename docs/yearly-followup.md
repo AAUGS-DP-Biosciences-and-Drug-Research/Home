@@ -1,12 +1,12 @@
 # Yearly follow-up during your PhD studies
 
-## Useful ressources
+## Useful resources
 
 - 📝 [Skills and Competencies (DOCX)](files/Skills%20and%20competencies_v250108.docx)
 
 ## Study Right & Initial ISP
 - Apply for study rights via study.info.
-- After acceptance and at the start of the doctoral studies, the PhD researcher has 3 months to update the Individual Study Plan (ISP based on the document used to apply for the study rights.
+- After acceptance and at the start of the doctoral studies, the PhD researcher has 3 months to update the Individual Study Plan (ISP) based on the document used to apply for the study rights.
 
 ## Annual ISP Update & Follow-Up Committee
 - The ISP must be updated once a year.
@@ -56,7 +56,7 @@
 
 ## Quick Checklists
 
-### Startup (first 3 months
+### Startup (first 3 months)
 
 - [ ] Update ISP based on the application documents 
 - [ ] Recruit two TFC members (internal and/or external) with supervisor(s)
@@ -67,13 +67,13 @@
 - [ ] Share ISP with TFC and supervisor(s) 
 - [ ] Circulate agenda and materials
 
-### During each TFC meeting (≤ 90 min
+### During each TFC meeting (≤ 90 min)
 
 - [ ] Graduation requirements & target date 
 - [ ] Progress (courses, research) 
 - [ ] Publication plan 
 - [ ] Funding plan 
-- [ ] 10 minutes without the PhD  researcher (confidential)
+- [ ] 10 minutes without the PhD researcher (confidential)
 - [ ] Last 10 minutes without main supervisor(s) (confidential)
 
 

@@ -183,6 +183,7 @@ body, input, select { font-family: "Figtree", system-ui, -apple-system, "Segoe U
   .dp-profile { flex-direction: column; align-items: center; text-align: center; }
 }
 .dp-back { margin-top: 2rem; text-align: center; }
+.dp-suggest { margin-top: 2rem; }
 .dp-pdf-link { margin: 0.5rem 0 0; }
 .md-typeset a.dp-person, .md-typeset a.dp-person:hover { text-decoration: none; }
 .dp-person__initials {

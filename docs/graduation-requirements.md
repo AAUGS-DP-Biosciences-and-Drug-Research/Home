@@ -15,6 +15,7 @@ A licentiate dissertation must include **at least one article**.
 In addition to what is outlined in this procedure, doctoral programmes may provide programme-specific guidelines for article-based dissertations.
 
 The following are considered scientific articles:
+
 - Published articles  
 - Articles accepted for publication  
 - Unpublished manuscripts that have undergone peer review or been accepted for publication  

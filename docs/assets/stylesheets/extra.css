@@ -117,8 +117,8 @@ body, input, select { font-family: "Figtree", system-ui, -apple-system, "Segoe U
   background: var(--tile-bg); color: var(--tile-fg);
   transition: transform 120ms ease, filter 120ms ease;
 }
-.dp-card:nth-child(5n+2) { --tile-bg: var(--dp-yellow); --tile-fg: var(--dp-ink); }
-.dp-card:nth-child(5n+3) { --tile-bg: var(--dp-teal);   --tile-fg: var(--dp-ink); }
+.dp-card:nth-child(5n+2) { --tile-bg: var(--dp-yellow); --tile-fg: #20201f; }
+.dp-card:nth-child(5n+3) { --tile-bg: var(--dp-teal);   --tile-fg: #20201f; }
 .dp-card:nth-child(5n+4) { --tile-bg: var(--dp-navy);   --tile-fg: #fff; }
 .dp-card:nth-child(5n+5) { --tile-bg: var(--dp-wine);   --tile-fg: #fff; }
 .dp-card:hover { transform: translateY(-2px); filter: brightness(1.05); }

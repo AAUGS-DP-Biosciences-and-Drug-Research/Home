@@ -80,7 +80,7 @@ the same):
 pip install -r requirements.txt
 python scripts/gen_supervisors.py   # supervisor pages from YAML
 zensical serve                      # live preview (address printed in the terminal)
-zensical build && python scripts/build_pdf.py   # full build incl. PDFs into site/
+zensical build && python scripts/add_dates.py && python scripts/build_pdf.py   # full build incl. dates and PDFs
 ```
 
 WeasyPrint needs Pango (`apt install libpango-1.0-0 libpangoft2-1.0-0`).

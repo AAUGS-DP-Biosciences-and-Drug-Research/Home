@@ -15,6 +15,7 @@ import sys
 from pathlib import Path
 from urllib.parse import unquote, urljoin, urlparse
 
+import segno
 import yaml
 from bs4 import BeautifulSoup
 from weasyprint import CSS, HTML
@@ -97,6 +98,14 @@ table { border-collapse: collapse; } td, th { border: 1px solid #ccc; padding: 3
 span.dp-profile__photo { display: block; background: #b8161d; color: #fff; font-size: 26pt; font-weight: 700; text-align: center; line-height: 95pt; }
 .dp-profile__info h1 { font-size: 1.6em; }
 .dp-profile__info p { margin: 0.05em 0; }
+/* QR codes to the live pages (for printed copies) */
+.qr { float: right; width: 16mm; margin: 0 0 2mm 4mm; text-align: center; text-decoration: none; }
+.qr img { display: block; width: 16mm; height: 16mm; }
+.qr span { display: block; font-size: 5.5pt; color: #777; margin-top: 1mm; line-height: 1.1; }
+.qr--cover { float: none; display: block; width: 28mm; margin: 14mm auto 0; }
+.qr--cover img { width: 28mm; height: 28mm; }
+.qr--cover span { font-size: 8pt; }
+.cols2 .qr { column-span: all; }
 /* cover + contents */
 .cover { page: cover; text-align: center; padding-top: 55mm; }
 .cover img { width: 32mm; }
@@ -111,7 +120,14 @@ span.dp-profile__photo { display: block; background: #b8161d; color: #fff; font-
 """
 
 
-def article(page):
+def qr(url, label="Online version", cls="qr"):
+    """Small vector QR code linking to the live web page (for printed copies)."""
+    svg = segno.make(url, error="m").svg_data_uri(scale=4, border=0, dark="#20201f")
+    return (f'<a class="{cls}" href="{url}"><img src="{svg}" alt="QR code: {url}">'
+            f'<span>{label}</span></a>')
+
+
+def article(page, with_qr=True):
     """Return a deep copy of the <article> of a built page, links made absolute."""
     path = SITE / page / "index.html"
     soup = BeautifulSoup(path.read_text(encoding="utf-8"), "html.parser")
@@ -127,8 +143,12 @@ def article(page):
     for a in art.select(".dp-profile__info a[href]"):
         if a.get_text(strip=True) == "link":
             a.string = re.sub(r"^https?://(www\.)?", "", a["href"]).rstrip("/")
+    if with_qr:  # QR code to this page on the live site, top-right of the section
+        art.insert(0, BeautifulSoup(qr(page_url), "html.parser"))
     for img in art.select("img[src]"):
         src = img["src"]
+        if src.startswith("data:"):
+            continue
         if not urlparse(src).scheme:
             local = (path.parent / unquote(src)).resolve()
             img["src"] = local.as_uri()
@@ -274,7 +294,7 @@ def main():
     updated = content_date()
     cover = (
         f'<div class="cover"><img src="{logo}" alt=""><h1>{TITLE}</h1>'
-        f"<p>Åbo Akademi University</p><p>{SITE_URL}</p>"
+        f"<p>Åbo Akademi University</p><p>{SITE_URL}</p>{qr(SITE_URL, 'Scan for the website', 'qr qr--cover')}"
         f"<p>Last updated: {updated.day} {updated.strftime('%B %Y')}</p></div>"
     )
     toc, body = [], []

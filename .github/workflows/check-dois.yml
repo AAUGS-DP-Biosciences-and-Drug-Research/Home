@@ -1,0 +1,48 @@
+# Monthly check of every supervisor publication against its DOI registry
+# (resolves, title matches, supervisor is an author, not retracted).
+# Opens an issue, or comments on the open one, when something needs attention.
+name: Check publication DOIs
+
+on:
+  schedule:
+    - cron: "17 6 1 * *"   # 06:17 UTC on the 1st of every month
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Check DOIs
+        id: check
+        run: python scripts/check_dois.py --report doi-report.md
+        continue-on-error: true
+
+      - name: Open or update the issue
+        if: steps.check.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          title="Publication check: DOIs need attention"
+          body="$(cat doi-report.md)
+
+          _Found by the monthly [Check publication DOIs](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) workflow._"
+          number=$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number')
+          if [ -n "$number" ]; then
+            gh issue comment "$number" --body "$body"
+          else
+            gh issue create --title "$title" --body "$body"
+          fi

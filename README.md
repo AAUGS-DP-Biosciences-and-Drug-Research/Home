@@ -54,6 +54,7 @@ and uncomment the `background-image` line under "Landing page hero" in
 | What | Source | Licence |
 |---|---|---|
 | Site generator and theme | [Zensical](https://zensical.org) | MIT (bundled third-party scripts: see `assets/javascripts/LICENSE` in the built site) |
+| QR codes | [segno](https://github.com/heuer/segno) | BSD |
 | Font | [Figtree](https://github.com/erikdkennedy/figtree), via Fontsource, self-hosted in `docs/assets/fonts/` | SIL Open Font License 1.1 (`docs/assets/fonts/OFL.txt`) |
 | Emoji in PDFs | Noto Color Emoji (system font on the build machine) | SIL Open Font License 1.1 |
 | Åbo Akademi University logo | [abo.fi logo page](https://www.abo.fi/en/about-abo-akademi-university/for-media/the-abo-akademi-university-logo/) | © Åbo Akademi University. Used unmodified, on white, as required by the university's graphic guide ("Felanvändning": no busy/low-contrast backgrounds, no recolouring or distortion) |
@@ -73,6 +74,19 @@ the same):
 - `/Home/pdf/handbook.pdf` – everything in one document, with contents
 - `/Home/pdf/<page>.pdf` – one PDF per page, and `supervisor-portfolio.pdf`
 - `/Home/Document.pdf` – the landing page (same address as before)
+
+Each section fits on one page where possible, all links are clickable, and every
+page carries a QR code to its live web page, so printed copies lead to the
+current version.
+
+## Publication check
+
+`scripts/check_dois.py` checks every supervisor publication against its DOI
+registry: the DOI resolves, the title matches, the supervisor is an author and
+the article is not retracted. The *Check publication DOIs* workflow runs it on
+the 1st of every month and opens (or updates) an issue when something needs
+attention. Run it by hand from the Actions tab, or locally with
+`python scripts/check_dois.py`.
 
 ## Building locally
 

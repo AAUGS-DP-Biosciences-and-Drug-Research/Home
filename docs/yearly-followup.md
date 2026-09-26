@@ -5,11 +5,12 @@
 - 📝 [Skills and Competencies (DOCX)](files/Skills%20and%20competencies_v250108.docx)
 
 ## Study Right & Initial ISP
-- Apply for study rights via study.info.
+- Apply for study rights via [Studieinfo.fi](https://studyinfo.fi/).
 - After acceptance and at the start of the doctoral studies, the PhD researcher has 3 months to update the Individual Study Plan (ISP) based on the document used to apply for the study rights.
+- Every PhD researcher has at least two supervisors, one of whom is the responsible supervisor (a docent or equivalent) ([Regulation on Doctoral Studies](https://www.abo.fi/wp-content/uploads/2025/11/regulation-on-doctoral-studies.pdf), 4.4).
 
 ## Annual ISP Update & Follow-Up Committee
-- The ISP must be updated once a year.
+- The ISP must be updated once a year, at the end of the autumn semester (unless the doctoral programme decides otherwise), and the responsible supervisor holds a follow-up and development meeting with the PhD researcher at least once a year ([Regulation on Doctoral Studies](https://www.abo.fi/wp-content/uploads/2025/11/regulation-on-doctoral-studies.pdf), 4.3).
 - As part of the yearly follow-up, the PhD researcher recruits a Thesis Follow-Up Committee (TFC).
     - **Aim**: Promote successful progress of the thesis by providing subject matter and implementation expertise. If necessary, the study plan and research plan may be updated in response to the committee’s discussions.
     - **Composition** (recommended): 2 members (internal to AAU and/or external) + the supervisor(s).

@@ -38,7 +38,7 @@ Within our doctoral programme, we **recommend** the following to emphasize **qua
 
 - A **typical thesis consists of two high-quality papers**, with **at least one** paper as a **first-author** publication.  
 - **≥50%** of the included work should be **published** (or accepted).  
-- The decision to proceed to the **PhD defence** is made by the **supervisor** and the **head of subject**.  
+- The decision to submit the thesis for **preliminary examination** is made by the **supervisor** and the **head of subject**; permission for the **public defence** is granted by the **head of department** based on the preliminary examiners' statements.  
 - For each manuscript included in the thesis, the **contribution of the PhD researcher must be clearly explained and justified**:
   - Avoid vague statements.  
   - **List specific figure panels** and contributions (**data generation**, **analysis**, etc.)  

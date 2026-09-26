@@ -18,6 +18,15 @@
 - **University pedagogics courses**
 - **Language courses** (**max 5 ECTS**)
 
+## Studying at other universities
+
+- Studies may also be completed at other universities.
+- Through the **Doctoral+** (Tohtori+) network, doctoral courses at other Finnish universities are free of charge; add the course to your study plan in Peppi. A separate agreement also covers University of Turku courses outside the network. See [Doctoral studies at ÅAU](https://www.abo.fi/en/research-at-aau/postgraduate-and-doctoral-studies/).
+
+## Licentiate degree
+
+- A licentiate degree (30 ECTS of studies and a licentiate thesis) can also be completed; a doctoral degree taken after it only requires the doctoral dissertation. See the [programme page](https://www.abo.fi/en/research-at-aau/postgraduate-and-doctoral-studies/doctoral-programmes-at-abo-akademi-university/doctoral-programme-in-bio-drug-research/).
+
 ---
 
 ## Useful resources

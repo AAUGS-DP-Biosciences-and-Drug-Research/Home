@@ -63,7 +63,7 @@ a { color: #b8161d; text-decoration: none; }
 hr { border: 0; border-top: 1px solid #dddddd; margin: 0.8em 0; }
 table { border-collapse: collapse; } td, th { border: 1px solid #ccc; padding: 3pt 6pt; }
 .dp-updated { margin-top: 1.2em; font-size: 0.75em; color: #777; }
-.headerlink, .md-content__button, .dp-filter, .dp-back, .dp-pdf-link { display: none !important; }
+.headerlink, .md-content__button, .dp-filter, .dp-back, .dp-pdf-link, .dp-suggest { display: none !important; }
 .section, .profile { break-before: page; }
 .joined { break-before: auto; margin-top: 1.4em; padding-top: 1em; border-top: 2px solid #eeeeee; }
 .profile { break-inside: avoid; }

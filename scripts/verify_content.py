@@ -43,7 +43,7 @@ PAGES = [  # (old repo, old path, new page, pdf)
 ]
 
 # Elements that are new on the new site (not content that could be lost).
-NEW_ONLY = ".dp-updated, .dp-filter, .dp-person__group, .dp-person__initials, .headerlink, .md-content__button"
+NEW_ONLY = ".dp-updated, .dp-suggest, .dp-filter, .dp-person__group, .dp-person__initials, .headerlink, .md-content__button"
 # Web-only elements that the PDFs hide on purpose (buttons, back links).
 WEB_ONLY = ".dp-back, .dp-pdf-link"
 

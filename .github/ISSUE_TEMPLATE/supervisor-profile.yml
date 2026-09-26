@@ -1,0 +1,75 @@
+name: Supervisor profile update
+description: Suggest changes to your supervisor profile, or send a new one.
+title: "Profile update: "
+labels: ["supervisor profile"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The form shows what is on your profile now. **Edit what should change and click "Create".**
+        Leave the rest as it is. One item per line in the lists. The programme reviews the
+        request and updates the website.
+  - type: input
+    id: name
+    attributes:
+      label: Name
+    validations:
+      required: true
+  - type: input
+    id: group
+    attributes:
+      label: Group name
+  - type: input
+    id: subject
+    attributes:
+      label: Subject
+  - type: input
+    id: university
+    attributes:
+      label: University
+  - type: input
+    id: lab_website
+    attributes:
+      label: Lab website
+  - type: input
+    id: cris_profile
+    attributes:
+      label: AboCRIS profile
+  - type: textarea
+    id: expertise
+    attributes:
+      label: Areas of expertise
+      description: One per line.
+  - type: textarea
+    id: projects
+    attributes:
+      label: Research projects
+      description: One per line.
+  - type: textarea
+    id: techniques
+    attributes:
+      label: Special methodologies & techniques
+      description: One per line.
+  - type: textarea
+    id: funding
+    attributes:
+      label: Major funding & international networks
+      description: One per line.
+  - type: textarea
+    id: publications
+    attributes:
+      label: Selected publications
+      description: Up to 5, one per line, each ending with "DOI: 10.xxxx/…".
+  - type: input
+    id: keywords
+    attributes:
+      label: Keywords
+  - type: textarea
+    id: photo
+    attributes:
+      label: New photo
+      description: Optional. Drag a portrait (at least 600 px wide) into this box.
+  - type: textarea
+    id: comments
+    attributes:
+      label: Anything else?

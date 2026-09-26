@@ -12,6 +12,7 @@ Slugs are kept unchanged so the old URLs can be redirected one-to-one.
 import html
 import re
 import shutil
+import urllib.parse
 from pathlib import Path
 
 import yaml
@@ -24,6 +25,8 @@ OUT_DIR = ROOT / "docs" / "supervisors"
 IMG_OUT = ROOT / "docs" / "assets" / "images" / "supervisors"
 LOGO = "AboAkademiUniversity.png"
 PHOTO_WIDTH = 600
+REPO = "https://github.com/AAUGS-DP-Biosciences-and-Drug-Research/Home"
+ISSUE_FORM = "supervisor-profile.yml"  # .github/ISSUE_TEMPLATE/
 
 SECTIONS = [
     ("expertise", "Areas of Expertise"),
@@ -111,7 +114,10 @@ def load():
     sups = []
     for f in sorted(YAML_DIR.glob("*.y*ml")):
         entry = yaml.safe_load(f.read_text(encoding="utf-8"))
-        sups.extend(entry if isinstance(entry, list) else [entry])
+        entry = entry if isinstance(entry, list) else [entry]
+        for s in entry:
+            s["_file"] = f.name
+        sups.extend(entry)
     for s in sups:
         s["lab_website"] = normalize_url(s.get("lab_website"))
         s["cris_profile"] = normalize_url(s.get("cris_profile"))
@@ -146,6 +152,24 @@ def make_photo(slug):
     name = f"{slug}.jpg"
     im.save(IMG_OUT / name, "JPEG", quality=85, optimize=True)
     return name
+
+
+def suggest_url(s=None):
+    """New-issue link that opens the profile form, prefilled with the profile."""
+    q = {"template": ISSUE_FORM}
+    if s:
+        q["title"] = f"Profile update: {s['name']}"
+        fields = {
+            "name": s.get("name"), "group": s.get("group"), "subject": s.get("unit"),
+            "university": s.get("university"), "lab_website": s["lab_website"],
+            "cris_profile": s["cris_profile"], "keywords": s.get("keywords"),
+        }
+        fields.update({key: "\n".join(map(str, s.get(key) or [])) for key, _ in SECTIONS})
+        fields["publications"] = "\n".join(" ".join(str(p).split()) for p in s.get("publications") or [])
+        q.update({k: str(v) for k, v in fields.items() if v})
+    else:
+        q["title"] = "New supervisor profile: "
+    return f"{REPO}/issues/new?{urllib.parse.urlencode(q, quote_via=urllib.parse.quote)}"
 
 
 def profile_page(s):
@@ -184,13 +208,16 @@ def profile_page(s):
         body.append(f"<h2>Keywords</h2>\n<p>{text(s['keywords'])}</p>")
 
     title = str(s["name"]).replace('"', '\\"')
+    edit = f"{REPO}/edit/main/data/supervisors/{s['_file']}"
     return (
-        f'---\ntitle: "{title}"\n---\n\n'
+        f'---\ntitle: "{title}"\nedit_url: "{edit}"\n---\n\n'
         f'<div class="dp-profile">\n'
         f"{media}\n"
         f'<div class="dp-profile__info">\n' + "\n".join(info) + "\n</div>\n</div>\n\n"
         + "\n\n".join(body)
-        + '\n\n<p class="dp-back"><a href="index.md">← Back to Portfolio</a></p>\n'
+        + f'\n\n<p class="dp-suggest"><a class="md-button" href="{html.escape(suggest_url(s))}" target="_blank" rel="noopener">'
+        "✏️ Suggest changes to this profile</a></p>\n"
+        '\n<p class="dp-back"><a href="index.md">← Back to Portfolio</a></p>\n'
     )
 
 
@@ -239,6 +266,11 @@ def index_page(sups):
             f"<h2>{text(u)}</h2>\n"
             f'<div class="dp-people">{"".join(cards)}</div>\n</section>\n'
         )
+    parts.append(
+        f'<p class="dp-suggest">Supervisor in the programme without a profile? '
+        f'<a href="{html.escape(suggest_url())}" target="_blank" rel="noopener">Send us your profile</a> '
+        "(needs a free GitHub account).</p>\n"
+    )
     parts.append('<p class="dp-back"><a href="../index.md">← Back to Home</a></p>\n')
     return "\n".join(parts)
 

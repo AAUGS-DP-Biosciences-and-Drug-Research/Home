@@ -1,0 +1,19 @@
+name: Label supervisor profile issues
+
+# Issues opened from the "Suggest changes to this profile" / "Send us your
+# profile" links get the "supervisor profile" label.
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+
+jobs:
+  label:
+    if: startsWith(github.event.issue.title, 'Profile update:') || startsWith(github.event.issue.title, 'New supervisor profile:')
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue edit ${{ github.event.issue.number }} --repo ${{ github.repository }} --add-label "supervisor profile"

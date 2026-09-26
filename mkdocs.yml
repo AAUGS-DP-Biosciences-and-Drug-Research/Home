@@ -4,7 +4,7 @@ site_url: https://aaugs-dp-biosciences-and-drug-research.github.io/Home/
 repo_url: https://github.com/AAUGS-DP-Biosciences-and-Drug-Research/Home
 repo_name: Edit these pages on GitHub
 edit_uri: edit/main/docs/
-copyright: Unofficial pages · Åbo Akademi University
+copyright: 'Unofficial pages · Åbo Akademi University<br>Maintained by Guillaume Jacquemet. Questions or corrections: <a href="mailto:guillaume.jacquemet@abo.fi">guillaume.jacquemet@abo.fi</a>'
 use_directory_urls: true
 
 theme:

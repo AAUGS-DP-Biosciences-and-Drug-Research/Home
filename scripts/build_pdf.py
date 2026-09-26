@@ -9,6 +9,7 @@ and site/Document.pdf (the landing page, same address as the old Home PDF).
 
 import copy
 import datetime
+import subprocess
 import sys
 from pathlib import Path
 from urllib.parse import unquote, urljoin, urlparse
@@ -54,6 +55,7 @@ li { margin: 2pt 0; }
 a { color: #b8161d; text-decoration: none; }
 hr { border: 0; border-top: 1px solid #dddddd; margin: 12pt 0; }
 table { border-collapse: collapse; } td, th { border: 1px solid #ccc; padding: 3pt 6pt; }
+.dp-updated { margin-top: 14pt; font-size: 8pt; color: #777; }
 .headerlink, .md-content__button, .dp-filter, .dp-back, .dp-pdf-link { display: none !important; }
 .section { break-before: page; }
 .task-list-item { list-style: none; }
@@ -114,6 +116,13 @@ def article(page):
     return art
 
 
+def content_date():
+    """Latest real change of any page or supervisor data (see add_dates.py)."""
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from add_dates import last_commit_date
+    return last_commit_date(ROOT / "docs", ROOT / "data" / "supervisors", ROOT / "data" / "photos") or datetime.date.today()
+
+
 def render(body_html, out):
     doc = f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>{TITLE}</title></head><body>{body_html}</body></html>'
     fonts = FontConfiguration()  # needed for the @font-face rules (Figtree)
@@ -165,10 +174,11 @@ def main():
 
     # Handbook: cover, contents, all sections, supervisor portfolio
     logo = (SITE / "assets" / "images" / "AboAkademiUniversity.png").as_uri()
-    today = datetime.date.today().strftime("%d %B %Y")
+    updated = content_date()
     cover = (
         f'<div class="cover"><img src="{logo}" alt=""><h1>{TITLE}</h1>'
-        f"<p>Åbo Akademi University</p><p>{SITE_URL}</p><p>{today}</p></div>"
+        f"<p>Åbo Akademi University</p><p>{SITE_URL}</p>"
+        f"<p>Last updated: {updated.day} {updated.strftime('%B %Y')}</p></div>"
     )
     toc, body = [], []
     for i, (page, name, title) in enumerate(PAGES, 1):

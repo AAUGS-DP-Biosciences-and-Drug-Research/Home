@@ -83,15 +83,27 @@ def initials(name):
     return html.escape((parts[0][0] + parts[-1][0]).upper() if parts else "")
 
 
+def split_doi(value):
+    """Clean DOI for the link, plus any trailing punctuation to keep as text.
+
+    Accepts '10.x/y', 'doi.org/10.x/y' and 'https://doi.org/10.x/y'; a trailing
+    '.' or ',' (end of the citation) is not part of the DOI.
+    """
+    value = value.strip()
+    doi = re.sub(r"^(https?://)?(dx\.)?doi\.org/", "", value, flags=re.I)
+    m = re.match(r"^(.*?)([.,;]*)$", doi)
+    return m.group(1), m.group(2)
+
+
 def publication(pub):
     pub = str(pub)
     i = pub.find("DOI: ")
     if i == -1:
         return text(pub)
-    doi = pub[i + 5:].strip()
+    doi, tail = split_doi(pub[i + 5:])
     return (
         f'{text(pub[:i])} DOI: <a href="https://doi.org/{html.escape(doi)}" '
-        f'target="_blank" rel="noopener">{html.escape(doi)}</a>'
+        f'target="_blank" rel="noopener">{html.escape(doi)}</a>{html.escape(tail)}'
     )
 
 

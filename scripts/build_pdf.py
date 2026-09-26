@@ -295,7 +295,8 @@ def main():
     cover = (
         f'<div class="cover"><img src="{logo}" alt=""><h1>{TITLE}</h1>'
         f"<p>Åbo Akademi University</p><p>{SITE_URL}</p>{qr(SITE_URL, 'Scan for the website', 'qr qr--cover')}"
-        f"<p>Last updated: {updated.day} {updated.strftime('%B %Y')}</p></div>"
+        f"<p>Last updated: {updated.day} {updated.strftime('%B %Y')}</p>"
+        "<p>Maintained by Guillaume Jacquemet</p></div>"
     )
     toc, body = [], []
     for i, (page, name, title) in enumerate(PAGES, 1):

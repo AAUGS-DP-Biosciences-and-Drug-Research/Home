@@ -9,6 +9,7 @@ and site/Document.pdf (the landing page, same address as the old Home PDF).
 
 import copy
 import datetime
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -122,6 +123,10 @@ def article(page):
         href = a["href"]
         if not href.startswith(("#", "mailto:")):
             a["href"] = urljoin(page_url, href)
+    # On paper "link" is useless: print the address of profile links instead
+    for a in art.select(".dp-profile__info a[href]"):
+        if a.get_text(strip=True) == "link":
+            a.string = re.sub(r"^https?://(www\.)?", "", a["href"]).rstrip("/")
     for img in art.select("img[src]"):
         src = img["src"]
         if not urlparse(src).scheme:

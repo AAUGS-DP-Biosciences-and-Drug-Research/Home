@@ -49,6 +49,22 @@ photo behind the title on the landing page, add `docs/assets/images/hero.jpg`
 and uncomment the `background-image` line under "Landing page hero" in
 `extra.css`.
 
+## Credits and licences
+
+| What | Source | Licence |
+|---|---|---|
+| Site generator and theme | [Zensical](https://zensical.org) | MIT (bundled third-party scripts: see `assets/javascripts/LICENSE` in the built site) |
+| Font | [Figtree](https://github.com/erikdkennedy/figtree), via Fontsource, self-hosted in `docs/assets/fonts/` | SIL Open Font License 1.1 (`docs/assets/fonts/OFL.txt`) |
+| Emoji in PDFs | Noto Color Emoji (system font on the build machine) | SIL Open Font License 1.1 |
+| Åbo Akademi University logo | [abo.fi logo page](https://www.abo.fi/en/about-abo-akademi-university/for-media/the-abo-akademi-university-logo/) | © Åbo Akademi University. Used unmodified, on white, as required by the university's graphic guide ("Felanvändning": no busy/low-contrast backgrounds, no recolouring or distortion) |
+| Colours | Åbo Akademi graphic guide (2019) and www.abo.fi | Colour values only; no code, images or icons are copied from www.abo.fi |
+| Supervisor photos and texts | Submitted by the supervisors for the portfolio | © the supervisors |
+
+The university's own typefaces (Gibson, Soleil) are licensed through Adobe
+Fonts and are **not** used. The only requests a visitor's browser makes outside
+the site are to the GitHub API (repository name/version next to the "Edit these
+pages on GitHub" link); no Google, Adobe or font CDN requests.
+
 ## PDFs
 
 Built automatically from the website pages (so PDF and web text are always

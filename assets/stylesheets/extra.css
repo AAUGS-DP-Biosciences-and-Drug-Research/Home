@@ -207,3 +207,6 @@ body, input, select { font-family: "Figtree", system-ui, -apple-system, "Segoe U
 .md-typeset h2 { margin-top: 2em; }
 .md-typeset .md-button { border-radius: 0; font-weight: 800; }
 @media (max-width: 600px) { .md-content__button { display: none; } }
+
+/* "Last updated" line added by scripts/add_dates.py */
+.md-typeset .dp-updated { margin-top: 2.5rem; font-size: 0.7rem; color: var(--md-default-fg-color--light); }

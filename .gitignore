@@ -1,0 +1,5 @@
+site/
+docs/supervisors/
+docs/assets/images/supervisors/
+__pycache__/
+.cache/

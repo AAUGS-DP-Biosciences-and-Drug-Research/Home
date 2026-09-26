@@ -1,0 +1,63 @@
+site_name: Doctoral Programme in Biosciences and Drug Research
+site_description: Unofficial web pages for the Doctoral Programme in Biosciences and Drug Research at Åbo Akademi University
+site_url: https://aaugs-dp-biosciences-and-drug-research.github.io/Home/
+repo_url: https://github.com/AAUGS-DP-Biosciences-and-Drug-Research/Home
+repo_name: Edit these pages on GitHub
+edit_uri: edit/main/docs/
+copyright: Unofficial pages · Åbo Akademi University
+use_directory_urls: true
+
+theme:
+  name: material
+  language: en
+  logo: assets/images/AboAkademiUniversity.png
+  favicon: assets/images/AboAkademiUniversity.png
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.action.edit
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - Learning Goals: learning-goals.md
+  - Curriculum: curriculum.md
+  - Yearly Follow-up: yearly-followup.md
+  - Graduation Requirements: graduation-requirements.md
+  - Supervisors: supervisors/index.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - extra
+  - tables
+  - attr_list
+  - md_in_html
+  - admonition
+  - toc:
+      permalink: true
+
+extra_css:
+  - assets/stylesheets/extra.css
+extra_javascript:
+  - assets/javascripts/supervisors.js

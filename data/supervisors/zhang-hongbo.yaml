@@ -1,0 +1,39 @@
+- name: Zhang Hongbo
+  slug: zhang-hongbo
+  group: Functional Materials for Medicine
+  unit: Pharmacy
+  university: Åbo Akademi University
+  lab_website: https://www.pharmscilab.fi/nanoprecisionmed
+  cris_profile: https://research.abo.fi/en/persons/hongbo-zhang
+  photo: zhang-hongbo.jpg
+  expertise:
+  - Nanomedicine
+  - Biomedical Engineering
+  - Drug Delivery
+  - Gene Therapy
+  projects:
+  - Functional Materials have played a more and more critical role in developing
+    novel treatment methods for different diseases. Our group focuses on designing all
+    kinds of functional materials, at different scales, to solve clinical and biological
+    problems.
+  techniques:
+  - We have broad collaborations with hospitals, and most of our projects have clinical
+    doctors involved, and initially, from a real-life clinical question. Our group is
+    multidisciplinary,  which involves an  interplay between physics, materials science, synthetic
+    organic chemistry, engineering, biology, and medicine. We aim that many of our
+    designs could be clinically applicable in the future, and have a tremendous social impact
+    in treating diseases.
+  funding:
+  - 'I am coordinating many projects from the Research Council of Finland, Business Finland,
+    and different foundations. I am also part of many consortium projects, including
+    the InFlame flagship, NAP4DIVE (EU Horizon), Nordic POP, NordicPharmTrain, PII:
+    Printed Intelligence Infrastructure, MADNESS (ÅAU Center of Excellence). As well
+    as the collaboration project with companies, e.g., the joint project with Bayer
+    Oy. I collaborate broadly with Harvard University, USA, and Chinese hospitals.'
+  publications:
+  - 'Development of Aptamer-DNAzyme Based Metal-Nucleic Acid Frameworks for Gastric Cancer therapy. Nature Communications. 2024. DOI: 10.1038/s41467-024-48149-9'
+  - 'An autocatalytic multicomponent DNAzyme nanomachine for tumor-specific photothermal therapy sensitization in pancreatic cancer. Nature Communications. 2023. DOI: 10.1038/s41467-023-42740-2'
+  - 'Therapeutic DNAzymes: From Structure Design to Clinical Applications. Advanced Materials. 2023. DOI: 10.1002/adma.202300374'
+  - 'Photothermal Responsive Nanosized Hybrid Polymersome as Versatile Therapeutics Co-Delivery Nanovehicle for Effective Tumor Suppression. Proc. Natl. Acad. Sci. U.S.A. 2019. DOI: 10.1073/pnas.1817251116'
+  - 'Programmable and Multifunctional DNA-Based Materials for Biomedical Applications. Advanced Materials. 2018. DOI: 10.1002/adma.201703658'
+  keywords: ''

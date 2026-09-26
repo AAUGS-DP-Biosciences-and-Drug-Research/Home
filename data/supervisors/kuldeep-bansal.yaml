@@ -1,0 +1,45 @@
+- name: Kuldeep Bansal
+  slug: kuldeep-bansal
+  group: Polymeric drug delivery
+  unit: Pharmacy
+  university: Åbo Akademi University
+  lab_website: https://www.pharmscilab.fi/
+  cris_profile: https://research.abo.fi/fi/persons/kuldeep-bansal
+  photo: kuldeep-bansal.png
+  expertise:
+  - Functional Polymers
+  - Stimuli-Sensitive Polymers
+  - Targeted and Controlled Drug Delivery
+  - Polymeric Micelles
+  - Polymer-Drug Conjugates
+  - Microparticles
+  - Amorphous Solid Dispersions
+  - Polymeric Nanoemulsion
+  projects:
+  - Centre of Excellence in Materials-driven Solutions for Combatting Antimicrobial
+    Resistance (MADNESS)
+  - 'Jasmine PRO: A versatile platform for drug delivery'
+  - Non-Animal Platform for Nanoparticle-Based Delivery across the blood-brain barrier
+    Interface with Vehicle Evolution
+  techniques:
+  - Polymer Synthesis and Characterization (NMR, FTIR, GPC, DSC),
+  - Nanoparticle Synthesis and Characterization (nanoprecipitation, microfluidics,
+    DLS, HPLC, TEM),
+  - Cell Culture,
+  - Design of Stimuli-Sensitive Drug Delivery Platforms
+  funding:
+  - 'Funding Sources: Stiftelsen för Åbo Akademi, Business Finland, Academy of Finland'
+  - 'International Networks: Copenhagen University, NIPER (India), UiT The Arctic University of Norway, University College London'
+  publications:
+  - 'Reactive Oxygen Species-Regulated Conjugates Based on Poly (jasmine) Lactone for
+    Simultaneous Delivery of Doxorubicin and Docetaxel, Pharmaceutics. 2024. DOI: 10.3390/pharmaceutics16091164'
+  - 'Poly-δ-decalactone (PDL) based nanoemulgel for topical delivery of ketoconazole
+    and eugenol against Candida albicans, Nanoscale Advances. 2024. DOI: 10.1039/D4NA00176A'
+  - 'Utilizing the allyl-terminated copolymer methoxy (poly(ethylene glycol))-block-poly
+    (jasmine lactone) in the development of amorphous solid dispersions: A comparative study of functionalized and nonfunctionalized
+    polymer, International Journal of Pharmaceutics. 2024. DOI: 10.1016/j.ijpharm.2024.124175'
+  - 'Functional block copolymer micelles based on poly (jasmine lactone) for improving
+    the loading efficiency of weakly basic drugs, RSC advances. 2022. DOI: 10.1039/D2RA03962A'
+  - 'Synthesis and evaluation of novel functional polymers derived from renewable jasmine
+    lactone for stimuli‐responsive drug delivery, Advanced Functional Materials. 2021. DOI: 10.1002/adfm.202101998'
+  keywords: ''

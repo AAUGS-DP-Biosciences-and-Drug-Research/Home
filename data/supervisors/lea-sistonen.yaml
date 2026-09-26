@@ -1,0 +1,47 @@
+- name: Lea Sistonen
+  slug: lea-sistonen
+  group: Sistonen Lab
+  unit: Cell Biology
+  university: Åbo Akademi University
+  lab_website: https://sistonenlab.com/
+  cris_profile: https://research.abo.fi/sv/persons/lea-sistonen
+  photo: lea-sistonen.jpg
+  expertise:
+  - Cell Differentiation
+  - Cell Stress
+  - Post-translational Modifications
+  - Proteostasis
+  - Transcriptional Gene Regulation  
+  projects:
+  - 'HSF-NET: Functional networks regulated by heat shock factors in cell plasticity,
+    Research Council of Finland 2023-27'
+  - Proteostasis driven by HSFs in cell plasticity programs and cancer”, Sigrid Jusélius
+    Foundation 2025-28
+  - Re-programming of gene and enhancer expression in cell differentiation and stress,
+    Liv och Hälsa 2023-26
+  - Pharmacologic strategy for targeting the main oncoproteins and defense systems
+    of HPV-driven cancers, Cancer Foundation Finland 2024-26, together with John E.
+    Eriksson
+  techniques:
+  - ChIP-seq
+  - DNA-protein interaction in vivo and in vitro
+  - Proteomics
+  - PRO-seq and RNA-seq, including data analysis
+  funding:
+  - 'HSF-NET: Functional networks regulated by heat shock factors in cell plasticity,
+    Research Council of Finland 2023-27'
+  - Proteostasis driven by HSFs in cell plasticity programs and cancer”, Sigrid Jusélius
+    Foundation 2025-28
+  - Re-programming of gene and enhancer expression in cell differentiation and stress,
+    Liv och Hälsa 2023-26
+  - Pharmacologic strategy for targeting the main oncoproteins and defense systems
+    of HPV-driven cancers, Cancer Foundation Finland 2024-26, together with John E.
+    Eriksson    
+  publications:
+  - 'Nuclear talin-1 provides a bridge between cell adhesion and gene expression. iScience. 2025. DOI: 10.1016/j.isci.2025.111745'
+  - 'CBP-HSF2 structural and functional interplay in Rubinstein-Taybi neurodevelopmental disorder. Nat Commun.  2022. DOI: 10.1038/s41467-022-34476-2'
+  - 'HSFs drive transcription of distinct genes and enhancers during oxidative stress and heat shock. Nucleic Acids Res. 2022. DOI: 10.1093/nar/gkac493'
+  - 'Stress-induced transcriptional memory accelerates promoter-proximal pause release and decelerates termination
+    over mitotic divisions. Mol Cell. 2021. DOI: 10.1016/j.molcel.2021.03.007'
+  - 'Heat shock factor 2 protects against proteotoxicity by maintaining cell-cell adhesion. Cell Rep. 2020. DOI: 10.1016/j.celrep.2019.12.037'
+  keywords: ''

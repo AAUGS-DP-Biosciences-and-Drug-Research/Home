@@ -196,7 +196,7 @@ def profile_page(s):
     if photo:
         copyright_notice = f"© {s['name']}"
         media = (f'<div class="dp-profile__media"><img class="dp-profile__photo" src="../assets/images/supervisors/{photo}" '
-                 f'alt="Photo of {html.escape(str(s["name"]))}"{pos}><small class="dp-photo-credit">{html.escape(copyright_notice)}</small></div>')
+                 f'alt="{html.escape(str(s["name"]))}" decoding="async"{pos}><small class="dp-photo-credit">{html.escape(copyright_notice)}</small></div>')
     else:
         media = f'<span class="dp-profile__photo dp-person__initials dp-tone-{tone(s["slug"])}" aria-hidden="true">{initials(s["name"])}</span>'
     info = [f"<h1>{text(s['name'])}</h1>"]
@@ -232,9 +232,9 @@ def profile_page(s):
     description_parts = [str(s.get("group") or "").strip(), str(s.get("unit") or "").strip()]
     description = " · ".join(part for part in description_parts if part) or "Supervisor profile"
     page_url = f"{SITE_URL}supervisors/{s['slug']}/"
-    person_jsonld = {
-        "@context": "https://schema.org",
+    person = {
         "@type": "Person",
+        "@id": f"{page_url}#person",
         "name": str(s["name"]),
         "url": page_url,
         "description": description,
@@ -244,13 +244,21 @@ def profile_page(s):
         },
     }
     if photo:
-        person_jsonld["image"] = {
+        person["image"] = {
             "@type": "ImageObject",
             "contentUrl": f"{SITE_URL}assets/images/supervisors/{photo}",
             "copyrightNotice": f"© {s['name']}",
             "creditText": f"© {s['name']}",
         }
-    structured_data = (json.dumps(person_jsonld, ensure_ascii=False).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026"))
+    profile_jsonld = {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "@id": f"{page_url}#profile",
+        "url": page_url,
+        "name": str(s["name"]),
+        "mainEntity": person,
+    }
+    structured_data = (json.dumps(profile_jsonld, ensure_ascii=False).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026"))
     return (
         f'---\ntitle: "{title}"\ndescription: "{description.replace(chr(34), chr(39))}"\nedit_url: "{edit}"\n---\n\n'
         f'<script type="application/ld+json">{structured_data}</script>\n\n'
@@ -272,7 +280,7 @@ def index_page(sups):
 
     options = "".join(f'<option value="{html.escape(str(u))}">{text(u)}</option>' for u in subjects)
     parts = [
-        '---\ntitle: Supervisors\nhide:\n  - toc\n---\n',
+        '---\ntitle: Supervisors\ndescription: Search the supervisor portfolio for the Doctoral Programme in Biosciences and Drug Research by name, group, subject, expertise, and technique.\nhide:\n  - toc\n---\n',
         "# Supervisor Portfolio for the Doctoral Programme in Biosciences and Drug Research\n",
         '<p class="dp-pdf-link"><a class="md-button md-button--primary" href="../pdf/supervisor-portfolio.pdf" target="_blank">📄 Download Full Portfolio PDF</a></p>\n',
         '<div class="dp-filter" data-dp-filter>'
@@ -289,7 +297,7 @@ def index_page(sups):
             photo = s["_photo"]
             pos = ' style="object-position: center;"' if s.get("photo_position") == "center" else ""
             if photo:
-                media = f'<img src="../assets/images/supervisors/{photo}" alt="{html.escape(str(s["name"]))}"{pos}>'
+                media = f'<img src="../assets/images/supervisors/{photo}" alt="" loading="lazy" decoding="async"{pos}>'
             else:
                 media = f'<span class="dp-person__initials" aria-hidden="true">{initials(s["name"])}</span>'
             haystack = " ".join(

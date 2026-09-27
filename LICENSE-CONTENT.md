@@ -8,6 +8,10 @@ Supervisor photographs remain **© the person named on the corresponding supervi
 
 The website generator publishes the same copyright notice beside each portrait and in machine-readable image metadata.
 
+## Supervisor profile text
+
+Supervisor-submitted profile text remains **© the submitting supervisor** and is not licensed for reuse unless a separate permission or licence is recorded. It is not covered by the MIT software licence.
+
 ## Åbo Akademi University logo
 
 The Åbo Akademi University logo is © Åbo Akademi University and remains subject to the university's visual identity and usage rules. It is not covered by the MIT licence.

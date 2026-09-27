@@ -10,6 +10,7 @@ Slugs are kept unchanged so the old URLs can be redirected one-to-one.
 """
 
 import html
+import json
 import re
 import shutil
 import urllib.parse
@@ -26,6 +27,7 @@ IMG_OUT = ROOT / "docs" / "assets" / "images" / "supervisors"
 LOGO = "AboAkademiUniversity.png"
 PHOTO_WIDTH = 600
 REPO = "https://github.com/AAUGS-DP-Biosciences-and-Drug-Research/Home"
+SITE_URL = "https://aaugs-dp-biosciences-and-drug-research.github.io/Home/"
 
 SECTIONS = [
     ("expertise", "Areas of Expertise"),
@@ -192,7 +194,9 @@ def profile_page(s):
     photo = s["_photo"]
     pos = ' style="object-position: center;"' if s.get("photo_position") == "center" else ""
     if photo:
-        media = f'<img class="dp-profile__photo" src="../assets/images/supervisors/{photo}" alt="Photo of {html.escape(str(s["name"]))}"{pos}>'
+        copyright_notice = f"© {s['name']}"
+        media = (f'<div class="dp-profile__media"><img class="dp-profile__photo" src="../assets/images/supervisors/{photo}" '
+                 f'alt="Photo of {html.escape(str(s["name"]))}"{pos}><small class="dp-photo-credit">{html.escape(copyright_notice)}</small></div>')
     else:
         media = f'<span class="dp-profile__photo dp-person__initials dp-tone-{tone(s["slug"])}" aria-hidden="true">{initials(s["name"])}</span>'
     info = [f"<h1>{text(s['name'])}</h1>"]
@@ -225,8 +229,30 @@ def profile_page(s):
 
     title = str(s["name"]).replace('"', '\\"')
     edit = f"{REPO}/edit/main/data/supervisors/{s['_file']}"
+    description_parts = [str(s.get("group") or "").strip(), str(s.get("unit") or "").strip()]
+    description = " · ".join(part for part in description_parts if part) or "Supervisor profile"
+    page_url = f"{SITE_URL}supervisors/{s['slug']}/"
+    person_jsonld = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": str(s["name"]),
+        "url": page_url,
+        "affiliation": {
+            "@type": "CollegeOrUniversity",
+            "name": str(s.get("university") or "Åbo Akademi University"),
+        },
+    }
+    if photo:
+        person_jsonld["image"] = {
+            "@type": "ImageObject",
+            "contentUrl": f"{SITE_URL}assets/images/supervisors/{photo}",
+            "copyrightNotice": f"© {s['name']}",
+            "acquireLicensePage": f"{SITE_URL}licensing/",
+        }
+    structured_data = html.escape(json.dumps(person_jsonld, ensure_ascii=False), quote=False)
     return (
-        f'---\ntitle: "{title}"\nedit_url: "{edit}"\n---\n\n'
+        f'---\ntitle: "{title}"\ndescription: "{description.replace(chr(34), chr(39))}"\nedit_url: "{edit}"\n---\n\n'
+        f'<script type="application/ld+json">{structured_data}</script>\n\n'
         f'<div class="dp-profile">\n'
         f"{media}\n"
         f'<div class="dp-profile__info">\n' + "\n".join(info) + "\n</div>\n</div>\n\n"
@@ -302,6 +328,28 @@ def main():
             print(f"⚠️  No photo for {s['name']} → using logo")
         (OUT_DIR / f"{s['slug']}.md").write_text(profile_page(s), encoding="utf-8")
     (OUT_DIR / "index.md").write_text(index_page(sups), encoding="utf-8")
+    rights = {
+        "schema_version": 1,
+        "policy": {
+            "rights_status": "copyrighted",
+            "reuse": "permission_required",
+            "notice": "Supervisor photographs are © the named supervisor and are not licensed for reuse.",
+        },
+        "images": [
+            {
+                "path": f"assets/images/supervisors/{s['_photo']}",
+                "copyright_holder": str(s["name"]),
+                "copyright_notice": f"© {s['name']}",
+                "rights_status": "copyrighted",
+                "reuse": "permission_required",
+                "profile_url": f"{SITE_URL}supervisors/{s['slug']}/",
+            }
+            for s in sups if s.get("_photo")
+        ],
+    }
+    rights_path = ROOT / "docs" / "assets" / "image_rights.json"
+    rights_path.parent.mkdir(parents=True, exist_ok=True)
+    rights_path.write_text(json.dumps(rights, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
     print(f"✅ Generated {len(sups)} supervisor pages")
 
 

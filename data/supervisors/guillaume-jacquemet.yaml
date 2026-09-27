@@ -6,43 +6,48 @@
   university: Åbo Akademi University
   lab_website: https://cellmig.org/
   cris_profile: https://research.abo.fi/en/persons/guillaume-jacquemet
+  web_pages:
+  - label: ORCID
+    url: https://orcid.org/0000-0002-9286-920X
+  - label: Google Scholar
+    url: https://scholar.google.com/citations?user=dnBWtfsAAAAJ&hl=en
   photo: guillaume-jacquemet.jpg
   photo_position: center
   expertise:
-  - Cancer cell biology
-  - Cell adhesion and migration
-  - Microscopy and live imaging
-  - Image analysis
+  - Cancer cell migration, invasion, and metastasis
+  - Filopodia, cell adhesion, and cytoskeletal dynamics
+  - Endothelial barriers and cancer-endothelium interactions
+  - Advanced microscopy and quantitative live-cell imaging
+  - Bioimage analysis, cell tracking, deep learning, and computer vision
   projects:
-  - The role of filopodia during breast cancer progression
-  - Cancer cell communication via filopodia trans- endocytosis
-  - Deciphering the mechanisms of pancreatic cancer metastasis
-  - The role of mechanosensitive calcium channels in melanoma
-  - The role of TLNRD1 in endothelium homeostasis
-  - Democratising deep learning for microscopy with ZeroCostDL4Mic
+  - Mechanisms of pancreatic cancer arrest and extravasation at vascular barriers
+  - Filopodia in cancer invasion and cell-cell communication
+  - Endothelial barrier regulation and immune-endothelial interactions
+  - 'FlowVision: label-free imaging and quantitative analysis of cell arrest under flow'
+  - Accessible deep learning and reproducible bioimage analysis for microscopy
+  - Tracking, registration, and quantitative microscopy tools
   techniques:
-  - Microscopy (super-resolution microscopy, live imaging, traction force microscopy)
-  - Image analysis, deep learning, and computer vision
-  - Cell and molecular biology
-  - Mass spectrometry (identification of protein-protein interactions using pull-downs
-    and biotinylation-based strategy)
-  - Zebrafish embryo to study cancer biology
-  - Flow and perfusion chambers
+  - Live-cell, spinning-disk, and super-resolution microscopy
+  - Microfluidic flow, perfusion, and endothelial barrier assays
+  - Quantitative image analysis, cell tracking, segmentation, and computer vision
+  - Deep learning for microscopy and reproducible bioimage-analysis workflows
+  - Cell and molecular biology and protein-interaction analysis
+  - Zebrafish and mouse models of cancer progression and metastasis
   funding:
+  - Research Council of Finland - Project Grant and IMMENs Centre of Excellence
+  - Finnish Cancer Institute - K. Albin Johansson Research Professorship
+  - Cancer Foundation Finland
+  - Wellcome Trust / Chan Zuckerberg Initiative - Essential Open Source Software for Science (EOSS)
   - Sigrid Juselius Foundation
-  - Wellcome Trust
-  - Academy of Finland
-  - Finnish Cancer Foundation
-  - Inflames
-  - Turku Bioscience
   publications:
+  - 'CCT8 associates with the MYO10 motor domain and regulates filopodia and breast
+    cancer cell invasion. J Cell Sci. 2026. DOI: 10.1242/jcs.265278'
+  - 'Fast label-free live imaging with FlowVision reveals key principles of cancer
+    cell arrest on endothelial monolayers. EMBO J. 2026. DOI: 10.1038/s44318-025-00678-9'
   - 'TLNRD1 is a CCM complex component and regulates endothelial barrier integrity.
     J Cell Biol. 2024. DOI: 10.1083/jcb.202310030'
+  - 'DL4MicEverywhere: deep learning for microscopy made flexible, shareable and
+    reproducible. Nat. Methods. 2024. DOI: 10.1038/s41592-024-02295-6'
   - 'CellTracksColab is a platform that enables compilation, analysis, and exploration
     of cell tracking data. PLOS Biol. 2024. DOI: 10.1371/journal.pbio.3002740'
-  - 'MYO10-filopodia support basement membranes at preinvasive tumor boundaries. Dev
-    Cell. 2022. DOI: 10.1016/j.devcel.2022.09.016'
-  - 'TrackMate 7: Integrating state-of-the-art segmentation algorithms into tracking
-    pipelines. Nat. Methods. 2022. DOI: 10.1038/s41592-022-01507-1'
-  - 'Democratising Deep Learning for Microscopy with ZeroCostDL4Mic. Nat Commun. 2021. DOI: 10.1038/s41467-021-22518-0'
   keywords: ''

@@ -43,6 +43,9 @@ jobs:
       - name: Add "Last updated" dates
         run: python scripts/add_dates.py
 
+      - name: Validate discovery and rights metadata
+        run: python scripts/check_discovery.py
+
       - name: Build PDFs
         run: python scripts/build_pdf.py
 

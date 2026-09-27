@@ -1,3 +1,7 @@
+---
+description: "Unofficial programme hub for doctoral researchers in Biosciences and Drug Research at Åbo Akademi University, with curriculum, graduation requirements, follow-up guidance, and supervisor profiles."
+---
+
 <div class="dp-hero" markdown>
 
 # Doctoral Programme in Biosciences and Drug Research

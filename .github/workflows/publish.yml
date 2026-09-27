@@ -66,3 +66,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
           publish_branch: gh-pages
+
+      - name: Notify IndexNow
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: python scripts/submit_indexnow.py --sitemap site/sitemap.xml --key-file docs/c3e7a1f9b5d2c8e4a6f0b7d1e9c5a3f2.txt

@@ -4,35 +4,40 @@ description: "Curriculum structure, ECTS requirements, course categories, confer
 
 # Curriculum
 
-## 🟦 Courses in major subject or related fields (20-30 ECTS)
+The doctoral degree includes **30 ECTS** of studies. Most credits normally come from the major subject or a closely related field.
 
-#### Compulsory courses
-- **A course on research ethics**
-- **Subject specific compulsory courses**
+## Major subject or related fields: 20–30 ECTS
 
-#### Courses that support your PhD project
-- **Advanced-level courses** in the major subject or related fields
-- **Methodological courses:** e.g., statistics, experimental design, bioinformatics tools
+### Compulsory courses
 
-#### Conferences (Max 5 ECTS)
-- 5 ECTS requires active participation with one's own contribution in at least two international conferences
+- A course on research ethics
+- Subject-specific compulsory courses
 
-## 🟩 General skills/minor subject area (0-10 ECTS)
+### Courses that support the PhD project
 
-- **University pedagogics courses**
-- **Language courses** (**max 5 ECTS**)
+Relevant options include advanced courses in the major subject or related fields and methodological training such as statistics, experimental design, or bioinformatics.
+
+### Conferences: maximum 5 ECTS
+
+Five ECTS requires active participation, including the doctoral researcher's own contribution, in at least two international conferences.
+
+## General skills or minor subject: 0–10 ECTS
+
+Examples include:
+
+- University pedagogy
+- Language courses, up to **5 ECTS**
 
 ## Studying at other universities
 
-- Studies may also be completed at other universities.
-- Through the **Doctoral+** (Tohtori+) network, doctoral courses at other Finnish universities are free of charge; add the course to your study plan in Peppi. A separate agreement also covers University of Turku courses outside the network. See [Doctoral studies at ÅAU](https://www.abo.fi/en/research-at-aau/postgraduate-and-doctoral-studies/).
+Studies can also be completed at other universities. Through the **Doctoral+ (Tohtori+)** network, doctoral courses at other Finnish universities are free of charge; add the course to your study plan in Peppi.
+
+A separate agreement also covers University of Turku courses outside the Doctoral+ network. See [Doctoral studies at ÅAU](https://www.abo.fi/en/research-at-aau/postgraduate-and-doctoral-studies/) for current information.
 
 ## Licentiate degree
 
-- A licentiate degree (30 ECTS of studies and a licentiate thesis) can also be completed; a doctoral degree taken after it only requires the doctoral dissertation. See the [programme page](https://www.abo.fi/en/research-at-aau/postgraduate-and-doctoral-studies/doctoral-programmes-at-abo-akademi-university/doctoral-programme-in-bio-drug-research/).
+A licentiate degree consists of 30 ECTS of studies and a licentiate thesis. A doctoral degree completed after a licentiate degree requires the doctoral dissertation. See the [programme page](https://www.abo.fi/en/research-at-aau/postgraduate-and-doctoral-studies/doctoral-programmes-at-abo-akademi-university/doctoral-programme-in-bio-drug-research/) for details.
 
----
-
-## Useful resources
+## Useful resource
 
 - 📝 [Skills and Competencies (DOCX)](files/Skills%20and%20competencies_v250108.docx)

@@ -15,6 +15,7 @@ import datetime
 import subprocess
 import sys
 from pathlib import Path
+from xml.sax.saxutils import escape
 
 import yaml
 
@@ -23,6 +24,7 @@ SITE = ROOT / "site"
 MARK = '<p class="dp-updated">'
 MIGRATION = "5ccbbb0456e2a767a57265e6c6128121aea30c99"  # merge of Home#1
 BEFORE = yaml.safe_load((ROOT / "data" / "dates_before_migration.yaml").read_text(encoding="utf-8"))
+SITE_URL = "https://aaugs-dp-biosciences-and-drug-research.github.io/Home/"
 
 
 def last_commit_date(*paths):
@@ -68,14 +70,42 @@ def pages():
             yield SITE / "supervisors" / slug / "index.html", [f, *photos.glob(f"{slug}.*")]
 
 
+def sitemap_url(html_file):
+    """Canonical public URL for a built index.html file."""
+    rel = html_file.relative_to(SITE)
+    if rel.as_posix() == "index.html":
+        return SITE_URL
+    parent = rel.parent.as_posix().strip('/')
+    return f"{SITE_URL}{parent}/"
+
+
+def write_sitemap(entries):
+    """Replace the generator sitemap with every real HTML page and accurate lastmod."""
+    lines = ['<?xml version="1.0" encoding="UTF-8"?>',
+             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for html_file, date in sorted(entries, key=lambda item: sitemap_url(item[0])):
+        lines.append('  <url>')
+        lines.append(f"    <loc>{escape(sitemap_url(html_file))}</loc>")
+        if date is not None:
+            lines.append(f"    <lastmod>{date.isoformat()}</lastmod>")
+        lines.append('  </url>')
+    lines.append('</urlset>')
+    (SITE / "sitemap.xml").write_text("\n".join(lines) + "\n", encoding="utf-8")
+
 def main():
     if not SITE.is_dir():
         sys.exit("site/ not found – run `zensical build` first")
     n = 0
+    sitemap_entries = []
     for html_file, sources in pages():
-        if html_file.is_file() and stamp(html_file, last_commit_date(*sources)):
+        if not html_file.is_file():
+            continue
+        date = last_commit_date(*sources)
+        sitemap_entries.append((html_file, date))
+        if stamp(html_file, date):
             n += 1
-    print(f"✅ Added 'Last updated' to {n} pages")
+    write_sitemap(sitemap_entries)
+    print(f"✅ Added 'Last updated' to {n} pages; sitemap contains {len(sitemap_entries)} pages")
 
 
 if __name__ == "__main__":

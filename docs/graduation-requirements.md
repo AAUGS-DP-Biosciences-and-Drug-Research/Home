@@ -1,3 +1,7 @@
+---
+description: "Graduation requirements, dissertation format, publication expectations, credits, and programme recommendations for doctoral researchers in Biosciences and Drug Research."
+---
+
 # 🎓 Graduation Requirements
 
 ## Duration

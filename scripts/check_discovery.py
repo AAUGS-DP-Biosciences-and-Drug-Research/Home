@@ -11,7 +11,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / "site"
-NS = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+NS = {
+    "sm": "http://www.sitemaps.org/schemas/sitemap/0.9",
+    "image": "http://www.google.com/schemas/sitemap-image/1.1",
+}
 SITE_URL = "https://aaugs-dp-biosciences-and-drug-research.github.io/Home/"
 
 
@@ -25,6 +28,7 @@ def main() -> None:
         SITE / "sitemap.xml",
         SITE / "licensing" / "index.html",
         SITE / "assets" / "image_rights.json",
+        SITE / "c3e7a1f9b5d2c8e4a6f0b7d1e9c5a3f2.txt",
     ]
     missing = [str(path.relative_to(SITE)) for path in required if not path.is_file()]
     if missing:
@@ -58,6 +62,13 @@ def main() -> None:
         extra_urls = sorted(sitemap_urls - expected_urls)
         fail(f"sitemap mismatch; missing={missing_urls}, extra={extra_urls}")
 
+    image_entries = tree.findall("sm:url/image:image/image:loc", NS)
+    if len(image_entries) != len(rows):
+        fail(
+            f"expected {len(rows)} sitemap image entries for supervisor portraits; "
+            f"found {len(image_entries)}"
+        )
+
     profile_dir = SITE / "supervisors"
     for html_file in sorted(profile_dir.glob("*/index.html")):
         html = html_file.read_text(encoding="utf-8")
@@ -69,14 +80,21 @@ def main() -> None:
         if not match:
             fail(f"missing JSON-LD in {html_file.relative_to(SITE)}")
         payload = json.loads(match.group(1))
-        if payload.get("@type") != "ProfilePage":
-            fail(f"expected ProfilePage JSON-LD in {html_file.relative_to(SITE)}")
-        if not isinstance(payload.get("mainEntity"), dict) or payload["mainEntity"].get("@type") != "Person":
-            fail(f"expected Person mainEntity in {html_file.relative_to(SITE)}")
+        graph = payload.get("@graph")
+        if not isinstance(graph, list):
+            fail(f"expected JSON-LD @graph in {html_file.relative_to(SITE)}")
+        types = {node.get("@type") for node in graph if isinstance(node, dict)}
+        if not {"ProfilePage", "Person", "BreadcrumbList"} <= types:
+            fail(
+                f"expected ProfilePage, Person and BreadcrumbList JSON-LD in "
+                f"{html_file.relative_to(SITE)}"
+            )
+        if "og:image" not in html:
+            fail(f"missing social image metadata in {html_file.relative_to(SITE)}")
 
     print(
         f"Discovery validation passed: {len(sitemap_urls)} pages, "
-        f"{len(rows)} attributed supervisor images."
+        f"{len(rows)} attributed supervisor images and {len(image_entries)} sitemap images."
     )
 
 

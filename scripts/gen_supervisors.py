@@ -247,7 +247,6 @@ def profile_page(s):
             "@type": "ImageObject",
             "contentUrl": f"{SITE_URL}assets/images/supervisors/{photo}",
             "copyrightNotice": f"© {s['name']}",
-            "acquireLicensePage": f"{SITE_URL}licensing/",
         }
     structured_data = (json.dumps(person_jsonld, ensure_ascii=False).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026"))
     return (

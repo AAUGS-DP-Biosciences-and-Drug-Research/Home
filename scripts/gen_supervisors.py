@@ -249,7 +249,7 @@ def profile_page(s):
             "copyrightNotice": f"© {s['name']}",
             "acquireLicensePage": f"{SITE_URL}licensing/",
         }
-    structured_data = html.escape(json.dumps(person_jsonld, ensure_ascii=False), quote=False)
+    structured_data = (json.dumps(person_jsonld, ensure_ascii=False).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026"))
     return (
         f'---\ntitle: "{title}"\ndescription: "{description.replace(chr(34), chr(39))}"\nedit_url: "{edit}"\n---\n\n'
         f'<script type="application/ld+json">{structured_data}</script>\n\n'

@@ -89,7 +89,9 @@ def main() -> None:
                 f"expected ProfilePage, Person and BreadcrumbList JSON-LD in "
                 f"{html_file.relative_to(SITE)}"
             )
-        if "og:image" not in html:
+        slug = html_file.parent.name
+        has_photo = (SITE / "assets" / "images" / "supervisors" / f"{slug}.jpg").is_file()
+        if has_photo and "og:image" not in html:
             fail(f"missing social image metadata in {html_file.relative_to(SITE)}")
 
     print(

@@ -230,7 +230,13 @@ def profile_page(s):
     title = str(s["name"]).replace('"', '\\"')
     edit = f"{REPO}/edit/main/data/supervisors/{s['_file']}"
     description_parts = [str(s.get("group") or "").strip(), str(s.get("unit") or "").strip()]
-    description = " · ".join(part for part in description_parts if part) or "Supervisor profile"
+    affiliation_summary = ", ".join(part for part in description_parts if part)
+    description = (
+        f"{s['name']} — {affiliation_summary}. Supervisor profile for the "
+        "Doctoral Programme in Biosciences and Drug Research."
+        if affiliation_summary
+        else f"{s['name']} — supervisor profile for the Doctoral Programme in Biosciences and Drug Research."
+    )
     page_url = f"{SITE_URL}supervisors/{s['slug']}/"
     person = {
         "@type": "Person",

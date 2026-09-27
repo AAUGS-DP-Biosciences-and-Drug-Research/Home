@@ -43,6 +43,12 @@ jobs:
       - name: Add "Last updated" dates
         run: python scripts/add_dates.py
 
+      - name: Enrich sitemap with primary images
+        run: python scripts/enrich_sitemap_images.py
+
+      - name: Validate IndexNow payload
+        run: python scripts/submit_indexnow.py --sitemap site/sitemap.xml --key-file docs/c3e7a1f9b5d2c8e4a6f0b7d1e9c5a3f2.txt --dry-run
+
       - name: Validate discovery and rights metadata
         run: python scripts/check_discovery.py
 
@@ -69,4 +75,5 @@ jobs:
 
       - name: Notify IndexNow
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        continue-on-error: true
         run: python scripts/submit_indexnow.py --sitemap site/sitemap.xml --key-file docs/c3e7a1f9b5d2c8e4a6f0b7d1e9c5a3f2.txt

@@ -249,6 +249,21 @@ def profile_page(s):
             "name": str(s.get("university") or "Åbo Akademi University"),
         },
     }
+    same_as = []
+    if s["cris_profile"]:
+        same_as.append(s["cris_profile"])
+    if s["lab_website"]:
+        same_as.append(s["lab_website"])
+    same_as.extend(page["url"] for page in s["web_pages"])
+    if same_as:
+        person["sameAs"] = list(dict.fromkeys(same_as))
+    knows_about = [
+        str(value).strip()
+        for value in [*(s.get("expertise") or []), *(s.get("techniques") or [])]
+        if str(value).strip()
+    ]
+    if knows_about:
+        person["knowsAbout"] = list(dict.fromkeys(knows_about))
     if photo:
         person["image"] = {
             "@type": "ImageObject",
@@ -258,15 +273,47 @@ def profile_page(s):
         }
     profile_jsonld = {
         "@context": "https://schema.org",
-        "@type": "ProfilePage",
-        "@id": f"{page_url}#profile",
-        "url": page_url,
-        "name": str(s["name"]),
-        "mainEntity": person,
+        "@graph": [
+            {
+                "@type": "ProfilePage",
+                "@id": f"{page_url}#profile",
+                "url": page_url,
+                "name": str(s["name"]),
+                "mainEntity": {"@id": f"{page_url}#person"},
+                "breadcrumb": {"@id": f"{page_url}#breadcrumb"},
+            },
+            person,
+            {
+                "@type": "BreadcrumbList",
+                "@id": f"{page_url}#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": SITE_URL,
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Supervisors",
+                        "item": f"{SITE_URL}supervisors/",
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": str(s["name"]),
+                        "item": page_url,
+                    },
+                ],
+            },
+        ],
     }
     structured_data = (json.dumps(profile_jsonld, ensure_ascii=False).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026"))
     return (
-        f'---\ntitle: "{title}"\ndescription: "{description.replace(chr(34), chr(39))}"\nedit_url: "{edit}"\n---\n\n'
+        f'---\ntitle: "{title}"\ndescription: "{description.replace(chr(34), chr(39))}"\n'
+        + (f'image: "{SITE_URL}assets/images/supervisors/{photo}"\nimage_alt: "{title}"\n' if photo else "")
+        + f'edit_url: "{edit}"\n---\n\n'
         f'<script type="application/ld+json">{structured_data}</script>\n\n'
         f'<div class="dp-profile">\n'
         f"{media}\n"

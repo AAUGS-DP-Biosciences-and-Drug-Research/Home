@@ -10,6 +10,8 @@
 - Graduation requirements: https://aaugs-dp-biosciences-and-drug-research.github.io/Home/graduation-requirements/
 - Supervisor portfolio: https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/
 - Licensing and image rights: https://aaugs-dp-biosciences-and-drug-research.github.io/Home/licensing/
+- Image rights JSON: https://aaugs-dp-biosciences-and-drug-research.github.io/Home/assets/image_rights.json
+- Sitemap: https://aaugs-dp-biosciences-and-drug-research.github.io/Home/sitemap.xml
 - Source repository: https://github.com/AAUGS-DP-Biosciences-and-Drug-Research/Home
 
 ## Authority and interpretation

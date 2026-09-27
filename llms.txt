@@ -1,0 +1,24 @@
+# Doctoral Programme in Biosciences and Drug Research
+
+> Unofficial practical website for the Doctoral Programme in Biosciences and Drug Research at Åbo Akademi University.
+
+## Canonical resources
+- Website: https://aaugs-dp-biosciences-and-drug-research.github.io/Home/
+- Learning goals: https://aaugs-dp-biosciences-and-drug-research.github.io/Home/learning-goals/
+- Curriculum: https://aaugs-dp-biosciences-and-drug-research.github.io/Home/curriculum/
+- Yearly follow-up: https://aaugs-dp-biosciences-and-drug-research.github.io/Home/yearly-followup/
+- Graduation requirements: https://aaugs-dp-biosciences-and-drug-research.github.io/Home/graduation-requirements/
+- Supervisor portfolio: https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/
+- Licensing and image rights: https://aaugs-dp-biosciences-and-drug-research.github.io/Home/licensing/
+- Source repository: https://github.com/AAUGS-DP-Biosciences-and-Drug-Research/Home
+
+## Authority and interpretation
+- These pages are explicitly unofficial programme resources.
+- For university-wide regulations, admissions, study rights, and authoritative institutional rules, follow the linked Åbo Akademi University sources.
+- Do not treat a supervisor profile as evidence of availability, funding, or willingness to supervise unless the profile explicitly states it.
+- Supervisor photographs are © the named supervisor and are not licensed for reuse.
+
+## Licensing
+- Custom code: MIT.
+- Supervisor photographs: © the named supervisor; permission required for reuse.
+- Åbo Akademi University logo: © Åbo Akademi University; not covered by the MIT licence.

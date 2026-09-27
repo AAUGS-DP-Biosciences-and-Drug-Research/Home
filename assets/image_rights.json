@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "policy": {
+    "rights_status": "copyrighted",
+    "reuse": "permission_required",
+    "notice": "Supervisor photographs are © the named supervisor and are not licensed for reuse."
+  },
+  "images": [
+    {
+      "path": "assets/images/supervisors/kuldeep-bansal.jpg",
+      "copyright_holder": "Kuldeep Bansal",
+      "copyright_notice": "© Kuldeep Bansal",
+      "rights_status": "copyrighted",
+      "reuse": "permission_required",
+      "profile_url": "https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/kuldeep-bansal/"
+    },
+    {
+      "path": "assets/images/supervisors/eleanor-coffey.jpg",
+      "copyright_holder": "Eleanor Coffey",
+      "copyright_notice": "© Eleanor Coffey",
+      "rights_status": "copyrighted",
+      "reuse": "permission_required",
+      "profile_url": "https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/eleanor-coffey/"
+    },
+    {
+      "path": "assets/images/supervisors/zhang-hongbo.jpg",
+      "copyright_holder": "Zhang Hongbo",
+      "copyright_notice": "© Zhang Hongbo",
+      "rights_status": "copyrighted",
+      "reuse": "permission_required",
+      "profile_url": "https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/zhang-hongbo/"
+    },
+    {
+      "path": "assets/images/supervisors/guillaume-jacquemet.jpg",
+      "copyright_holder": "Guillaume Jacquemet",
+      "copyright_notice": "© Guillaume Jacquemet",
+      "rights_status": "copyrighted",
+      "reuse": "permission_required",
+      "profile_url": "https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/guillaume-jacquemet/"
+    },
+    {
+      "path": "assets/images/supervisors/peter-mattjus.jpg",
+      "copyright_holder": "Peter Mattjus",
+      "copyright_notice": "© Peter Mattjus",
+      "rights_status": "copyrighted",
+      "reuse": "permission_required",
+      "profile_url": "https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/peter-mattjus/"
+    },
+    {
+      "path": "assets/images/supervisors/annika-meinander.jpg",
+      "copyright_holder": "Annika Meinander",
+      "copyright_notice": "© Annika Meinander",
+      "rights_status": "copyrighted",
+      "reuse": "permission_required",
+      "profile_url": "https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/annika-meinander/"
+    },
+    {
+      "path": "assets/images/supervisors/mikael-von-numers.jpg",
+      "copyright_holder": "Mikael von Numers",
+      "copyright_notice": "© Mikael von Numers",
+      "rights_status": "copyrighted",
+      "reuse": "permission_required",
+      "profile_url": "https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/mikael-von-numers/"
+    },
+    {
+      "path": "assets/images/supervisors/christian-pansch-hattich.jpg",
+      "copyright_holder": "Christian Pansch-Hattich",
+      "copyright_notice": "© Christian Pansch-Hattich",
+      "rights_status": "copyrighted",
+      "reuse": "permission_required",
+      "profile_url": "https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/christian-pansch-hattich/"
+    },
+    {
+      "path": "assets/images/supervisors/riikka-puntila-dodd.jpg",
+      "copyright_holder": "Riikka Puntila-Dodd",
+      "copyright_notice": "© Riikka Puntila-Dodd",
+      "rights_status": "copyrighted",
+      "reuse": "permission_required",
+      "profile_url": "https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/riikka-puntila-dodd/"
+    },
+    {
+      "path": "assets/images/supervisors/jessica-rosenholm.jpg",
+      "copyright_holder": "Jessica Rosenholm",
+      "copyright_notice": "© Jessica Rosenholm",
+      "rights_status": "copyrighted",
+      "reuse": "permission_required",
+      "profile_url": "https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/jessica-rosenholm/"
+    },
+    {
+      "path": "assets/images/supervisors/cecilia-sahlgren.jpg",
+      "copyright_holder": "Cecilia Sahlgren",
+      "copyright_notice": "© Cecilia Sahlgren",
+      "rights_status": "copyrighted",
+      "reuse": "permission_required",
+      "profile_url": "https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/cecilia-sahlgren/"
+    },
+    {
+      "path": "assets/images/supervisors/tiina-salminen.jpg",
+      "copyright_holder": "Tiina Salminen",
+      "copyright_notice": "© Tiina Salminen",
+      "rights_status": "copyrighted",
+      "reuse": "permission_required",
+      "profile_url": "https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/tiina-salminen/"
+    },
+    {
+      "path": "assets/images/supervisors/outi-salo-ahen.jpg",
+      "copyright_holder": "Outi Salo-Ahen",
+      "copyright_notice": "© Outi Salo-Ahen",
+      "rights_status": "copyrighted",
+      "reuse": "permission_required",
+      "profile_url": "https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/outi-salo-ahen/"
+    },
+    {
+      "path": "assets/images/supervisors/sonja-salovius-lauren.jpg",
+      "copyright_holder": "Sonja Salovius-Lauren",
+      "copyright_notice": "© Sonja Salovius-Lauren",
+      "rights_status": "copyrighted",
+      "reuse": "permission_required",
+      "profile_url": "https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/sonja-salovius-lauren/"
+    },
+    {
+      "path": "assets/images/supervisors/lea-sistonen.jpg",
+      "copyright_holder": "Lea Sistonen",
+      "copyright_notice": "© Lea Sistonen",
+      "rights_status": "copyrighted",
+      "reuse": "permission_required",
+      "profile_url": "https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/lea-sistonen/"
+    },
+    {
+      "path": "assets/images/supervisors/conny-sj-qvist.jpg",
+      "copyright_holder": "Conny Sjöqvist",
+      "copyright_notice": "© Conny Sjöqvist",
+      "rights_status": "copyrighted",
+      "reuse": "permission_required",
+      "profile_url": "https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/conny-sj-qvist/"
+    },
+    {
+      "path": "assets/images/supervisors/diana-toivola.jpg",
+      "copyright_holder": "Diana Toivola",
+      "copyright_notice": "© Diana Toivola",
+      "rights_status": "copyrighted",
+      "reuse": "permission_required",
+      "profile_url": "https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/diana-toivola/"
+    },
+    {
+      "path": "assets/images/supervisors/anna-t-rnroos-remes.jpg",
+      "copyright_holder": "Anna Törnroos-Remes",
+      "copyright_notice": "© Anna Törnroos-Remes",
+      "rights_status": "copyrighted",
+      "reuse": "permission_required",
+      "profile_url": "https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/anna-t-rnroos-remes/"
+    },
+    {
+      "path": "assets/images/supervisors/tapani-viitala.jpg",
+      "copyright_holder": "Tapani Viitala",
+      "copyright_notice": "© Tapani Viitala",
+      "rights_status": "copyrighted",
+      "reuse": "permission_required",
+      "profile_url": "https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/tapani-viitala/"
+    },
+    {
+      "path": "assets/images/supervisors/xiaoju-wang.jpg",
+      "copyright_holder": "Xiaoju Wang",
+      "copyright_notice": "© Xiaoju Wang",
+      "rights_status": "copyrighted",
+      "reuse": "permission_required",
+      "profile_url": "https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/xiaoju-wang/"
+    },
+    {
+      "path": "assets/images/supervisors/markus-st.jpg",
+      "copyright_holder": "Markus Öst",
+      "copyright_notice": "© Markus Öst",
+      "rights_status": "copyrighted",
+      "reuse": "permission_required",
+      "profile_url": "https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/markus-st/"
+    }
+  ]
+}\n

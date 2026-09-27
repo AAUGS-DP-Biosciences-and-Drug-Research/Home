@@ -237,6 +237,7 @@ def profile_page(s):
         "@type": "Person",
         "name": str(s["name"]),
         "url": page_url,
+        "description": description,
         "affiliation": {
             "@type": "CollegeOrUniversity",
             "name": str(s.get("university") or "Åbo Akademi University"),
@@ -247,6 +248,7 @@ def profile_page(s):
             "@type": "ImageObject",
             "contentUrl": f"{SITE_URL}assets/images/supervisors/{photo}",
             "copyrightNotice": f"© {s['name']}",
+            "creditText": f"© {s['name']}",
         }
     structured_data = (json.dumps(person_jsonld, ensure_ascii=False).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026"))
     return (
@@ -348,7 +350,7 @@ def main():
     }
     rights_path = ROOT / "docs" / "assets" / "image_rights.json"
     rights_path.parent.mkdir(parents=True, exist_ok=True)
-    rights_path.write_text(json.dumps(rights, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    rights_path.write_text(json.dumps(rights, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"✅ Generated {len(sups)} supervisor pages")
 
 

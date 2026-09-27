@@ -341,7 +341,7 @@ def index_page(sups):
         '<input type="search" data-dp-search placeholder="Name, group, expertise, technique…"></label>'
         '<label class="dp-filter__group"><span>Subject</span>'
         f'<select data-dp-subject><option value="">All subjects</option>{options}</select></label>'
-        '<span class="dp-filter__count" data-dp-count></span>'
+        '<span class="dp-filter__count" data-dp-count role="status" aria-live="polite" aria-atomic="true"></span>'
         "</div>\n",
     ]
     for u in subjects:

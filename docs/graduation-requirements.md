@@ -2,53 +2,41 @@
 description: "Graduation requirements, dissertation format, publication expectations, credits, and programme recommendations for doctoral researchers in Biosciences and Drug Research."
 ---
 
-# 🎓 Graduation Requirements
+# 🎓 Graduation requirements
 
-## Duration
-- A PhD thesis **typically takes 3–4 years** to complete.
+## Duration and credits
 
-## Credits
-- To graduate, **30 ECTS** are required — see the **[Curriculum](curriculum.md)**.
+A PhD thesis typically takes **3–4 years** to complete.
 
----
+The degree requires **30 ECTS** of studies. See the [Curriculum](curriculum.md).
 
-## Dissertation Format (Current AAU Regulations)
+## Article-based dissertations: university rules
 
-An article-based doctoral dissertation typically consists of **2–3 scientific articles**.  
-A licentiate dissertation must include **at least one article**.  
-In addition to what is outlined in this procedure, doctoral programmes may provide programme-specific guidelines for article-based dissertations.
+Under the current Åbo Akademi University regulations, an article-based doctoral dissertation typically consists of **2–3 scientific articles**. A licentiate dissertation must include **at least one article**. Doctoral programmes may also provide programme-specific guidance.
 
-The following are considered scientific articles:
+The following can count as scientific articles:
 
-- Published articles  
-- Articles accepted for publication  
-- Unpublished manuscripts that have undergone peer review or been accepted for publication  
-- Unpublished manuscripts submitted for peer review  
+- published articles;
+- articles accepted for publication;
+- unpublished manuscripts that have undergone peer review or been accepted for publication; and
+- unpublished manuscripts submitted for peer review.
 
-### Number of Articles
-The articles constitute the main scientific contribution of the dissertation.  
-The number of articles depends on their **scope**, **scientific significance**, and **quality**, the **publication platform**, and the **author’s individual contribution** in the case of co-authored articles.  
+The articles form the main scientific contribution of the dissertation. The appropriate number depends on their scope, scientific significance and quality, the publication platform, and the doctoral researcher's individual contribution to co-authored work.
 
-At least **one article must be accepted for publication**.  
-In exceptional cases, the **Head of Department** may approve the submission of a dissertation with fewer articles than recommended, provided that the scope and quality are sufficiently high.  
+At least **one article must be accepted for publication**. In exceptional cases, the Head of Department may approve submission with fewer articles than normally recommended if the scope and quality are sufficient.
 
-Preliminary examiners will pay particular attention to articles that have not yet been accepted for publication.
+Preliminary examiners will pay particular attention to manuscripts that have not yet been accepted for publication.
 
----
+## Programme recommendations
 
-## Doctoral Programme Recommendations
+The programme recommends judging a thesis by the quality and contribution of the work rather than by article count alone.
 
-Within our doctoral programme, we **recommend** the following to emphasize **quality over quantity**:
+- A typical thesis contains **two high-quality papers**, with the doctoral researcher as **first author on at least one**.
+- At least **50% of the included work** should be published or accepted.
+- The supervisor and head of subject decide when the thesis is ready for preliminary examination.
+- The head of department grants permission for the public defence on the basis of the preliminary examiners' statements.
+- For every manuscript included in the thesis, the doctoral researcher's contribution should be described precisely. List concrete contributions such as data generation, analysis, writing, and relevant figure panels rather than using broad statements. Use the programme template signed by the supervisor.
 
-- A **typical thesis consists of two high-quality papers**, with **at least one** paper as a **first-author** publication.  
-- **≥50%** of the included work should be **published** (or accepted).  
-- The decision to submit the thesis for **preliminary examination** is made by the **supervisor** and the **head of subject**; permission for the **public defence** is granted by the **head of department** based on the preliminary examiners' statements.  
-- For each manuscript included in the thesis, the **contribution of the PhD researcher must be clearly explained and justified**:
-  - Avoid vague statements.  
-  - **List specific figure panels** and contributions (**data generation**, **analysis**, etc.)  
-  - Use a **template signed by the supervisor**.
+## Full regulations
 
----
-
-## Full Regulations
-- 📄 **[AAU PhD Regulations (PDF)](https://www.abo.fi/wp-content/uploads/2025/11/regulation-on-doctoral-studies.pdf)**
+- 📄 [ÅAU Regulation on Doctoral Studies (PDF)](https://www.abo.fi/wp-content/uploads/2025/11/regulation-on-doctoral-studies.pdf)

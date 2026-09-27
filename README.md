@@ -1,117 +1,88 @@
-# Doctoral Programme in Biosciences and Drug Research – website
+# Doctoral Programme in Biosciences and Drug Research website
 
-Source of the (unofficial) programme website:
+This repository builds the unofficial programme website for the Doctoral Programme in Biosciences and Drug Research at Åbo Akademi University:
 
-**https://aaugs-dp-biosciences-and-drug-research.github.io/Home/**
+https://aaugs-dp-biosciences-and-drug-research.github.io/Home/
 
-The site is built with [Zensical](https://zensical.org) from the Markdown
-files in `docs/`. Every push to `main` rebuilds the website and all PDFs and
-publishes them automatically (GitHub Actions → `gh-pages` branch).
+The site is built from Markdown and YAML with [Zensical](https://zensical.org). Pull requests build a preview; pushes to main rebuild the site and PDFs and publish them to GitHub Pages.
 
-## Editing a page
+## Where to edit
 
-| Page | File |
+| Content | Source |
 |---|---|
-| Home (landing page) | `docs/index.md` |
-| Learning Goals | `docs/learning-goals.md` |
-| Curriculum | `docs/curriculum.md` |
-| Yearly Follow-up | `docs/yearly-followup.md` |
-| Graduation Requirements | `docs/graduation-requirements.md` |
+| Home page | docs/index.md |
+| Learning goals | docs/learning-goals.md |
+| Curriculum | docs/curriculum.md |
+| Yearly follow-up | docs/yearly-followup.md |
+| Graduation requirements | docs/graduation-requirements.md |
+| Supervisor profiles | data/supervisors/*.yaml |
+| Supervisor photos | data/photos/ |
+| Downloadable files | docs/files/ |
+| Site styling | docs/assets/stylesheets/extra.css |
 
-Open the file on GitHub, click the pencil icon, edit, and commit. Each page on
-the website also has an "Edit this page" button that opens the right file.
-Lists need a blank line before them, and nested items are indented by
-**4 spaces**.
+The generated files under docs/supervisors/ and docs/assets/images/supervisors/ should not be edited by hand.
 
-Downloadable files (DOCX, …) go in `docs/files/`.
+## Updating a supervisor profile
 
-## Supervisors
+Each supervisor has one YAML file in data/supervisors/. Existing slugs are permanent because they are part of the public URL.
 
-- One YAML file per supervisor in `data/supervisors/` (template: copy an
-  existing file). The `slug` is also the page address, so do not change it
-  for existing supervisors.
-- Photo: `data/photos/<slug>.jpg` (or `.png`). Photos are resized
-  automatically. Without a photo, the initials are shown.
-- Optional `photo_position: center` crops the thumbnail from the centre
-  instead of the top.
-- Supervisors can request changes themselves: each profile page has a
-  **Suggest changes to this profile** button. It opens a new GitHub issue whose
-  text is the current profile, so they only edit what should change. The
-  supervisor overview page links to a blank version for new supervisors.
-  These issues get the label `supervisor profile` automatically
-  (`.github/workflows/label-profile-issues.yml`); apply the change to the YAML
-  file and close the issue. The pencil icon on a profile opens its YAML file.
-- To convert a Microsoft Forms Excel export into YAML, use the notebook
-  `tools/Convert_Excel_Supervisor_Data_to_YAML.ipynb`:
-  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AAUGS-DP-Biosciences-and-Drug-Research/Home/blob/main/tools/Convert_Excel_Supervisor_Data_to_YAML.ipynb)
+The normal update route is a GitHub issue. Each profile has a **Suggest changes to this profile** button that opens an issue prefilled with the current information. Apply the requested changes to the YAML file, check any publication DOIs, and close the issue when the change is merged.
 
-## Look and feel
+A profile can also be edited directly in GitHub. Copy an existing YAML file when adding a new supervisor rather than inventing a new structure.
 
-The style follows www.abo.fi (colours of the abo2025 theme, square colour tiles,
-bold type). Everything is in `docs/assets/stylesheets/extra.css`. The
-university's own fonts are licensed through Adobe Fonts, so the open-source
-Figtree font is used instead; it is self-hosted in `docs/assets/fonts/`, so the
-site makes no requests to Google or Adobe. To show a black-and-white campus
-photo behind the title on the landing page, add `docs/assets/images/hero.jpg`
-and uncomment the `background-image` line under "Landing page hero" in
-`extra.css`.
+Photos belong in data/photos/ and should use the profile slug as the file name. If no photo is present, the site shows initials.
 
-## Credits and licences
+## Publication checks
 
-| What | Source | Licence |
-|---|---|---|
-| Custom website code | This repository | MIT (`LICENSE`) |
-| Site generator and theme | [Zensical](https://zensical.org) | MIT (bundled third-party scripts: see `assets/javascripts/LICENSE` in the built site) |
-| QR codes | [segno](https://github.com/heuer/segno) | BSD |
-| Font | [Figtree](https://github.com/erikdkennedy/figtree), via Fontsource, self-hosted in `docs/assets/fonts/` | SIL Open Font License 1.1 (`docs/assets/fonts/OFL.txt`) |
-| Emoji in PDFs | Noto Color Emoji (system font on the build machine) | SIL Open Font License 1.1 |
-| Åbo Akademi University logo | [abo.fi logo page](https://www.abo.fi/en/about-abo-akademi-university/for-media/the-abo-akademi-university-logo/) | © Åbo Akademi University. Used unmodified, on white, as required by the university's graphic guide ("Felanvändning": no busy/low-contrast backgrounds, no recolouring or distortion) |
-| Colours | Åbo Akademi graphic guide (2019) and www.abo.fi | Colour values only; no code, images or icons are copied from www.abo.fi |
-| Supervisor photos and texts | Submitted by the supervisors for the portfolio | © the supervisors; photographs are not licensed for reuse |
+scripts/check_dois.py checks the selected publications in supervisor profiles. It verifies that each DOI resolves, the registered title matches the citation, the supervisor appears among the authors, and the article is not marked as retracted.
 
-The university's own typefaces (Gibson, Soleil) are licensed through Adobe
-Fonts and are **not** used. The only requests a visitor's browser makes outside
-the site are to the GitHub API (repository name/version next to the "Edit these
-pages on GitHub" link); no Google, Adobe or font CDN requests.
+The scheduled **Check publication DOIs** workflow runs monthly and opens or updates an issue when something needs attention.
 
-See `LICENSE-CONTENT.md` and the public **Licensing and image rights** page for the separation between code and visual-content rights.
+Run the same check locally with:
 
-## PDFs
+~~~bash
+python scripts/check_dois.py
+~~~
 
-Built automatically from the website pages (so PDF and web text are always
-the same):
+## Build locally
 
-- `/Home/pdf/handbook.pdf` – everything in one document, with contents
-- `/Home/pdf/<page>.pdf` – one PDF per page, and `supervisor-portfolio.pdf`
-- `/Home/Document.pdf` – the landing page (same address as before)
+Install the Python dependencies:
 
-Each section fits on one page where possible, all links are clickable, and every
-page carries a QR code to its live web page, so printed copies lead to the
-current version.
-
-## Publication check
-
-`scripts/check_dois.py` checks every supervisor publication against its DOI
-registry: the DOI resolves, the title matches, the supervisor is an author and
-the article is not retracted. The *Check publication DOIs* workflow runs it on
-the 1st of every month and opens (or updates) an issue when something needs
-attention. Run it by hand from the Actions tab, or locally with
-`python scripts/check_dois.py`.
-
-## Building locally
-
-```bash
+~~~bash
 pip install -r requirements.txt
-python scripts/gen_supervisors.py   # supervisor pages from YAML
-zensical serve                      # live preview (address printed in the terminal)
-zensical build && python scripts/add_dates.py && python scripts/build_pdf.py   # full build incl. dates and PDFs
-```
+~~~
 
-WeasyPrint needs Pango (`apt install libpango-1.0-0 libpangoft2-1.0-0`).
+Generate supervisor pages and start a live preview:
 
-## History
+~~~bash
+python scripts/gen_supervisors.py
+zensical serve
+~~~
 
-Until 2026 each page lived in its own repository (LearningGoals, Curriculum,
-Yearly_followup, Graduation_Requirements, supervisor-portfolio, Master_PDF).
-See [MIGRATION.md](MIGRATION.md) for how they were merged here and how text
-accuracy was verified. Retired files are kept in [`deprecated/`](deprecated/).
+For the full CI-equivalent build:
+
+~~~bash
+python scripts/gen_supervisors.py
+zensical build --strict
+python scripts/add_dates.py
+python scripts/enrich_sitemap_images.py
+python scripts/submit_indexnow.py --sitemap site/sitemap.xml --key-file docs/c3e7a1f9b5d2c8e4a6f0b7d1e9c5a3f2.txt --dry-run
+python scripts/check_discovery.py
+python scripts/build_pdf.py
+~~~
+
+WeasyPrint also needs Pango. On Debian/Ubuntu:
+
+~~~bash
+sudo apt install libpango-1.0-0 libpangoft2-1.0-0
+~~~
+
+## Repository rules
+
+See [AGENTS.md](AGENTS.md) before changing code or generated content. The short version is: keep changes small, fail loudly instead of silently falling back, delete dead code, add type annotations and useful docstrings, and keep source files easy to read.
+
+## Licensing
+
+Custom code in this repository is MIT licensed. Supervisor photographs and profile text are not covered by that licence. Photographs remain © the named supervisor and are not licensed for reuse.
+
+See [LICENSE-CONTENT.md](LICENSE-CONTENT.md) and the website's **Licensing and image rights** page for details.

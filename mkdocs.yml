@@ -66,3 +66,4 @@ extra_css:
   - assets/stylesheets/extra.css
 extra_javascript:
   - assets/javascripts/supervisors.js
+  - assets/javascripts/external-links.js

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version='1.0' encoding='utf-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/</loc>
     <lastmod>2026-09-27</lastmod>
@@ -27,7 +27,7 @@
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/anna-t-rnroos-remes/</loc>
     <lastmod>2026-09-26</lastmod>
-  </url>
+  <image:image><image:loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/assets/images/supervisors/anna-t-rnroos-remes.jpg</image:loc></image:image></url>
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/anne-filppula/</loc>
     <lastmod>2026-02-13</lastmod>
@@ -35,15 +35,15 @@
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/annika-meinander/</loc>
     <lastmod>2026-09-26</lastmod>
-  </url>
+  <image:image><image:loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/assets/images/supervisors/annika-meinander.jpg</image:loc></image:image></url>
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/cecilia-sahlgren/</loc>
     <lastmod>2026-02-13</lastmod>
-  </url>
+  <image:image><image:loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/assets/images/supervisors/cecilia-sahlgren.jpg</image:loc></image:image></url>
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/christian-pansch-hattich/</loc>
     <lastmod>2026-09-26</lastmod>
-  </url>
+  <image:image><image:loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/assets/images/supervisors/christian-pansch-hattich.jpg</image:loc></image:image></url>
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/christoffer-bostr-m/</loc>
     <lastmod>2026-09-26</lastmod>
@@ -51,23 +51,23 @@
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/conny-sj-qvist/</loc>
     <lastmod>2026-02-13</lastmod>
-  </url>
+  <image:image><image:loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/assets/images/supervisors/conny-sj-qvist.jpg</image:loc></image:image></url>
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/diana-toivola/</loc>
     <lastmod>2026-09-26</lastmod>
-  </url>
+  <image:image><image:loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/assets/images/supervisors/diana-toivola.jpg</image:loc></image:image></url>
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/eleanor-coffey/</loc>
     <lastmod>2026-02-13</lastmod>
-  </url>
+  <image:image><image:loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/assets/images/supervisors/eleanor-coffey.jpg</image:loc></image:image></url>
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/guillaume-jacquemet/</loc>
     <lastmod>2026-02-13</lastmod>
-  </url>
+  <image:image><image:loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/assets/images/supervisors/guillaume-jacquemet.jpg</image:loc></image:image></url>
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/jessica-rosenholm/</loc>
     <lastmod>2026-02-13</lastmod>
-  </url>
+  <image:image><image:loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/assets/images/supervisors/jessica-rosenholm.jpg</image:loc></image:image></url>
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/k-the-dahlstr-m/</loc>
     <lastmod>2026-02-13</lastmod>
@@ -79,15 +79,15 @@
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/kuldeep-bansal/</loc>
     <lastmod>2026-02-13</lastmod>
-  </url>
+  <image:image><image:loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/assets/images/supervisors/kuldeep-bansal.jpg</image:loc></image:image></url>
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/lea-sistonen/</loc>
     <lastmod>2026-02-13</lastmod>
-  </url>
+  <image:image><image:loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/assets/images/supervisors/lea-sistonen.jpg</image:loc></image:image></url>
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/markus-st/</loc>
     <lastmod>2026-02-13</lastmod>
-  </url>
+  <image:image><image:loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/assets/images/supervisors/markus-st.jpg</image:loc></image:image></url>
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/martin-snickars/</loc>
     <lastmod>2026-02-13</lastmod>
@@ -95,19 +95,19 @@
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/mikael-von-numers/</loc>
     <lastmod>2026-09-26</lastmod>
-  </url>
+  <image:image><image:loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/assets/images/supervisors/mikael-von-numers.jpg</image:loc></image:image></url>
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/outi-salo-ahen/</loc>
     <lastmod>2026-09-26</lastmod>
-  </url>
+  <image:image><image:loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/assets/images/supervisors/outi-salo-ahen.jpg</image:loc></image:image></url>
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/peter-mattjus/</loc>
     <lastmod>2026-02-13</lastmod>
-  </url>
+  <image:image><image:loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/assets/images/supervisors/peter-mattjus.jpg</image:loc></image:image></url>
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/riikka-puntila-dodd/</loc>
     <lastmod>2026-09-26</lastmod>
-  </url>
+  <image:image><image:loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/assets/images/supervisors/riikka-puntila-dodd.jpg</image:loc></image:image></url>
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/silvia-gramolelli/</loc>
     <lastmod>2026-02-13</lastmod>
@@ -115,23 +115,23 @@
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/sonja-salovius-lauren/</loc>
     <lastmod>2026-02-17</lastmod>
-  </url>
+  <image:image><image:loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/assets/images/supervisors/sonja-salovius-lauren.jpg</image:loc></image:image></url>
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/tapani-viitala/</loc>
     <lastmod>2026-02-13</lastmod>
-  </url>
+  <image:image><image:loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/assets/images/supervisors/tapani-viitala.jpg</image:loc></image:image></url>
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/tiina-salminen/</loc>
     <lastmod>2026-02-13</lastmod>
-  </url>
+  <image:image><image:loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/assets/images/supervisors/tiina-salminen.jpg</image:loc></image:image></url>
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/xiaoju-wang/</loc>
     <lastmod>2026-02-13</lastmod>
-  </url>
+  <image:image><image:loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/assets/images/supervisors/xiaoju-wang.jpg</image:loc></image:image></url>
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/supervisors/zhang-hongbo/</loc>
     <lastmod>2026-02-13</lastmod>
-  </url>
+  <image:image><image:loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/assets/images/supervisors/zhang-hongbo.jpg</image:loc></image:image></url>
   <url>
     <loc>https://aaugs-dp-biosciences-and-drug-research.github.io/Home/yearly-followup/</loc>
     <lastmod>2026-09-27</lastmod>

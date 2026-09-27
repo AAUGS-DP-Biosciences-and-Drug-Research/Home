@@ -1,3 +1,7 @@
+---
+description: "Learning goals for the Doctoral Programme in Biosciences and Drug Research at Åbo Akademi University, in English and Swedish."
+---
+
 # Learning goals
 
 

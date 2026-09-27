@@ -60,18 +60,21 @@ and uncomment the `background-image` line under "Landing page hero" in
 
 | What | Source | Licence |
 |---|---|---|
+| Custom website code | This repository | MIT (`LICENSE`) |
 | Site generator and theme | [Zensical](https://zensical.org) | MIT (bundled third-party scripts: see `assets/javascripts/LICENSE` in the built site) |
 | QR codes | [segno](https://github.com/heuer/segno) | BSD |
 | Font | [Figtree](https://github.com/erikdkennedy/figtree), via Fontsource, self-hosted in `docs/assets/fonts/` | SIL Open Font License 1.1 (`docs/assets/fonts/OFL.txt`) |
 | Emoji in PDFs | Noto Color Emoji (system font on the build machine) | SIL Open Font License 1.1 |
 | Åbo Akademi University logo | [abo.fi logo page](https://www.abo.fi/en/about-abo-akademi-university/for-media/the-abo-akademi-university-logo/) | © Åbo Akademi University. Used unmodified, on white, as required by the university's graphic guide ("Felanvändning": no busy/low-contrast backgrounds, no recolouring or distortion) |
 | Colours | Åbo Akademi graphic guide (2019) and www.abo.fi | Colour values only; no code, images or icons are copied from www.abo.fi |
-| Supervisor photos and texts | Submitted by the supervisors for the portfolio | © the supervisors |
+| Supervisor photos and texts | Submitted by the supervisors for the portfolio | © the supervisors; photographs are not licensed for reuse |
 
 The university's own typefaces (Gibson, Soleil) are licensed through Adobe
 Fonts and are **not** used. The only requests a visitor's browser makes outside
 the site are to the GitHub API (repository name/version next to the "Edit these
 pages on GitHub" link); no Google, Adobe or font CDN requests.
+
+See `LICENSE-CONTENT.md` and the public **Licensing and image rights** page for the separation between code and visual-content rights.
 
 ## PDFs
 

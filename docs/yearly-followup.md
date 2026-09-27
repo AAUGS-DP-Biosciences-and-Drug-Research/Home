@@ -1,3 +1,7 @@
+---
+description: "Yearly PhD follow-up process, ISP updates, thesis follow-up committee guidance, meeting structure, and checklists for doctoral researchers."
+---
+
 # Yearly follow-up during your PhD studies
 
 ## Useful resources

@@ -1,3 +1,7 @@
+---
+description: "Curriculum structure, ECTS requirements, course categories, conference credits, and study options for the Doctoral Programme in Biosciences and Drug Research."
+---
+
 # Curriculum
 
 ## 🟦 Courses in major subject or related fields (20-30 ECTS)

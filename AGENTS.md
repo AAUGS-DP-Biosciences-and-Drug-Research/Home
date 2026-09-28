@@ -96,14 +96,13 @@ python scripts/gen_supervisors.py
 zensical build --strict
 python scripts/add_dates.py
 python scripts/enrich_sitemap_images.py
-python scripts/submit_indexnow.py --sitemap site/sitemap.xml --key-file docs/c3e7a1f9b5d2c8e4a6f0b7d1e9c5a3f2.txt --dry-run
 python scripts/check_discovery.py
 python scripts/build_pdf.py
 ~~~
 
 Run python scripts/check_dois.py when supervisor publications change.
 
-A failing check is a problem to fix, not something to suppress. Do not add continue-on-error, blanket exception handling, or conditional skips merely to make CI green. The one deliberate exception is an external notification step whose failure cannot affect the built site; such exceptions must be named and documented in the workflow.
+A failing check is a problem to fix, not something to suppress. Do not add continue-on-error, blanket exception handling, or conditional skips merely to make CI green. The one deliberate exception is the "Check DOIs" step in check-dois.yml: its exit code 1 means "problems found", and the next step reports them in an issue. Any new exception must be named and documented in the workflow.
 
 ## Pull requests
 

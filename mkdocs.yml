@@ -67,3 +67,4 @@ extra_css:
 extra_javascript:
   - assets/javascripts/supervisors.js
   - assets/javascripts/external-links.js
+  - assets/javascripts/checklists.js

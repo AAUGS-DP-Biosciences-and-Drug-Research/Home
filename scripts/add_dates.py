@@ -19,6 +19,9 @@ from xml.sax.saxutils import escape
 
 import yaml
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from gen_supervisors import load_entries  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / "site"
 MARK = '<p class="dp-updated">'
@@ -65,7 +68,7 @@ def pages():
     photos = ROOT / "data" / "photos"
     yield SITE / "supervisors" / "index.html", [sup, photos]
     for f in sorted(sup.glob("*.y*ml")):
-        for entry in yaml.safe_load(f.read_text(encoding="utf-8")) or []:
+        for entry in load_entries(f):
             slug = entry["slug"]
             yield SITE / "supervisors" / slug / "index.html", [f, *photos.glob(f"{slug}.*")]
 
@@ -99,8 +102,10 @@ def main():
     sitemap_entries = []
     for html_file, sources in pages():
         if not html_file.is_file():
-            continue
+            sys.exit(f"{html_file.relative_to(ROOT)} is missing: run gen_supervisors.py and zensical build first")
         date = last_commit_date(*sources)
+        if date is None:
+            print(f"⚠️  {html_file.relative_to(SITE)}: source not committed yet, so no 'Last updated' date")
         sitemap_entries.append((html_file, date))
         if stamp(html_file, date):
             n += 1

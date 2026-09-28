@@ -17,6 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
 
       - uses: actions/setup-python@v6
         with:
@@ -29,6 +31,7 @@ jobs:
       - name: Check DOIs
         id: check
         run: python scripts/check_dois.py --report doi-report.md
+        # Exit code 1 means "problems found"; the next step reports them.
         continue-on-error: true
 
       - name: Open or update the issue
@@ -37,6 +40,10 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           title="Publication check: DOIs need attention"
+          if [ ! -s doi-report.md ]; then
+            echo "::error::check_dois.py failed before writing its report; see the 'Check DOIs' step log."
+            exit 1
+          fi
           body="$(cat doi-report.md)
 
           _Found by the monthly [Check publication DOIs](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) workflow._"

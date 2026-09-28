@@ -22,10 +22,9 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from gen_supervisors import split_doi  # noqa: E402
+from gen_supervisors import load_entries, split_doi  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 UA = {"User-Agent": "aaugs-dp-biosciences-site/1.0 (https://github.com/AAUGS-DP-Biosciences-and-Drug-Research/Home)"}
@@ -61,13 +60,17 @@ def registry(doi):
             title = m.get("title")
             title = " ".join(title) if isinstance(title, list) else (title or "")
             title = re.sub(r"<[^>]+>|&lt;[^&]*&gt;", "", title)
-            authors = [" ".join(filter(None, [a.get("family"), a.get("given"), a.get("name")])) for a in m.get("author", [])]
-            retracted = title.upper().startswith("RETRACTED")
-            if source == "crossref" and not retracted:
+            authors = [{"family": a.get("family") or a.get("name") or "", "given": a.get("given") or ""}
+                       for a in m.get("author", [])]
+            notices = {u.get("type") for u in m.get("updated-by", [])}  # includes Retraction Watch
+            if source == "crossref":
                 notes = fetch(f"https://api.crossref.org/works?filter=updates:{q}&rows=5", {})["message"]["items"]
-                retracted = any(u.get("type") == "retraction" for n in notes for u in n.get("update-to", []))
-            return {"title": title, "authors": authors, "retracted": retracted}
-        except Exception as e:  # network hiccup or rate limit: retry
+                notices |= {u.get("type") for n in notes for u in n.get("update-to", [])}
+            retracted = title.upper().startswith("RETRACTED") or bool(notices & {"retraction", "withdrawal"})
+            concern = "expression_of_concern" in notices
+            return {"title": title, "authors": authors, "retracted": retracted, "concern": concern}
+        except (urllib.error.URLError, TimeoutError, json.JSONDecodeError, KeyError) as e:
+            # network hiccup, rate limit or truncated response: retry
             last = e
             time.sleep(3 * (attempt + 1))
     return {"error": str(last)}
@@ -75,23 +78,37 @@ def registry(doi):
 
 def title_score(registered, citation):
     t, c = norm(registered), norm(citation)
-    if t and t in c:
+    if len(t.split()) >= 4 and t in c:  # short titles could match a journal name
         return 1.0
     return difflib.SequenceMatcher(None, t, c[: len(t) + 10]).ratio()
 
 
+def similar(a, b):
+    return difflib.SequenceMatcher(None, a, b).ratio() >= AUTHOR_MIN
+
+
 def is_author(name, authors):
-    parts = [p for p in norm(name).split() if len(p) >= 3]
-    for a in map(norm, authors):
-        for w in a.split():
-            if any(difflib.SequenceMatcher(None, p, w).ratio() >= AUTHOR_MIN for p in parts):
-                return True
+    """True when one author's family name and given-name initial match the supervisor.
+
+    Name order is not assumed ("Zhang Hongbo" and "Hongbo Zhang" both work):
+    one part of the supervisor's name must match the author's family name, and
+    when the registry gives a first name, another part must share its initial.
+    """
+    parts = [p for p in norm(name).split() if len(p) >= 2]
+    for a in authors:
+        family, given = norm(a["family"]).split(), norm(a["given"]).split()
+        for i, p in enumerate(parts):
+            if any(similar(p, f) for f in family):
+                rest = parts[:i] + parts[i + 1:]
+                initials = {g[0] for g in given}
+                if not initials or any(r[0] in initials for r in rest):
+                    return True
     return False
 
 
 def publications():
     for f in sorted((ROOT / "data" / "supervisors").glob("*.y*ml")):
-        for e in yaml.safe_load(f.read_text(encoding="utf-8")) or []:
+        for e in load_entries(f):
             for p in e.get("publications") or []:
                 p = " ".join(str(p).split())
                 i = p.find("DOI: ")
@@ -109,11 +126,14 @@ def check(pub):
     problems = []
     if r["retracted"]:
         problems.append("**retracted**")
+    if r["concern"]:
+        problems.append("expression of concern")
     score = title_score(r["title"], citation)
     if score < TITLE_MIN:
         problems.append(f"title mismatch ({score:.2f}): registered as “{r['title'][:120]}”")
     if not is_author(name, r["authors"]):
-        problems.append("supervisor not among the authors: " + ", ".join(r["authors"][:8]))
+        problems.append("supervisor not among the authors: "
+                        + ", ".join(f"{a['given']} {a['family']}".strip() for a in r["authors"][:8]))
     return pub, problems
 
 

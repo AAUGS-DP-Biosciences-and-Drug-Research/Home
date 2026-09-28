@@ -24,18 +24,12 @@ def load_site_url(mkdocs_path: Path) -> str:
 
 def primary_image(site_root: Path, relative_page: str) -> Path | None:
     parts = [part for part in relative_page.strip("/").split("/") if part]
-    if len(parts) != 2 or parts[0] not in {"instruments", "supervisors"}:
+    if len(parts) != 2 or parts[0] != "supervisors":
         return None
-    slug = parts[1]
-    roots = [
-        site_root / "assets" / "images",
-        site_root / "assets" / "images" / "supervisors",
-    ]
-    for root in roots:
-        for suffix in IMAGE_SUFFIXES:
-            candidate = root / f"{slug}{suffix}"
-            if candidate.is_file():
-                return candidate
+    for suffix in IMAGE_SUFFIXES:
+        candidate = site_root / "assets" / "images" / "supervisors" / f"{parts[1]}{suffix}"
+        if candidate.is_file():
+            return candidate
     return None
 
 

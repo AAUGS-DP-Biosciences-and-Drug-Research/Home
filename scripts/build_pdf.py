@@ -8,6 +8,7 @@ and site/Document.pdf (the landing page, same address as the old Home PDF).
 """
 
 import copy
+import html
 import datetime
 import re
 import subprocess
@@ -19,6 +20,7 @@ import segno
 import yaml
 from bs4 import BeautifulSoup
 from weasyprint import CSS, HTML
+from weasyprint.urls import URLFetcher
 from weasyprint.text.fonts import FontConfiguration
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -179,7 +181,7 @@ def _doc(body_html):
 
 
 def pages(body_html):
-    return len(HTML(string=_doc(body_html), base_url=str(SITE)).render(stylesheets=STYLES, font_config=FONTS).pages)
+    return len(_html(body_html).render(stylesheets=STYLES, font_config=FONTS).pages)
 
 
 def fit(inner, cls="section", attrs=""):
@@ -193,7 +195,7 @@ def fit(inner, cls="section", attrs=""):
 
 def height(body_html):
     """Height and usable page height (CSS px) of a one-page section."""
-    page = HTML(string=_doc(body_html), base_url=str(SITE)).render(stylesheets=STYLES, font_config=FONTS).pages[0]
+    page = _html(body_html).render(stylesheets=STYLES, font_config=FONTS).pages[0]
     box = page._page_box
     usable = box.height  # content area of the page (without margins)
 
@@ -246,8 +248,32 @@ def pack(items):
     return out
 
 
+class LocalOnlyFetcher(URLFetcher):
+    """Let WeasyPrint load only data: URIs and files inside the repository.
+
+    Page content comes partly from supervisor YAML; this stops a crafted link
+    or image from pulling other files (or remote resources) into a PDF.
+    Refused resources are left out and WeasyPrint logs a warning.
+    """
+
+    def fetch(self, url, headers=None):
+        parsed = urlparse(url)
+        if parsed.scheme == "data" or (
+            parsed.scheme == "file" and Path(unquote(parsed.path)).resolve().is_relative_to(ROOT.resolve())
+        ):
+            return super().fetch(url, headers)
+        raise ValueError(f"PDF build refused to load {url}")
+
+
+FETCHER = LocalOnlyFetcher(allowed_protocols={"file", "data"})
+
+
+def _html(body_html):
+    return HTML(string=_doc(body_html), base_url=str(SITE), url_fetcher=FETCHER)
+
+
 def render(body_html, out):
-    HTML(string=_doc(body_html), base_url=str(SITE)).write_pdf(out, stylesheets=STYLES, font_config=FONTS)
+    _html(body_html).write_pdf(out, stylesheets=STYLES, font_config=FONTS)
     print(f"✅ {out.relative_to(ROOT)} ({out.stat().st_size // 1024} kB)")
 
 
@@ -310,7 +336,7 @@ def main():
     toc.append('<li><a href="#s-supervisors">Supervisor Portfolio</a></li>')
     for slug, art in profiles:
         name = art.select_one("h1").get_text(strip=True)
-        toc.append(f'<li class="sub"><a href="#sup-{slug}">{name}</a></li>')
+        toc.append(f'<li class="sub"><a href="#sup-{slug}">{html.escape(name)}</a></li>')
     body.append(f'<div id="s-supervisors">{supervisor_html(index, profiles)}</div>')
     toc_html = f'<div class="toc"><h1>Contents</h1><ol>{"".join(toc)}</ol></div>'
     render(cover + toc_html + "".join(body), OUT / "handbook.pdf")

@@ -4,7 +4,7 @@ This repository builds the unofficial programme website for the Doctoral Program
 
 https://aaugs-dp-biosciences-and-drug-research.github.io/Home/
 
-The site is built from Markdown and YAML with [Zensical](https://zensical.org). Pull requests build a preview; pushes to main rebuild the site and PDFs and publish them to GitHub Pages.
+The site is built from Markdown and YAML with [Zensical](https://zensical.org). Pull requests build a preview; pushes to main rebuild the site and PDFs and publish them to GitHub Pages. The build job only has read access; a separate deploy job, which runs only for main, publishes to the gh-pages branch and then notifies IndexNow of new or changed pages.
 
 ## Where to edit
 
@@ -29,6 +29,8 @@ Each supervisor has one YAML file in data/supervisors/. Existing slugs are perma
 The normal update route is a GitHub issue. Each profile has a **Suggest changes to this profile** button that opens an issue prefilled with the current information. Apply the requested changes to the YAML file, check any publication DOIs, and close the issue when the change is merged.
 
 A profile can also be edited directly in GitHub. Copy an existing YAML file when adding a new supervisor rather than inventing a new structure.
+
+Each YAML file is a list with one entry. `name`, `slug`, `unit` (subject) and `university` are required. `name`, `group`, `unit` and `university` must not contain `<`, `>`, `"` or line breaks, because they are used in page titles and metadata. The build stops with an error naming the file if a rule is broken.
 
 Photos belong in data/photos/ and should use the profile slug as the file name. If no photo is present, the site shows initials.
 

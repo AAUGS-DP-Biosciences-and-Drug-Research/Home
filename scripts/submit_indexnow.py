@@ -30,20 +30,32 @@ def load_site_url(mkdocs_path: Path) -> str:
     return site_url.rstrip("/") + "/"
 
 
-def load_sitemap_urls(sitemap_path: Path, site_url: str) -> list[str]:
+SITEMAP_NS = "http://www.sitemaps.org/schemas/sitemap/0.9"
+
+
+def load_lastmods(sitemap_path: Path, site_url: str) -> dict[str, str]:
+    """Map each sitemap URL under site_url to its lastmod ('' when absent)."""
     root = ET.parse(sitemap_path).getroot()
-    urls = []
-    sitemap_ns = "http://www.sitemaps.org/schemas/sitemap/0.9"
-    for loc in root.findall(f"{{{sitemap_ns}}}url/{{{sitemap_ns}}}loc"):
-        if not loc.text:
-            continue
-        url = loc.text.strip()
-        if url.startswith(site_url):
-            urls.append(url)
-    urls = sorted(set(urls))
-    if not urls:
+    out = {}
+    for node in root.findall(f"{{{SITEMAP_NS}}}url"):
+        loc = node.findtext(f"{{{SITEMAP_NS}}}loc", "").strip()
+        if loc.startswith(site_url):
+            out[loc] = node.findtext(f"{{{SITEMAP_NS}}}lastmod", "").strip()
+    return out
+
+
+def load_sitemap_urls(sitemap_path: Path, site_url: str, previous: Path | None = None) -> list[str]:
+    """URLs to submit: all sitemap URLs, or with `previous` only new or changed ones.
+
+    A URL counts as changed when its lastmod differs from the previous sitemap.
+    """
+    current = load_lastmods(sitemap_path, site_url)
+    if not current:
         raise ValueError(f"No URLs under {site_url} were found in {sitemap_path}")
-    return urls
+    if previous is not None:
+        before = load_lastmods(previous, site_url)
+        current = {u: d for u, d in current.items() if before.get(u) != d}
+    return sorted(current)
 
 
 def build_payload(site_url: str, key: str, key_file_name: str, urls: list[str]) -> dict:
@@ -83,6 +95,8 @@ def main() -> None:
     parser.add_argument("--mkdocs", type=Path, default=Path("mkdocs.yml"))
     parser.add_argument("--sitemap", type=Path, default=Path("site/sitemap.xml"))
     parser.add_argument("--key-file", type=Path, required=True)
+    parser.add_argument("--previous-sitemap", type=Path,
+                        help="sitemap of the previous deploy; only new or changed URLs are submitted")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
@@ -92,7 +106,10 @@ def main() -> None:
     if not (8 <= len(key) <= 128) or any(ch not in allowed_key_chars for ch in key):
         raise SystemExit("IndexNow key must be 8-128 letters, digits, or hyphens")
 
-    urls = load_sitemap_urls(args.sitemap, site_url)
+    urls = load_sitemap_urls(args.sitemap, site_url, args.previous_sitemap)
+    if not urls:
+        print("No new or changed URLs since the previous deploy; nothing to submit.")
+        return
     statuses = []
     for offset in range(0, len(urls), MAX_URLS):
         batch = urls[offset : offset + MAX_URLS]

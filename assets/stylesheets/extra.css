@@ -214,6 +214,7 @@ body, input, select { font-family: "Figtree", system-ui, -apple-system, "Segoe U
 
 
 /* Photo rights */
-.dp-profile__media { flex: none; }
+.dp-profile__media { flex: 0 0 200px; width: 200px; }
+@media (max-width: 700px) { .dp-profile__media { flex: none; width: 160px; } }
 .dp-profile__media .dp-profile__photo { display: block; }
 .dp-photo-credit { display: block; margin-top: 0.3rem; color: var(--md-default-fg-color--light); font-size: 0.72rem; line-height: 1.25; }

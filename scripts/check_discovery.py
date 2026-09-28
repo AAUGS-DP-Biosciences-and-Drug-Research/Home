@@ -63,11 +63,16 @@ def main() -> None:
         fail(f"sitemap mismatch; missing={missing_urls}, extra={extra_urls}")
 
     image_entries = tree.findall("sm:url/image:image/image:loc", NS)
-    if len(image_entries) != len(rows):
-        fail(
-            f"expected {len(rows)} sitemap image entries for supervisor portraits; "
-            f"found {len(image_entries)}"
-        )
+    sitemap_images = {}
+    for url_node in tree.findall("sm:url", NS):
+        for img in url_node.findall("image:image/image:loc", NS):
+            sitemap_images[img.text.strip()] = url_node.findtext("sm:loc", "", NS).strip()
+    expected_images = {f"{SITE_URL}{row['path']}": row["profile_url"] for row in rows}
+    if sitemap_images != expected_images:
+        fail(f"sitemap images do not match image_rights.json: sitemap={sitemap_images}, expected={expected_images}")
+    for row in rows:
+        if not (SITE / row["path"]).is_file():
+            fail(f"image listed in image_rights.json does not exist: {row['path']}")
 
     profile_dir = SITE / "supervisors"
     for html_file in sorted(profile_dir.glob("*/index.html")):

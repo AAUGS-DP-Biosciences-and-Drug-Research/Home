@@ -24,7 +24,6 @@ YAML_DIR = ROOT / "data" / "supervisors"
 PHOTO_DIR = ROOT / "data" / "photos"
 OUT_DIR = ROOT / "docs" / "supervisors"
 IMG_OUT = ROOT / "docs" / "assets" / "images" / "supervisors"
-LOGO = "AboAkademiUniversity.png"
 PHOTO_WIDTH = 600
 REPO = "https://github.com/AAUGS-DP-Biosciences-and-Drug-Research/Home"
 SITE_URL = "https://aaugs-dp-biosciences-and-drug-research.github.io/Home/"
@@ -70,8 +69,11 @@ def last_name_key(name):
 
 
 def text(value):
-    """Escape a YAML string and turn '[https://…]' into links (as before)."""
-    escaped = html.escape(str(value), quote=False)
+    """Escape a YAML string and turn '[https://…]' into links (as before).
+
+    Quotes are escaped too, so a pasted URL cannot close the href attribute.
+    """
+    escaped = html.escape(str(value), quote=True)
     return re.sub(
         r"\[(https?://[^\]\s]+)\]",
         lambda m: f'<a href="{m.group(1)}" target="_blank" rel="noopener">{m.group(1)}</a>',
@@ -113,14 +115,44 @@ def publication(pub):
     )
 
 
+REQUIRED = ("name", "slug", "unit", "university")
+TITLE_FIELDS = ("name", "group", "unit", "university")  # end up in <title>, <meta> and headers
+
+
+def load_entries(path):
+    """Supervisor entries of one YAML file: a list of mappings with the required fields.
+
+    Raises ValueError with the file name when the file is malformed.
+    """
+    entries = yaml.safe_load(path.read_text(encoding="utf-8"))
+    if not isinstance(entries, list) or not entries:
+        raise ValueError(f"{path.name}: expected a list with one supervisor entry ('- name: ...')")
+    for s in entries:
+        if not isinstance(s, dict):
+            raise ValueError(f"{path.name}: each entry must be a mapping of fields")
+        missing = [k for k in REQUIRED if not str(s.get(k) or "").strip()]
+        if missing:
+            raise ValueError(f"{path.name}: missing required field(s): {', '.join(missing)}")
+        for k in TITLE_FIELDS:
+            if re.search(r'[<>"\n\r]', str(s.get(k) or "")):
+                raise ValueError(f"{path.name}: {k} must not contain <, >, \" or line breaks "
+                                 "(it is used in page titles and metadata)")
+        if not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", str(s["slug"])):
+            raise ValueError(f"{path.name}: slug {s['slug']!r} must be lowercase letters, digits and hyphens")
+    return entries
+
+
 def load():
     sups = []
     for f in sorted(YAML_DIR.glob("*.y*ml")):
-        entry = yaml.safe_load(f.read_text(encoding="utf-8"))
-        entry = entry if isinstance(entry, list) else [entry]
+        entry = load_entries(f)
         for s in entry:
             s["_file"] = f.name
         sups.extend(entry)
+    slugs = [s["slug"] for s in sups]
+    dupes = sorted({x for x in slugs if slugs.count(x) > 1})
+    if dupes:
+        raise ValueError(f"duplicate supervisor slug(s): {', '.join(dupes)}")
     for s in sups:
         s["lab_website"] = normalize_url(s.get("lab_website"))
         s["cris_profile"] = normalize_url(s.get("cris_profile"))
@@ -192,6 +224,15 @@ def suggest_url(s=None):
     return f"{REPO}/issues/new?{urllib.parse.urlencode(q, quote_via=urllib.parse.quote)}"
 
 
+def yaml_str(value):
+    """A front-matter value that YAML reads back as exactly this string.
+
+    JSON strings are valid YAML, so quotes, backslashes, newlines and '---'
+    inside supervisor data cannot break or extend the front matter.
+    """
+    return json.dumps(" ".join(str(value).split()), ensure_ascii=False)
+
+
 def profile_page(s):
     photo = s["_photo"]
     pos = ' style="object-position: center;"' if s.get("photo_position") == "center" else ""
@@ -206,7 +247,7 @@ def profile_page(s):
         info.append(f"<p><strong>Group Name:</strong> {text(s['group'])}</p>")
     if s.get("unit"):
         info.append(f"<p><strong>Subject:</strong> {text(s['unit'])}</p>")
-    info.append(f"<p><strong>University:</strong> {text(s.get('university', ''))}</p>")
+    info.append(f"<p><strong>University:</strong> {text(s['university'])}</p>")
     if s["lab_website"]:
         info.append(f'<p><strong>Lab Website:</strong> <a href="{html.escape(s["lab_website"])}" target="_blank" rel="noopener">link</a></p>')
     if s["cris_profile"]:
@@ -229,7 +270,7 @@ def profile_page(s):
     if s.get("keywords"):
         body.append(f"<h2>Keywords</h2>\n<p>{text(s['keywords'])}</p>")
 
-    title = str(s["name"]).replace('"', '\\"')
+    title = str(s["name"])
     edit = f"{REPO}/edit/main/data/supervisors/{s['_file']}"
     description_parts = [str(s.get("group") or "").strip(), str(s.get("unit") or "").strip()]
     affiliation_summary = ", ".join(part for part in description_parts if part)
@@ -248,7 +289,7 @@ def profile_page(s):
         "description": description,
         "affiliation": {
             "@type": "CollegeOrUniversity",
-            "name": str(s.get("university") or "Åbo Akademi University"),
+            "name": str(s["university"]),
         },
     }
     same_as = []
@@ -314,9 +355,9 @@ def profile_page(s):
     }
     structured_data = (json.dumps(profile_jsonld, ensure_ascii=False).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026"))
     return (
-        f'---\ntitle: "{title}"\ndescription: "{description.replace(chr(34), chr(39))}"\n'
-        + (f'image: "{SITE_URL}assets/images/supervisors/{photo}"\nimage_alt: "{title}"\n' if photo else "")
-        + f'edit_url: "{edit}"\n---\n\n'
+        f"---\ntitle: {yaml_str(title)}\ndescription: {yaml_str(description)}\n"
+        + (f"image: {yaml_str(f'{SITE_URL}assets/images/supervisors/{photo}')}\nimage_alt: {yaml_str(title)}\n" if photo else "")
+        + f"edit_url: {yaml_str(edit)}\n---\n\n"
         f'<script type="application/ld+json">{structured_data}</script>\n\n'
         f'<div class="dp-profile">\n'
         f"{media}\n"
@@ -359,6 +400,7 @@ def index_page(sups):
             haystack = " ".join(
                 str(x) for x in [s.get("name"), s.get("group"), s.get("unit"), s.get("keywords")]
                 + list(s.get("expertise") or []) + list(s.get("techniques") or [])
+                if x
             ).casefold()
             cards.append(
                 f'<a class="dp-person dp-tone-{tone(s["slug"])}" href="{s["slug"]}.md" data-subject="{html.escape(str(u))}" '
@@ -390,7 +432,7 @@ def main():
     for s in sups:
         s["_photo"] = make_photo(s["slug"])
         if not s["_photo"]:
-            print(f"⚠️  No photo for {s['name']} → using logo")
+            print(f"⚠️  No photo for {s['name']} → showing initials")
         (OUT_DIR / f"{s['slug']}.md").write_text(profile_page(s), encoding="utf-8")
     (OUT_DIR / "index.md").write_text(index_page(sups), encoding="utf-8")
     rights = {

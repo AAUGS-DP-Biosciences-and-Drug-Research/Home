@@ -49,9 +49,6 @@ jobs:
       - name: Enrich sitemap with primary images
         run: python scripts/enrich_sitemap_images.py
 
-      - name: Validate IndexNow payload
-        run: python scripts/submit_indexnow.py --sitemap site/sitemap.xml --key-file docs/c3e7a1f9b5d2c8e4a6f0b7d1e9c5a3f2.txt --dry-run
-
       - name: Validate discovery and rights metadata
         run: python scripts/check_discovery.py
 
@@ -73,21 +70,10 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v5
-        with:
-          persist-credentials: false
-
       - uses: actions/download-artifact@v4
         with:
           name: site
           path: site/
-
-      - name: Keep the sitemap of the current deploy (for IndexNow)
-        run: |
-          if ! curl -fsS https://aaugs-dp-biosciences-and-drug-research.github.io/Home/sitemap.xml -o previous-sitemap.xml; then
-            echo "::warning::Could not download the deployed sitemap; IndexNow will receive every URL."
-            printf '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"/>\n' > previous-sitemap.xml
-          fi
 
       # Deploys the same way as before (gh-pages branch), so the address
       # https://aaugs-dp-biosciences-and-drug-research.github.io/Home/ is unchanged.
@@ -99,14 +85,3 @@ jobs:
           publish_dir: ./site
           publish_branch: gh-pages
 
-      - uses: actions/setup-python@v6
-        with:
-          python-version: "3.12"
-
-      # Documented exception (AGENTS.md): an outside notification whose
-      # failure cannot affect the published site.
-      - name: Notify IndexNow of new or changed pages
-        continue-on-error: true
-        run: |
-          pip install PyYAML==6.0.3
-          python scripts/submit_indexnow.py --sitemap site/sitemap.xml --previous-sitemap previous-sitemap.xml --key-file docs/c3e7a1f9b5d2c8e4a6f0b7d1e9c5a3f2.txt

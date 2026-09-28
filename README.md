@@ -4,7 +4,7 @@ This repository builds the unofficial programme website for the Doctoral Program
 
 https://aaugs-dp-biosciences-and-drug-research.github.io/Home/
 
-The site is built from Markdown and YAML with [Zensical](https://zensical.org). Pull requests build a preview; pushes to main rebuild the site and PDFs and publish them to GitHub Pages. The build job only has read access; a separate deploy job, which runs only for main, publishes to the gh-pages branch and then notifies IndexNow of new or changed pages.
+The site is built from Markdown and YAML with [Zensical](https://zensical.org). Pull requests build a preview; pushes to main rebuild the site and PDFs and publish them to GitHub Pages. The build job only has read access; a separate deploy job, which runs only for main, publishes to the gh-pages branch. Search engines find the pages through `sitemap.xml`.
 
 ## Where to edit
 
@@ -68,7 +68,6 @@ python scripts/gen_supervisors.py
 zensical build --strict
 python scripts/add_dates.py
 python scripts/enrich_sitemap_images.py
-python scripts/submit_indexnow.py --sitemap site/sitemap.xml --key-file docs/c3e7a1f9b5d2c8e4a6f0b7d1e9c5a3f2.txt --dry-run
 python scripts/check_discovery.py
 python scripts/build_pdf.py
 ~~~

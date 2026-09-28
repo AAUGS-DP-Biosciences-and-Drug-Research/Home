@@ -28,7 +28,6 @@ def main() -> None:
         SITE / "sitemap.xml",
         SITE / "licensing" / "index.html",
         SITE / "assets" / "image_rights.json",
-        SITE / "c3e7a1f9b5d2c8e4a6f0b7d1e9c5a3f2.txt",
     ]
     missing = [str(path.relative_to(SITE)) for path in required if not path.is_file()]
     if missing:

@@ -8,13 +8,14 @@ The yearly follow-up is a chance to review progress, update the study and resear
 
 ## At the start of the PhD
 
+Apply for the study right via [Studieinfo.fi](https://studyinfo.fi/).
+
 After admission, update the ISP within the first three months using the plan submitted with the doctoral-study application.
 
 Every doctoral researcher has at least two supervisors. One is the responsible supervisor and must be a docent or have equivalent qualifications. See section 4.4 of the [Regulation on Doctoral Studies](https://www.abo.fi/wp-content/uploads/2025/11/regulation-on-doctoral-studies.pdf).
 
-During the same period:
+Within the same first three months:
 
-- update the ISP;
 - recruit two TFC members together with the supervisor(s); and
 - arrange the first TFC meeting.
 

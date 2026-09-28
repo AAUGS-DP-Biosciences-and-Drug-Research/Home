@@ -83,6 +83,20 @@ See [AGENTS.md](AGENTS.md) before changing code or generated content. The short 
 
 ## Licensing
 
-Custom code in this repository is MIT licensed. Supervisor photographs and profile text are not covered by that licence. Photographs remain © the named supervisor and are not licensed for reuse.
+Custom code in this repository is MIT licensed. Supervisor photographs and profile text are not covered by that licence. Photographs are provided by the supervisors; copyright stays with the copyright holder (usually the photographer or the supervisor), and they are not licensed for reuse.
 
 See [LICENSE-CONTENT.md](LICENSE-CONTENT.md) and the website's **Licensing and image rights** page for details.
+
+### Third-party components
+
+| What | Source | Licence |
+|---|---|---|
+| Site generator and theme | [Zensical](https://zensical.org) | MIT (bundled third-party scripts: see `assets/javascripts/LICENSE` in the built site) |
+| PDF rendering | [WeasyPrint](https://weasyprint.org) | BSD |
+| QR codes | [segno](https://github.com/heuer/segno) | BSD |
+| Font | [Figtree](https://github.com/erikdkennedy/figtree), via Fontsource, self-hosted in `docs/assets/fonts/` | SIL Open Font License 1.1 (`docs/assets/fonts/OFL.txt`) |
+| Emoji in PDFs | Noto Color Emoji (system font on the build machine) | SIL Open Font License 1.1 |
+| Åbo Akademi University logo | [abo.fi logo page](https://www.abo.fi/en/about-abo-akademi-university/for-media/the-abo-akademi-university-logo/) | © Åbo Akademi University; used unmodified on white, as the university's graphic guide requires |
+| Colours | Åbo Akademi graphic guide and www.abo.fi | Colour values only; no code, images or icons are copied from www.abo.fi |
+
+The site makes no requests to Google, Adobe or font CDNs. The only outside request is to the GitHub API, for the repository name and version shown next to the "Edit these pages on GitHub" link.

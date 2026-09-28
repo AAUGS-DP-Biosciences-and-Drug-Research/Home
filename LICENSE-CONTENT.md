@@ -4,9 +4,9 @@ The MIT licence in `LICENSE` applies to the custom code in this repository. It d
 
 ## Supervisor photographs
 
-Supervisor photographs remain **© the person named on the corresponding supervisor profile** and are **not licensed for reuse**. Permission is required from the copyright holder for reuse outside this website.
+Supervisor photographs are provided by the supervisors for this website. Copyright stays with the copyright holder, usually the photographer or the supervisor. The photographs are **not licensed for reuse**; reuse outside this website needs permission from the copyright holder.
 
-The website generator publishes the same copyright notice beside each portrait and in machine-readable image metadata.
+The website generator publishes this notice beside each portrait and in machine-readable image metadata.
 
 ## Supervisor profile text
 

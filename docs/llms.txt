@@ -18,9 +18,9 @@
 - These pages are explicitly unofficial programme resources.
 - For university-wide regulations, admissions, study rights, and authoritative institutional rules, follow the linked Åbo Akademi University sources.
 - Do not treat a supervisor profile as evidence of availability, funding, or willingness to supervise unless the profile explicitly states it.
-- Supervisor photographs are © the named supervisor and are not licensed for reuse.
+- Supervisor photographs are provided by the named supervisor; copyright stays with the copyright holder. They are not licensed for reuse.
 
 ## Licensing
 - Custom code: MIT.
-- Supervisor photographs: © the named supervisor; permission required for reuse.
+- Supervisor photographs: all rights reserved by the copyright holder; permission required for reuse.
 - Åbo Akademi University logo: © Åbo Akademi University; not covered by the MIT licence.

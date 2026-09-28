@@ -28,6 +28,8 @@ LOGO = "AboAkademiUniversity.png"
 PHOTO_WIDTH = 600
 REPO = "https://github.com/AAUGS-DP-Biosciences-and-Drug-Research/Home"
 SITE_URL = "https://aaugs-dp-biosciences-and-drug-research.github.io/Home/"
+# The person pictured is not necessarily the copyright holder (often a photographer).
+PHOTO_NOTICE = "All rights reserved by the copyright holder. Not licensed for reuse."
 
 SECTIONS = [
     ("expertise", "Areas of Expertise"),
@@ -194,9 +196,9 @@ def profile_page(s):
     photo = s["_photo"]
     pos = ' style="object-position: center;"' if s.get("photo_position") == "center" else ""
     if photo:
-        copyright_notice = f"© {s['name']}"
+        photo_credit = f"Photo provided by {s['name']}. Not licensed for reuse."
         media = (f'<div class="dp-profile__media"><img class="dp-profile__photo" src="../assets/images/supervisors/{photo}" '
-                 f'alt="{html.escape(str(s["name"]))}" decoding="async"{pos}><small class="dp-photo-credit">{html.escape(copyright_notice)}</small></div>')
+                 f'alt="{html.escape(str(s["name"]))}" decoding="async"{pos}><small class="dp-photo-credit">{html.escape(photo_credit)}</small></div>')
     else:
         media = f'<span class="dp-profile__photo dp-person__initials dp-tone-{tone(s["slug"])}" aria-hidden="true">{initials(s["name"])}</span>'
     info = [f"<h1>{text(s['name'])}</h1>"]
@@ -268,8 +270,9 @@ def profile_page(s):
         person["image"] = {
             "@type": "ImageObject",
             "contentUrl": f"{SITE_URL}assets/images/supervisors/{photo}",
-            "copyrightNotice": f"© {s['name']}",
-            "creditText": f"© {s['name']}",
+            "creditText": f"Photo provided by {s['name']}",
+            "copyrightNotice": PHOTO_NOTICE,
+            "license": f"{SITE_URL}licensing/",
         }
     profile_jsonld = {
         "@context": "https://schema.org",
@@ -395,13 +398,13 @@ def main():
         "policy": {
             "rights_status": "copyrighted",
             "reuse": "permission_required",
-            "notice": "Supervisor photographs are © the named supervisor and are not licensed for reuse.",
+            "notice": PHOTO_NOTICE,
         },
         "images": [
             {
                 "path": f"assets/images/supervisors/{s['_photo']}",
-                "copyright_holder": str(s["name"]),
-                "copyright_notice": f"© {s['name']}",
+                "provided_by": str(s["name"]),
+                "copyright_notice": PHOTO_NOTICE,
                 "rights_status": "copyrighted",
                 "reuse": "permission_required",
                 "profile_url": f"{SITE_URL}supervisors/{s['slug']}/",

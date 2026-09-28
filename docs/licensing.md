@@ -11,9 +11,9 @@ The custom code used to build this website is distributed under the **MIT Licens
 
 ## Supervisor photographs
 
-Each supervisor photograph remains **© the person named on that supervisor's profile**. Photographs are **not licensed for reuse**; permission from the copyright holder is required for reuse outside this website.
+Supervisor photographs are provided by the supervisors for this website. Copyright stays with the copyright holder, usually the photographer or the supervisor. The photographs are **not licensed for reuse**; reuse outside this website needs permission from the copyright holder.
 
-The site publishes the copyright notice next to each portrait and in [machine-readable image-rights metadata](../assets/image_rights.json).
+The site publishes this notice next to each portrait and in [machine-readable image-rights metadata](../assets/image_rights.json).
 
 ## Supervisor profile text
 

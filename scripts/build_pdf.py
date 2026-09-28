@@ -96,6 +96,9 @@ table { border-collapse: collapse; } td, th { border: 1px solid #ccc; padding: 3
 .dp-profile { display: flex; gap: 10pt; align-items: flex-start; margin-bottom: 0.4em; }
 .dp-profile__photo { width: 76pt; height: 95pt; object-fit: cover; object-position: top; flex: none; }
 span.dp-profile__photo { display: block; background: #b8161d; color: #fff; font-size: 26pt; font-weight: 700; text-align: center; line-height: 95pt; }
+.dp-profile__media { flex: none; width: 76pt; }
+.dp-photo-credit { display: block; font-size: 6pt; color: #777; line-height: 1.2; margin-top: 2pt; }
+.dp-profile__info { flex: 1; padding-right: 20mm; }  /* keep clear of the QR code */
 .dp-profile__info h1 { font-size: 1.6em; }
 .dp-profile__info p { margin: 0.05em 0; }
 /* QR codes to the live pages (for printed copies) */

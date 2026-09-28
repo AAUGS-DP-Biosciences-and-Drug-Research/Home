@@ -39,9 +39,9 @@ def main() -> None:
     if not isinstance(rows, list) or not rows:
         fail("image_rights.json has no image records")
     for row in rows:
-        holder = str(row.get("copyright_holder") or "").strip()
+        provided_by = str(row.get("provided_by") or "").strip()
         notice = str(row.get("copyright_notice") or "").strip()
-        if not holder or notice != f"© {holder}":
+        if not provided_by or not notice:
             fail(f"invalid supervisor image attribution: {row!r}")
         if row.get("reuse") != "permission_required":
             fail(f"unexpected supervisor image reuse policy: {row!r}")

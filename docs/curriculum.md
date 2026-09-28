@@ -36,7 +36,7 @@ A separate agreement also covers University of Turku courses outside the Doctora
 
 ## Licentiate degree
 
-A licentiate degree consists of 30 ECTS of studies and a licentiate thesis. A doctoral degree completed after a licentiate degree requires the doctoral dissertation. See the [programme page](https://www.abo.fi/en/research-at-aau/postgraduate-and-doctoral-studies/doctoral-programmes-at-abo-akademi-university/doctoral-programme-in-bio-drug-research/) for details.
+A licentiate degree consists of 30 ECTS of studies and a licentiate thesis. A doctoral degree completed after a licentiate degree only requires the doctoral dissertation. See the [programme page](https://www.abo.fi/en/research-at-aau/postgraduate-and-doctoral-studies/doctoral-programmes-at-abo-akademi-university/doctoral-programme-in-bio-drug-research/) for details.
 
 ## Useful resource
 

@@ -77,6 +77,7 @@ Write for doctoral researchers and supervisors, not for a software audience.
 - Avoid inflated claims, repetitive summaries, fake enthusiasm, and generic conclusion paragraphs.
 - Do not turn every section into a checklist or a stack of micro-headings.
 - Keep official requirements distinct from programme recommendations.
+- docs/learning-goals.md holds the programme's approved learning goals (English and Swedish). Do not reword them, even to remove the words listed above; change them only when the programme approves new wording.
 - Do not paraphrase regulations in a way that changes their meaning. Link to the authoritative Åbo Akademi source when a rule comes from university regulations.
 
 ## HTML, CSS, and JavaScript

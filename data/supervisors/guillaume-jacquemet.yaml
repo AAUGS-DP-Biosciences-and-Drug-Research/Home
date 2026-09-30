@@ -40,14 +40,9 @@
   - Wellcome Trust / Chan Zuckerberg Initiative - Essential Open Source Software for Science (EOSS)
   - Sigrid Juselius Foundation
   publications:
-  - 'CCT8 associates with the MYO10 motor domain and regulates filopodia and breast
-    cancer cell invasion. J Cell Sci. 2026. DOI: 10.1242/jcs.265278'
-  - 'Fast label-free live imaging with FlowVision reveals key principles of cancer
-    cell arrest on endothelial monolayers. EMBO J. 2026. DOI: 10.1038/s44318-025-00678-9'
-  - 'TLNRD1 is a CCM complex component and regulates endothelial barrier integrity.
-    J Cell Biol. 2024. DOI: 10.1083/jcb.202310030'
-  - 'DL4MicEverywhere: deep learning for microscopy made flexible, shareable and
-    reproducible. Nat. Methods. 2024. DOI: 10.1038/s41592-024-02295-6'
-  - 'CellTracksColab is a platform that enables compilation, analysis, and exploration
-    of cell tracking data. PLOS Biol. 2024. DOI: 10.1371/journal.pbio.3002740'
+  - 10.1242/jcs.265278
+  - 10.1038/s44318-025-00678-9
+  - 10.1083/jcb.202310030
+  - 10.1038/s41592-024-02295-6
+  - 10.1371/journal.pbio.3002740
   keywords: ''

@@ -13,11 +13,15 @@ import html
 import json
 import re
 import shutil
+import sys
 import urllib.parse
 from pathlib import Path
 
 import yaml
 from PIL import Image, ImageOps
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from citations import MAX_PUBLICATIONS, check_doi, citation_html, load_cache  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 YAML_DIR = ROOT / "data" / "supervisors"
@@ -91,30 +95,6 @@ def initials(name):
     return html.escape((parts[0][0] + parts[-1][0]).upper() if parts else "")
 
 
-def split_doi(value):
-    """Clean DOI for the link, plus any trailing punctuation to keep as text.
-
-    Accepts '10.x/y', 'doi.org/10.x/y' and 'https://doi.org/10.x/y'; a trailing
-    '.' or ',' (end of the citation) is not part of the DOI.
-    """
-    value = value.strip()
-    doi = re.sub(r"^(https?://)?(dx\.)?doi\.org/", "", value, flags=re.I)
-    m = re.match(r"^(.*?)([.,;]*)$", doi)
-    return m.group(1), m.group(2)
-
-
-def publication(pub):
-    pub = str(pub)
-    i = pub.find("DOI: ")
-    if i == -1:
-        return text(pub)
-    doi, tail = split_doi(pub[i + 5:])
-    return (
-        f'{text(pub[:i])} DOI: <a href="https://doi.org/{html.escape(doi)}" '
-        f'target="_blank" rel="noopener">{html.escape(doi)}</a>{html.escape(tail)}'
-    )
-
-
 REQUIRED = ("name", "slug", "unit", "university")
 TITLE_FIELDS = ("name", "group", "unit", "university")  # end up in <title>, <meta> and headers
 
@@ -139,6 +119,16 @@ def load_entries(path):
                                  "(it is used in page titles and metadata)")
         if not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", str(s["slug"])):
             raise ValueError(f"{path.name}: slug {s['slug']!r} must be lowercase letters, digits and hyphens")
+        dois = s.get("publications") or []
+        if not isinstance(dois, list):
+            raise ValueError(f"{path.name}: publications must be a list of DOIs")
+        try:
+            for doi in dois:
+                check_doi(doi)
+        except ValueError as error:
+            raise ValueError(f"{path.name}: publications: {error}") from error
+        if len(dois) > MAX_PUBLICATIONS or len({d.lower() for d in dois}) != len(dois):
+            raise ValueError(f"{path.name}: publications must be at most {MAX_PUBLICATIONS} different DOIs")
     return entries
 
 
@@ -202,7 +192,7 @@ def issue_body(s):
               ("University", s.get("university", "Åbo Akademi University")),
               ("Lab website", s.get("lab_website")), ("AboCRIS profile", s.get("cris_profile"))]
     lines += [f"**{label}:** {value or ''}  " for label, value in fields]
-    lists = SECTIONS + [("publications", "Selected Publications (up to 5, each ending with DOI: 10.xxxx/…)")]
+    lists = SECTIONS + [("publications", "Selected Publications (up to 5 DOIs, one per line, e.g. 10.1000/xyz123)")]
     for key, title in lists:
         lines += ["", f"### {title}"]
         items = [" ".join(str(i).split()) for i in s.get(key) or []]
@@ -233,7 +223,7 @@ def yaml_str(value):
     return json.dumps(" ".join(str(value).split()), ensure_ascii=False)
 
 
-def profile_page(s):
+def profile_page(s, citations):
     photo = s["_photo"]
     pos = ' style="object-position: center;"' if s.get("photo_position") == "center" else ""
     if photo:
@@ -265,7 +255,7 @@ def profile_page(s):
             items = "".join(f"<li>{text(i)}</li>" for i in s[key])
             body.append(f"<h2>{title}</h2>\n<ul>{items}</ul>")
     if s.get("publications"):
-        items = "".join(f"<li>{publication(p)}</li>" for p in s["publications"])
+        items = "".join(f"<li>{citation_html(doi, citations)}</li>" for doi in s["publications"])
         body.append(f"<h2>Selected Publications</h2>\n<ul>{items}</ul>")
     if s.get("keywords"):
         body.append(f"<h2>Keywords</h2>\n<p>{text(s['keywords'])}</p>")
@@ -429,11 +419,12 @@ def main():
         shutil.rmtree(d, ignore_errors=True)
         d.mkdir(parents=True)
     sups = load()
+    citations = load_cache()
     for s in sups:
         s["_photo"] = make_photo(s["slug"])
         if not s["_photo"]:
             print(f"⚠️  No photo for {s['name']} → showing initials")
-        (OUT_DIR / f"{s['slug']}.md").write_text(profile_page(s), encoding="utf-8")
+        (OUT_DIR / f"{s['slug']}.md").write_text(profile_page(s, citations), encoding="utf-8")
     (OUT_DIR / "index.md").write_text(index_page(sups), encoding="utf-8")
     rights = {
         "schema_version": 1,

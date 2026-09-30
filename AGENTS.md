@@ -62,9 +62,9 @@ Existing large scripts do not justify adding more large scripts. Refactor the to
 - Keep one supervisor YAML file per supervisor.
 - Treat slug as a permanent identifier.
 - Keep selected publications to five unless the site design is deliberately changed.
-- Publication entries should end with a bare DOI identifier in the form "DOI: 10.xxxx/...", not a DOI URL.
+- Profiles list publications as bare DOIs ("10.xxxx/..."), not citation text or DOI URLs. Citations are built from data/publications.json, which scripts/update_citations.py fills from Crossref; run it and commit the result whenever DOIs change. Fix registry quirks in data/citation_overrides.yaml, never by hand-editing the citation text.
 - Do not invent affiliations, grants, titles, publication details, or profile claims.
-- For publication changes, verify DOI/title/author matching rather than trusting pasted citation text.
+- For publication changes, run scripts/check_dois.py: it verifies the registry record, the supervisor as author, retractions and that the saved citation is current.
 - Preserve copyright information for supervisor photographs.
 
 ## User-facing writing
@@ -92,6 +92,7 @@ Write for doctoral researchers and supervisors, not for a software audience.
 Before opening or merging a PR that changes code or content, run the checks relevant to the change. For a full site change, the expected sequence is:
 
 ~~~bash
+python scripts/test_citations.py
 python scripts/gen_supervisors.py
 zensical build --strict
 python scripts/add_dates.py

@@ -1,0 +1,12 @@
+# Fixes for registry records that are wrong or badly formatted, keyed by DOI.
+# Each entry may set title, journal and/or year; it is applied by
+# scripts/update_citations.py on top of what Crossref returns. Keep this list
+# short: correct the record with the publisher when you can.
+
+# The publisher's title has a space after the subscript ("H2 S-Driven").
+10.1002/adma.202513757:
+  title: "Mitochondria-Targeted Nanomotor: H<sub>2</sub>S-Driven Cascade Therapy for Hepatocellular Carcinoma"
+
+# Crossref lists the series first ("Lecture Notes in Computer Science"); the book is the second title.
+10.1007/978-3-030-72132-9_25:
+  journal: "Simulation Gaming Through Times and Disciplines"

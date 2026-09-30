@@ -1,0 +1,617 @@
+{
+ "10.1002/adfm.201908783": {
+  "title": "Evolving Technologies and Strategies for Combating Antibacterial Resistance in the Advent of the Postantibiotic Era",
+  "journal": "Advanced Functional Materials",
+  "year": 2020
+ },
+ "10.1002/adfm.202101998": {
+  "title": "Synthesis and Evaluation of Novel Functional Polymers Derived from Renewable Jasmine Lactone for Stimuli-Responsive Drug Delivery",
+  "journal": "Advanced Functional Materials",
+  "year": 2021
+ },
+ "10.1002/adfm.202315679": {
+  "title": "Evolution of Self-Assembled Lignin Nanostructure into Dendritic Fiber in Aqueous Biphasic Photocurable Resin for DLP-Printing",
+  "journal": "Advanced Functional Materials",
+  "year": 2024
+ },
+ "10.1002/adfm.202400431": {
+  "title": "Bioprinting Macroporous Hydrogel with Aqueous Two-Phase Emulsion-Based Bioink: In Vitro Mineralization and Differentiation Empowered by Phosphorylated Cellulose Nanofibrils",
+  "journal": "Advanced Functional Materials",
+  "year": 2024
+ },
+ "10.1002/adhm.202203243": {
+  "title": "Aqueous Two-Phase Emulsion Bioresin for Facile One-Step 3D Microgel-Based Bioprinting",
+  "journal": "Advanced Healthcare Materials",
+  "year": 2023
+ },
+ "10.1002/adma.201703651": {
+  "title": "Multimodality Imaging of Silica and Silicon Materials In Vivo",
+  "journal": "Advanced Materials",
+  "year": 2018
+ },
+ "10.1002/adma.202502617": {
+  "title": "Artesunate Nanoplatform Targets the Serine–MAPK Axis in Cancer-Associated Fibroblasts to Reverse Photothermal Resistance in Triple-Negative Breast Cancer",
+  "journal": "Advanced Materials",
+  "year": 2025
+ },
+ "10.1002/adma.202513757": {
+  "title": "Mitochondria-Targeted Nanomotor: H<sub>2</sub>S-Driven Cascade Therapy for Hepatocellular Carcinoma",
+  "journal": "Advanced Materials",
+  "year": 2026
+ },
+ "10.1002/adma.202518378": {
+  "title": "Disrupting Complement-Inflammation Positive Feedback Circuit via Oligonucleotide Hydrogel Microspheres for Reversing Joint Inflammation",
+  "journal": "Advanced Materials",
+  "year": 2026
+ },
+ "10.1002/cam4.2576": {
+  "title": "High tissue MMP14 expression predicts worse survival in gastric cancer, particularly with a low PROX1",
+  "journal": "Cancer Medicine",
+  "year": 2019
+ },
+ "10.1002/cmdc.202400501": {
+  "title": "Insights into Molecular Interactions and Biological Effect of Natural Stilbenoids at the TRPA1 Ion Channel",
+  "journal": "ChemMedChem",
+  "year": 2025
+ },
+ "10.1002/ece3.72772": {
+  "title": "Sediment Characteristics in Stonewort <i>Chara tomentosa</i> Assemblages",
+  "journal": "Ecology and Evolution",
+  "year": 2026
+ },
+ "10.1002/ece3.9001": {
+  "title": "Biological traits approaches in benthic marine ecology: Dead ends and new paths",
+  "journal": "Ecology and Evolution",
+  "year": 2022
+ },
+ "10.1002/ecy.3067": {
+  "title": "Refining predictions of metacommunity dynamics by modeling species non-independence",
+  "journal": "Ecology",
+  "year": 2020
+ },
+ "10.1002/lno.70049": {
+  "title": "Small-scale thermal habitat variability may not determine seagrass resilience to climate change",
+  "journal": "Limnology and Oceanography",
+  "year": 2025
+ },
+ "10.1002/lol2.10286": {
+  "title": "Environmental variability in aquatic ecosystems: Avenues for future multifactorial experiments",
+  "journal": "Limnology and Oceanography Letters",
+  "year": 2023
+ },
+ "10.1002/mbo3.1371": {
+  "title": "Isolation and functional analysis of phage-displayed antibody fragments targeting the staphylococcal superantigen-like proteins",
+  "journal": "MicrobiologyOpen",
+  "year": 2023
+ },
+ "10.1002/smmd.20230012": {
+  "title": "Monitoring silica core@shell nanoparticle-bacterial film interactions using the multi-parametric surface plasmon resonance technique",
+  "journal": "Smart Medicine",
+  "year": 2023
+ },
+ "10.1002/smsc.202400084": {
+  "title": "Surface Modification of Mesoporous Silica Nanoparticles as a Means to Introduce Inherent Cancer-Targeting Ability in a 3D Tumor Microenvironment",
+  "journal": "Small Science",
+  "year": 2024
+ },
+ "10.1007/978-3-030-72132-9_25": {
+  "title": "Food-Web Modeling in the Maritime Spatial Planning Challenge Simulation Platform: Results from the Baltic Sea Region",
+  "journal": "Simulation Gaming Through Times and Disciplines",
+  "year": 2021
+ },
+ "10.1007/s00138-023-01450-x": {
+  "title": "Toward phytoplankton parasite detection using autoencoders",
+  "journal": "Machine Vision and Applications",
+  "year": 2023
+ },
+ "10.1007/s00227-014-2579-3": {
+  "title": "Impact of eutrophication and climate change on fish and zoobenthos in coastal waters of the Baltic Sea",
+  "journal": "Marine Biology",
+  "year": 2015
+ },
+ "10.1007/s10336-022-02036-6": {
+  "title": "Predation risk and landscape properties shape reproductive output of an endangered sea duck from two subpopulations with contrasting predation risk",
+  "journal": "Journal of Ornithology",
+  "year": 2023
+ },
+ "10.1007/s12237-025-01541-0": {
+  "title": "Shallow Coastal Bays as Sediment Carbon and Nutrient Reservoirs in the Baltic Sea",
+  "journal": "Estuaries and Coasts",
+  "year": 2025
+ },
+ "10.1007/s12350-023-03371-8": {
+  "title": "Vascular adhesion protein-1-targeted PET imaging in autoimmune myocarditis",
+  "journal": "Journal of Nuclear Cardiology",
+  "year": 2023
+ },
+ "10.1007/s13280-025-02181-1": {
+  "title": "Novelty, variability, and resilience: Exploring adaptive cycles in a marine ecosystem under pressure",
+  "journal": "Ambio",
+  "year": 2025
+ },
+ "10.1007/s13280-025-02185-x": {
+  "title": "Marine biodiversity loss in Finnish coastal waters: Evidence and implications for management",
+  "journal": "Ambio",
+  "year": 2025
+ },
+ "10.1016/j.bbagen.2024.130748": {
+  "title": "The methylome of clonal seagrass shoots shows age-associated variation and differentiation of roots from other tissues",
+  "journal": "Biochimica et Biophysica Acta (BBA) - General Subjects",
+  "year": 2025
+ },
+ "10.1016/j.bbalip.2021.159021": {
+  "title": "Who moves the sphinx? An overview of intracellular sphingolipid transport",
+  "journal": "Biochimica et Biophysica Acta (BBA) - Molecular and Cell Biology of Lipids",
+  "year": 2021
+ },
+ "10.1016/j.celrep.2019.12.037": {
+  "title": "Heat Shock Factor 2 Protects against Proteotoxicity by Maintaining Cell-Cell Adhesion",
+  "journal": "Cell Reports",
+  "year": 2020
+ },
+ "10.1016/j.cis.2025.103400": {
+  "title": "Microfluidics-enabled core/shell nanostructure assembly: Understanding encapsulation processes via particle characterization and molecular dynamics",
+  "journal": "Advances in Colloid and Interface Science",
+  "year": 2025
+ },
+ "10.1016/j.cocis.2019.02.014": {
+  "title": "Nanodiamonds for advanced optical bioimaging and beyond",
+  "journal": "Current Opinion in Colloid &amp; Interface Science",
+  "year": 2019
+ },
+ "10.1016/j.colsurfa.2022.130015": {
+  "title": "Protein A/G-based surface plasmon resonance biosensor for regenerable antibody-mediated capture and analysis of nanoparticles",
+  "journal": "Colloids and Surfaces A: Physicochemical and Engineering Aspects",
+  "year": 2022
+ },
+ "10.1016/j.ecss.2018.02.014": {
+  "title": "Essential coastal habitats for fish in the Baltic Sea",
+  "journal": "Estuarine, Coastal and Shelf Science",
+  "year": 2018
+ },
+ "10.1016/j.ecss.2019.106272": {
+  "title": "Coastal habitats and their importance for the diversity of benthic communities: A species- and trait-based approach",
+  "journal": "Estuarine, Coastal and Shelf Science",
+  "year": 2019
+ },
+ "10.1016/j.ecss.2021.107600": {
+  "title": "Physical drivers of epi- and infauna communities related to dominating macrophytes in shallow bays in the Northern Baltic Sea",
+  "journal": "Estuarine, Coastal and Shelf Science",
+  "year": 2021
+ },
+ "10.1016/j.ecss.2024.109086": {
+  "title": "Diverging benthic trait diversity and drivers across fjord to slope habitats of the high Arctic",
+  "journal": "Estuarine, Coastal and Shelf Science",
+  "year": 2025
+ },
+ "10.1016/j.ejps.2022.106220": {
+  "title": "The discovery of Zika virus NS2B-NS3 inhibitors with antiviral activity via an integrated virtual screening approach",
+  "journal": "European Journal of Pharmaceutical Sciences",
+  "year": 2022
+ },
+ "10.1016/j.ejps.2025.107122": {
+  "title": "Semi-solid extruded tablets for personalized pediatric use: Development, Quality control and In-Vitro Assessment of Enteral Tube Administration",
+  "journal": "European Journal of Pharmaceutical Sciences",
+  "year": 2025
+ },
+ "10.1016/j.ejps.2025.107132": {
+  "title": "Functional enzyme delivery via surface-modified mesoporous silica nanoparticles in 3D printed nanocomposite hydrogels",
+  "journal": "European Journal of Pharmaceutical Sciences",
+  "year": 2025
+ },
+ "10.1016/j.ijpharm.2024.124175": {
+  "title": "Utilizing the allyl-terminated copolymer methoxy(poly(ethylene glycol))-block-poly(jasmine lactone) in the development of amorphous solid dispersions: A comparative study of functionalized and non-functionalized polymer",
+  "journal": "International Journal of Pharmaceutics",
+  "year": 2024
+ },
+ "10.1016/j.isci.2022.104306": {
+  "title": "Engineered patterns of Notch ligands Jag1 and Dll4 elicit differential spatial control of endothelial sprouting",
+  "journal": "iScience",
+  "year": 2022
+ },
+ "10.1016/j.isci.2025.111745": {
+  "title": "Nuclear talin-1 provides a bridge between cell adhesion and gene expression",
+  "journal": "iScience",
+  "year": 2025
+ },
+ "10.1016/j.isci.2025.113879": {
+  "title": "Mechanosensitive interactions between Jag1 and Myo1c control Jag1 trafficking in endothelial cells",
+  "journal": "iScience",
+  "year": 2025
+ },
+ "10.1016/j.jbc.2023.104607": {
+  "title": "Glycolipid transfer protein knockout disrupts vesicle trafficking to the plasma membrane",
+  "journal": "Journal of Biological Chemistry",
+  "year": 2023
+ },
+ "10.1016/j.jcmgh.2025.101716": {
+  "title": "Genetically Induced Mouse Model for Colon-specific Epithelial Cell Tumorigenesis Driven by Loss of K8 and Apc",
+  "journal": "Cellular and Molecular Gastroenterology and Hepatology",
+  "year": 2026
+ },
+ "10.1016/j.molcel.2021.03.007": {
+  "title": "Stress-induced transcriptional memory accelerates promoter-proximal pause release and decelerates termination over mitotic divisions",
+  "journal": "Molecular Cell",
+  "year": 2021
+ },
+ "10.1016/j.sbi.2024.102819": {
+  "title": "Apprehensions and emerging solutions in ML-based protein structure prediction",
+  "journal": "Current Opinion in Structural Biology",
+  "year": 2024
+ },
+ "10.1016/j.scitotenv.2021.150450": {
+  "title": "Integrating diverse model results into decision support for good environmental status and blue growth",
+  "journal": "Science of The Total Environment",
+  "year": 2022
+ },
+ "10.1016/j.scitotenv.2023.165508": {
+  "title": "Modelling framework to evaluate societal effects of ecosystem management",
+  "journal": "Science of The Total Environment",
+  "year": 2023
+ },
+ "10.1021/acs.est.4c02116": {
+  "title": "Climate Effects on Belowground Tea Litter Decomposition Depend on Ecosystem and Organic Matter Types in Global Wetlands",
+  "journal": "Environmental Science &amp; Technology",
+  "year": 2024
+ },
+ "10.1021/acs.langmuir.3c00728": {
+  "title": "<i>In Vitro</i> Characterization and Real-Time Label-Free Assessment of the Interaction of Chitosan-Coated Niosomes with Intestinal Cellular Monolayers",
+  "journal": "Langmuir",
+  "year": 2023
+ },
+ "10.1038/mp.2016.203": {
+  "title": "JNK1 controls adult hippocampal neurogenesis and imposes cell-autonomous control of anxiety behaviour from the neurogenic niche",
+  "journal": "Molecular Psychiatry",
+  "year": 2018
+ },
+ "10.1038/nature12423": {
+  "title": "Vesicular and non-vesicular transport feed distinct glycosylation pathways in the Golgi",
+  "journal": "Nature",
+  "year": 2013
+ },
+ "10.1038/nn.2755": {
+  "title": "Phosphorylation of SCG10/stathmin-2 determines multipolar stage exit and neuronal migration rate",
+  "journal": "Nature Neuroscience",
+  "year": 2011
+ },
+ "10.1038/nrn3729": {
+  "title": "Nuclear and cytosolic JNK signalling in neurons",
+  "journal": "Nature Reviews Neuroscience",
+  "year": 2014
+ },
+ "10.1038/s41396-021-00985-z": {
+  "title": "Ecologically coherent population structure of uncultivated bacterioplankton",
+  "journal": "The ISME Journal",
+  "year": 2021
+ },
+ "10.1038/s41396-022-01230-x": {
+  "title": "Strain-specific transcriptional responses overshadow salinity effects in a marine diatom sampled along the Baltic Sea salinity cline",
+  "journal": "The ISME Journal",
+  "year": 2022
+ },
+ "10.1038/s41418-021-00832-w": {
+  "title": "Drice restrains Diap2-mediated inflammatory signalling and intestinal inflammation",
+  "journal": "Cell Death &amp; Differentiation",
+  "year": 2022
+ },
+ "10.1038/s41418-022-01038-4": {
+  "title": "Drosophila caspases as guardians of host-microbe interactions",
+  "journal": "Cell Death &amp; Differentiation",
+  "year": 2023
+ },
+ "10.1038/s41418-026-01675-z": {
+  "title": "M1-linked ubiquitination by LUBAC regulates AMPK signalling and the response to energetic stress",
+  "journal": "Cell Death &amp; Differentiation",
+  "year": 2026
+ },
+ "10.1038/s41467-022-34476-2": {
+  "title": "CBP-HSF2 structural and functional interplay in Rubinstein-Taybi neurodevelopmental disorder",
+  "journal": "Nature Communications",
+  "year": 2022
+ },
+ "10.1038/s41467-024-48149-9": {
+  "title": "Development of Aptamer-DNAzyme based metal-nucleic acid frameworks for gastric cancer therapy",
+  "journal": "Nature Communications",
+  "year": 2024
+ },
+ "10.1038/s41467-025-57254-2": {
+  "title": "Assessing the success of marine ecosystem restoration using meta-analysis",
+  "journal": "Nature Communications",
+  "year": 2025
+ },
+ "10.1038/s41558-024-01981-9": {
+  "title": "Temperature optima of a natural diatom population increases as global warming proceeds",
+  "journal": "Nature Climate Change",
+  "year": 2024
+ },
+ "10.1038/s41592-024-02295-6": {
+  "title": "DL4MicEverywhere: deep learning for microscopy made flexible, shareable and reproducible",
+  "journal": "Nature Methods",
+  "year": 2024
+ },
+ "10.1038/s41597-024-04092-4": {
+  "title": "Finnish inventory data of underwater marine biodiversity",
+  "journal": "Scientific Data",
+  "year": 2024
+ },
+ "10.1038/s41598-019-42051-x": {
+  "title": "Improved predictions of time-dependent drug-drug interactions by determination of cytosolic drug concentrations",
+  "journal": "Scientific Reports",
+  "year": 2019
+ },
+ "10.1038/s41598-022-26603-2": {
+  "title": "Colonocyte keratin 7 is expressed de novo in inflammatory bowel diseases and associated with pathological changes and drug-resistance",
+  "journal": "Scientific Reports",
+  "year": 2022
+ },
+ "10.1038/s44318-025-00678-9": {
+  "title": "Fast label-free live imaging with FlowVision reveals key principles of cancer cell arrest on endothelial monolayers",
+  "journal": "The EMBO Journal",
+  "year": 2026
+ },
+ "10.1039/c9nr08186k": {
+  "title": "<i>In situ</i> analysis of liposome hard and soft protein corona structure and composition in a single label-free workflow",
+  "journal": "Nanoscale",
+  "year": 2020
+ },
+ "10.1039/d1gc03841a": {
+  "title": "Digital light processing (DLP) 3D-fabricated antimicrobial hydrogel with a sustainable resin of methacrylated woody polysaccharides and hybrid silver-lignin nanospheres",
+  "journal": "Green Chemistry",
+  "year": 2022
+ },
+ "10.1039/d2ra03962a": {
+  "title": "Functional block copolymer micelles based on poly (jasmine lactone) for improving the loading efficiency of weakly basic drugs",
+  "journal": "RSC Advances",
+  "year": 2022
+ },
+ "10.1039/d4na00176a": {
+  "title": "A poly-δ-decalactone (PDL) based nanoemulgel for topical delivery of ketoconazole and eugenol against <i>Candida albicans</i>",
+  "journal": "Nanoscale Advances",
+  "year": 2024
+ },
+ "10.1039/d5nr00583c": {
+  "title": "Photocurable cellulose nanofibers and their copolymers with polyacrylamide as microgels to support 3D cell cultivation",
+  "journal": "Nanoscale",
+  "year": 2025
+ },
+ "10.1073/pnas.2208389120": {
+  "title": "The effect of climate change on avian offspring production: A global meta-analysis",
+  "journal": "Proceedings of the National Academy of Sciences",
+  "year": 2023
+ },
+ "10.1073/pnas.2515765123": {
+  "title": "High-sensitivity, protein-independent detection of dsDNA sequences",
+  "journal": "Proceedings of the National Academy of Sciences",
+  "year": 2026
+ },
+ "10.1080/09670262.2025.2532468": {
+  "title": "Untangling the literature on unattached <i>Fucus</i> (Phaeophyceae): an overview of current knowledge",
+  "journal": "European Journal of Phycology",
+  "year": 2025
+ },
+ "10.1083/jcb.202310030": {
+  "title": "TLNRD1 is a CCM complex component and regulates endothelial barrier integrity",
+  "journal": "Journal of Cell Biology",
+  "year": 2024
+ },
+ "10.1086/668824": {
+  "title": "Brood Size Matching: A Novel Perspective on Predator Dilution",
+  "journal": "The American Naturalist",
+  "year": 2013
+ },
+ "10.1093/bib/bbab510": {
+  "title": "PhosPiR: an automated phosphoproteomic pipeline in R",
+  "journal": "Briefings in Bioinformatics",
+  "year": 2022
+ },
+ "10.1093/femsre/fuae024": {
+  "title": "Biodiversity of microorganisms in the Baltic Sea: the power of novel methods in the identification of marine microbes",
+  "journal": "FEMS Microbiology Reviews",
+  "year": 2024
+ },
+ "10.1093/nar/gkac493": {
+  "title": "HSFs drive transcription of distinct genes and enhancers during oxidative stress and heat shock",
+  "journal": "Nucleic Acids Research",
+  "year": 2022
+ },
+ "10.1096/fj.202001046r": {
+  "title": "Protein synthesis is suppressed in sporadic and familial Parkinson’s disease by LRRK2",
+  "journal": "The FASEB Journal",
+  "year": 2020
+ },
+ "10.1098/rspb.2022.1338": {
+  "title": "Drivers of within- and among-individual variation in risk-taking behaviour during reproduction in a long-lived bird",
+  "journal": "Proceedings of the Royal Society B: Biological Sciences",
+  "year": 2022
+ },
+ "10.1098/rspb.2022.2262": {
+  "title": "Marine heatwaves and upwelling shape stress responses in a keystone predator",
+  "journal": "Proceedings of the Royal Society B: Biological Sciences",
+  "year": 2023
+ },
+ "10.1101/2025.05.05.652186": {
+  "title": "Receptor stoichiometry predicts artery-typical vulnerability to altered Notch signaling during smooth muscle differentiation",
+  "journal": "bioRxiv",
+  "year": 2025
+ },
+ "10.1111/bcpt.13647": {
+  "title": "Translational aspects of cytochrome P450-mediated drug–drug interactions: A case study with clopidogrel",
+  "journal": "Basic &amp; Clinical Pharmacology &amp; Toxicology",
+  "year": 2022
+ },
+ "10.1111/ecog.05013": {
+  "title": "Island properties dominate species traits in determining plant colonizations in an archipelago system",
+  "journal": "Ecography",
+  "year": 2020
+ },
+ "10.1111/febs.16425": {
+  "title": "M1-linked ubiquitination facilitates NF-κB activation and survival during sterile inflammation",
+  "journal": "The FEBS Journal",
+  "year": 2022
+ },
+ "10.1111/febs.17028": {
+  "title": "Ubiquitin signalling in <i>Drosophila</i> innate immune responses",
+  "journal": "The FEBS Journal",
+  "year": 2024
+ },
+ "10.1111/gcb.14552": {
+  "title": "Four decades of functional community change reveals gradual trends and low interlinkage across trophic groups in a large marine ecosystem",
+  "journal": "Global Change Biology",
+  "year": 2019
+ },
+ "10.1111/j.1365-2486.2006.01162.x": {
+  "title": "Winter climate affects subsequent breeding success of common eiders",
+  "journal": "Global Change Biology",
+  "year": 2006
+ },
+ "10.1111/j.1365-294x.2012.05603.x": {
+  "title": "Kin association during brood care in a facultatively social bird: active discrimination or by-product of partner choice and demography?",
+  "journal": "Molecular Ecology",
+  "year": 2012
+ },
+ "10.1111/oik.11139": {
+  "title": "Food web robustness depends on the network type and threshold for extinction",
+  "journal": "Oikos",
+  "year": 2025
+ },
+ "10.1124/dmd.121.000406": {
+  "title": "Comparative Hepatic and Intestinal Metabolism and Pharmacodynamics of Statins",
+  "journal": "Drug Metabolism and Disposition",
+  "year": 2021
+ },
+ "10.1124/dmd.122.001018": {
+  "title": "Hydroxychloroquine is Metabolized by Cytochrome P450 2D6, 3A4, and 2C8, and Inhibits Cytochrome P450 2D6, while its Metabolites also Inhibit Cytochrome P450 3A in vitro",
+  "journal": "Drug Metabolism and Disposition",
+  "year": 2023
+ },
+ "10.1124/dmd.124.001798": {
+  "title": "Candesartan Has No Clinically Meaningful Effect on the Plasma Concentrations of Cytochrome P450 2C8 Substrate Repaglinide in Humans",
+  "journal": "Drug Metabolism and Disposition",
+  "year": 2024
+ },
+ "10.1128/iai.00962-19": {
+  "title": "Structural and Biomolecular Analyses of Borrelia burgdorferi BmpD Reveal a Substrate-Binding Protein of an ABC-Type Nucleoside Transporter Family",
+  "journal": "Infection and Immunity",
+  "year": 2020
+ },
+ "10.1128/jvi.02079-19": {
+  "title": "Kaposi’s Sarcoma-Associated Herpesvirus Lytic Replication Is Independent of Anaphase-Promoting Complex Activity",
+  "journal": "Journal of Virology",
+  "year": 2020
+ },
+ "10.1152/ajpcell.00123.2024": {
+  "title": "β-Cell keratin 8 maintains islet mechanical integrity, mitochondrial ultrastructure, and β-cell glucose transporter 2 plasma membrane targeting",
+  "journal": "American Journal of Physiology-Cell Physiology",
+  "year": 2024
+ },
+ "10.1152/ajpgi.00140.2023": {
+  "title": "Defining a timeline of colon pathologies after keratin 8 loss: rapid crypt elongation and diarrhea are followed by epithelial erosion and cell exfoliation",
+  "journal": "American Journal of Physiology-Gastrointestinal and Liver Physiology",
+  "year": 2024
+ },
+ "10.1152/ajpgi.00220.2023": {
+  "title": "Colonocyte keratins stabilize mitochondria and contribute to mitochondrial energy metabolism",
+  "journal": "American Journal of Physiology-Gastrointestinal and Liver Physiology",
+  "year": 2024
+ },
+ "10.1158/0008-5472.can-19-3103": {
+  "title": "Oncogenic Herpesvirus Engages Endothelial Transcription Factors SOX18 and PROX1 to Increase Viral Genome Copies and Virus Production",
+  "journal": "Cancer Research",
+  "year": 2020
+ },
+ "10.1172/jci.insight.171821": {
+  "title": "DLL4/Notch3/WNT5B axis mediates bidirectional prometastatic crosstalk between melanoma and lymphatic endothelial cells",
+  "journal": "JCI Insight",
+  "year": 2024
+ },
+ "10.1186/s12915-025-02396-4": {
+  "title": "An integrated 2D framework for quantifying cellular mechanics reveals the impact of juxtacrine Notch signalling on directed collective migration of endothelial cells",
+  "journal": "BMC Biology",
+  "year": 2025
+ },
+ "10.1242/jcs.265278": {
+  "title": "CCT8 associates with the MYO10 motor domain and regulates filopodia and breast cancer cell invasion",
+  "journal": "Journal of Cell Science",
+  "year": 2026
+ },
+ "10.1371/journal.pbio.3002740": {
+  "title": "CellTracksColab is a platform that enables compilation, analysis, and exploration of cell tracking data",
+  "journal": "PLOS Biology",
+  "year": 2024
+ },
+ "10.1371/journal.pone.0097263": {
+  "title": "Alternation in the Glycolipid Transfer Protein Expression Causes Changes in the Cellular Lipidome",
+  "journal": "PLoS ONE",
+  "year": 2014
+ },
+ "10.1371/journal.pone.0209230": {
+  "title": "Glucosylceramide acyl chain length is sensed by the glycolipid transfer protein",
+  "journal": "PLOS ONE",
+  "year": 2018
+ },
+ "10.1371/journal.ppat.1007969": {
+  "title": "Klebsiella pneumoniae type VI secretion system-mediated microbial competition is PhoPQ controlled and reactive oxygen species dependent",
+  "journal": "PLOS Pathogens",
+  "year": 2020
+ },
+ "10.1371/journal.ppat.1013108": {
+  "title": "Heat shock factor 2 regulates oncogenic gamma-herpesvirus gene expression by remodeling the chromatin at the ORF50 and BZLF1 promoter",
+  "journal": "PLOS Pathogens",
+  "year": 2025
+ },
+ "10.1890/08-0964.1": {
+  "title": "Declines in predatory fish promote bloom-forming macroalgae",
+  "journal": "Ecological Applications",
+  "year": 2009
+ },
+ "10.3354/meps15029": {
+  "title": "Water depth affects the biodiversity and functional trait composition of Fucus vesiculosus-associated macroinvertebrate communities in the Baltic Sea",
+  "journal": "Marine Ecology Progress Series",
+  "year": 2026
+ },
+ "10.3389/fmars.2022.994756": {
+  "title": "Editorial: Influence of environmental variability on climate change impacts in marine ecosystems",
+  "journal": "Frontiers in Marine Science",
+  "year": 2022
+ },
+ "10.3389/fmars.2024.1304442": {
+  "title": "The interplay of co-occurring ecosystem engineers shapes the structure of benthic communities – a mesocosm experiment",
+  "journal": "Frontiers in Marine Science",
+  "year": 2024
+ },
+ "10.3390/pharmaceutics16091164": {
+  "title": "Reactive Oxygen Species-Regulated Conjugates Based on Poly(jasmine) Lactone for Simultaneous Delivery of Doxorubicin and Docetaxel",
+  "journal": "Pharmaceutics",
+  "year": 2024
+ },
+ "10.3791/67641": {
+  "title": "2.5D Model for <i>Ex Vivo</i> Mechanical Characterization of Sprouting Angiogenesis in Living Tissue",
+  "journal": "Journal of Visualized Experiments",
+  "year": 2025
+ },
+ "10.4337/9781035311118.00006": {
+  "title": "Introduction: towards holistic knowledge of marine environmental changes",
+  "journal": "Understanding Marine Changes",
+  "year": 2023
+ },
+ "10.4337/9781035311118.00013": {
+  "title": "The anatomy of complex marine problems: a case study of decision-making on archipelagic aquaculture",
+  "journal": "Understanding Marine Changes",
+  "year": 2023
+ },
+ "10.51812/of.133973": {
+  "title": "Population changes in the declining Turnstone (Arenaria interpres) and other waders in the northern Baltic Sea based on past and current breeding observations",
+  "journal": "Ornis Fennica",
+  "year": 2020
+ },
+ "10.5735/085.056.0418": {
+  "title": "Distribution Patterns and Long-Term Changes in Vascular Plants of Non-Littoral Areas in the SW Archipelago of Finland. Part VII. Poaceae and Synthesis",
+  "journal": "Annales Botanici Fennici",
+  "year": 2019
+ },
+ "10.7150/thno.110544": {
+  "title": "Secreted Clever-1 modulates T cell responses and impacts cancer immunotherapy efficacy",
+  "journal": "Theranostics",
+  "year": 2025
+ }
+}

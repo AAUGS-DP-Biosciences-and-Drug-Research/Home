@@ -1,5 +1,5 @@
 # Monthly check of every supervisor publication against its DOI registry
-# (resolves, title matches, supervisor is an author, not retracted).
+# (registered, supervisor is an author, not retracted, saved citation current).
 # Opens an issue, or comments on the open one, when something needs attention.
 name: Check publication DOIs
 

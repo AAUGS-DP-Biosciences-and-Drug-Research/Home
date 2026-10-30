@@ -10,3 +10,13 @@
 # Crossref lists the series first ("Lecture Notes in Computer Science"); the book is the second title.
 10.1007/978-3-030-72132-9_25:
   journal: "Simulation Gaming Through Times and Disciplines"
+
+# Crossref lists the series first ("Issues in Business Ethics"); the book is the second title.
+10.1007/978-3-319-62785-4_5:
+  journal: "Stakeholder Engagement: Clinical Research Cases"
+
+# Crossref gives the journal name in lower case.
+10.1108/cpoib-03-2012-0022:
+  journal: "Critical Perspectives on International Business"
+10.1108/cpoib-05-2020-0057:
+  journal: "Critical Perspectives on International Business"
